@@ -1,15 +1,13 @@
 ---
 layout: default
-title: Navpreet Singh's Portfolio
+title: Birinder Bachhal's Portfolio
 ---
 
 <img class="profile-picture" src="profile_pic.jpeg">
 
-Hi! My name is Navpreet Singh and I am a third-year undergraduate at MIT studying Artificial Intelligence and Decision Making.
+Hi! My name is Birinder Bachhal and I am a second-year undergraduate at Boston University studying Mechanical Engineering with concentrations in Manufacturing and Robotics! I'm especially interested in medical devices and wearable technologies, where mechanical design, electronics, and real-world constraints intersect. 
 
-My journey so far has been a thrilling blend of exploring Natural Language Processing at MIT's CSAIL, and delving into the field of Robotics through both my academic coursework and a hands-on internship at Sikorsky Helicopters. As a developer, I've gained practical experience with full-stack development and automation during my internships at HelixVM and Sunny Day Fund. Finally, as an educator, I have taught Computer Science and AI courses in Jerusalem and Amman, while continuing my role as an Executive Director and Co-Founder of Future for Young Scientists.
-
-These experiences have not only honed my skills but also fueled my passion for AI, Computer Science, and its potential to revolutionize the way we interact with technology.
+Through project-team work and self-directed work, I've worked on CAD-driven design, prototyping, motion analysis, and system integration, with an emphasis on iterative testing and reliability. I enjoy building systems that interact with the physical-world and perform consistently under real-constraints, especially in safety and user-critical applications. I am currently building projects that explore assistive technology and human-interactive systems where performence, safety, and usability are equally important. I value hands-on prototyping, testing, and iterative improvement as core parts of the engineering process, and I 
 
 ## Projects
 
