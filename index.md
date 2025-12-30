@@ -13,25 +13,22 @@ Through project-team work and self-directed work, I've worked on CAD-driven desi
 
 ---
 
+<a href="./projects/rss/rss"><img class="description-photo" src="./projects/rss/square-ACRO_VIBE.png"/></a>
+
+### [Autonomous F1Tenth Race Car: Implementing Effective Mechanical Design, Hardware Integration, LIDAR and Computer Vision for Dynamic Path-Planning and Real-Time Obstacle Navigation for a Competitive Autonomous Race Car](./projects/rss/rss)
+
+
+This project encompassed the development of an autonomous race car for Boston University's F1Tenth Project Team that integrates electromechanical hardware, LiDAR sensing, and real-time control systems. Developed a Gaussian-based path-planning and control algorithm to generate stable, physically achievable steering and speed commands under competitive conditions.
+
+---
 <a href="./projects/stgcn_exploration_project/stgcn_exploration_project">
     <img class="description-photo" src="./projects/stgcn_exploration_project/metrla.png"/>
 </a>
 
 ### [Analyzing the Impact of Temporal Data Sparsity on Predictive Accuracy: a Study of Spatio-Temporal Graph Convolutional Networks for Traffic Pattern Modeling](./projects/stgcn_exploration_project/stgcn_exploration_project)
 
-_final project for mit course 6.s898 deep learning_
 
 This project investigates the impact of sparse temporal data on the predictive accuracy of Spatio-Temporal Graph Convolutional Networks (ST-GCNs) in traffic modeling, addressing a gap in understanding these models' performance under real-world data irregularities.
-
----
-
-<a href="./projects/rss/rss"><img class="description-photo" src="./projects/rss/square-racecar.png"/></a>
-
-### [Autonomous Racing Robot: Leveraging LiDAR and Computer Vision for Dynamic Path-Planning and Real-Time Obstacle Navigation in Competitive Environments](./projects/rss/rss)
-
-_semester project for mit course 6.4200 robotics science and systems_
-
-This project encompassed the development of an autonomous race car capable of navigation using LiDAR and computer vision. On a team of five, we implemented techniques such as wall following, Monte Carlo Localization, and path planning, culminating in successful navigation of track races and obstacle courses.
 
 ---
 
