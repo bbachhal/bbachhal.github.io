@@ -4,7 +4,7 @@ title: Autonomous RACECAR
 ---
 
 # Autonomous F1Tenth Race Car 
-### Implementing Effective Mechanical Design, Hardware Integration, LIDAR and Computer Vision for Dynamic Path-Planning nad Real-Time Obstacle Navigation for a Competitive Autonomous Race Car
+### Implementing Effective Mechanical Design, Hardware Integration, LIDAR and Computer Vision for Dynamic Path-Planning and Real-Time Obstacle Navigation for a Competitive Autonomous Race Car
 
 <img src="racecar.png"/>
 
@@ -24,7 +24,7 @@ I worked on the development of a 1:10 scale autonomous race car as a part of Bos
 
 ***find the full lab report <a href="https://rss2023-9.github.io/website/#lab5" target="_blank">here</a>.***
 
-I was responsible for the electromechanical design and wiring architecture of the F1Tenth Autonomous Race Car, focusing on reliable power distribution, signal integrity, and serviceable hardware integration. This included planning and implementing the physical layout of motors, motor controllers, computer hardware, sensors, and power electronics within a constrained chassis. 
+I was responsible for designing and implementing the electromechanical design and wiring architecture for an autonomous race car, selecting and integrating compute, sensing, power, and actuation components with a focus on reliability, serviceability, and real-world performence. 
 
 <img src="motion_model.png"/>
 
@@ -38,73 +38,50 @@ In terms of Compute and Control Hardware, I chose to use the NVIDIA Jetson NX as
 <img src=''/>
 
 
-**Figure 4**: 
+**Figure 4**: Image of NVIDIA Jetson NX 
 
-<img src="eval_graph_norm.png"/>
+For perception, we used the Hokuyo UST-10LX 2D LiDAR, chosen simply because of its lightweight form factor, preciseness with its scans, and suitability for faast dynamic obstacle detection in competitive environments. Its placement and wiring  were designed to maintain consistent scan geometry while minimizing inteference from drivetrain vibration and power electronics. 
 
-**Figure 4**: Euclidean Distance Error of Calculated Pose from Ground Truth Position Over Time
+<img src=""/>
 
-Our MCL implementation also involved optimizing various parameters such as the number of particles, resampling strategies, and motion models to balance computational efficiency with localization accuracy. The fine-tuning of these parameters was based on extensive testing in both simulated and real-world environments, ensuring that the robot could reliably determine its location under different conditions.
+**Figure 5**: Image of Hokuyo UST-10LX 2D LiDAR
 
-Moreover, the integration of MCL into our autonomous system was not just about accurate localization. It played a crucial role in the robot's decision-making processes, particularly in path planning and obstacle avoidance. By knowing its position with a high degree of certainty, the robot could make more informed choices about its movements, resulting in smoother and safer navigation.
 
-In summary, the Monte Carlo Localization segment of our project was a testament to the effectiveness of probabilistic methods in handling the complexities of real-world autonomous navigation. It highlighted the importance of accurate localization in the broader context of robotics and served as a practical application of theoretical concepts covered in the course. This experience not only demonstrated the capabilities of MCL in a challenging environment but also provided valuable insights into the nuances of implementing such sophisticated systems in practice.
+Initial testing revealed that powering all subsystems from a single battery introduced electrical instability and inconsistent performence. To address this, we redesigned the power architecture to split the system across two battery sources, significantly improving electrical stability and reducing stress on sensitive components. For this a Gens Ace 3S 11.1V 500 mAh LiPo battery was selected as the primary energy source due to its current-delivery capability and enduracne under a sustained load. Supporting components including a CC BEC Pro switching regulatar, which was used to ensure stable voltage delivery to control electronics while isolating them from motor noise. 
 
----
+<img src=''/>
 
-## Path Planning
+**Figure 6**: Image of Gens Ace 3S 11.1 5000 mAh LiPo battery 
 
-***find the full lab report <a href="https://rss2023-9.github.io/website/#lab6" target="_blank">here</a>.***
 
-The path planning component was a cornerstone of our project, focusing on the development and refinement of algorithms to guide the autonomous race car through complex environments. Starting with foundational algorithms like A*, we explored their basic functionalities and limitations in simulated environments. A* served as an introduction to grid-based path planning, offering a balance between efficiency and optimality. However, its performance in more dynamic and less predictable real-world settings prompted us to explore more advanced algorithms.
+<img src=''/>
 
-<img src="pure_pursuit.png"/>
+**Figure 7**: Image of Final Wiring Architecture and Design
 
-**Figure 5**: A single time step of the pure pursuit algorithm.
 
-We progressed to implementing Rapidly Exploring Random Trees (RRT), a more sophisticated algorithm better suited for environments with a higher degree of uncertainty and complexity. RRT was particularly advantageous in its ability to quickly explore large spaces, making it ideal for our project's requirements. Despite its strengths, we observed areas for improvement, particularly in path optimization and efficiency.
 
-<img src="rrt_forest.png"/>
+## Autonomous Path Planning and Real-Time Navigation
 
-**Figure 6**: The random forest generated by our RRT implementation while exploring the Stata Basement.
+Although most of my time was dedicated directly towards the electromechanical design and hardware integration of the vehicle, I contributed time towards the path planning and autonomous navigation pipeline for the F1Tenth race car, focusing on translating LiDAR-based perception into real-time, physically executable motion commands under dynamic and competitive conditions. 
 
-This led us to adopt RRT\*, an enhanced version of RRT, which introduces a cost function to evaluate and optimize paths. RRT\* not only maintained the exploratory strengths of RRT but also provided more optimal and smoother paths by continuously refining the tree with the best possible routes. The implementation of RRT\* marked a significant advancement in our project, enabling the autonomous race car to navigate efficiently and effectively in both simulation and real-world trials.
+However, our existing control logic did not meet our expectations when we ran our vehicle at speeds exceeding 20 mph. Therefore, we had to iterate and experiment with new control logic that consisted of Gaussian-based direction sleection and a simple Gaussian-based path planning algorithm. This processed LiDAR scan data and assigns directional "weights" across the vehicle's forward field of view. Instead of selecting a path based on a single minimum-distance measurement, as our existing algorithm did, the new algorithm models free space using Gaussian distributions, allowing the planner to favor wider, safer opening while naturally smoothing noisy sensor data. 
 
-To further enhance the path planning capabilities, we integrated techniques like Artificial Potential Fields to improve obstacle avoidance and maneuvering in cluttered spaces. Additionally, the use of Dubins curves allowed for more natural and smooth paths, particularly beneficial for the physical constraints of the race car.
+This approach provided several advantages including noise robustness against spurious LiDAR readings, smooth directional outputs, reducing abrupt steering changes, improved stability at speed, especially in narrow or cluttered track sections. This gaussian weighting effectively trasnformed our raw LiDAR distances into a continious cost landscape, creating more precise and reliable direction selection under much faster racing conditiions, with more dynamic obstacles including much more sharper turns and patterns to follow. 
 
-<img src="rrt_star_stata_trav_path.png"/>
+<img src=''/>
 
-**Figure 7**: The trajectory generated by our RRT* implementation while looking for a path traversing the Stata basement.
+**Figure 8: This displays the Gaussian heatmap shown with our simulation on the right. The map also displays the LiDAR distance points from the car's latest sensor readings, demonstrating how the Gaussians collectively form a "map" of the track, similar to the way LiDAR points create a spatial representation. 
 
-Throughout the path planning phase, we conducted numerous tests to evaluate and fine-tune the algorithms. These tests were crucial in understanding the practical implications of each algorithm and in making iterative improvements. We optimized various parameters, including step size, search radius, and path smoothing techniques, to achieve the best balance between path quality and computational efficiency.
 
-In conclusion, the path planning segment of our project was an extensive exploration into the world of algorithmic navigation. It highlighted the importance of selecting and fine-tuning the right algorithm for specific tasks and environments. The progression from A* to RRT and finally to RRT\* demonstrated a deepening understanding of the complexities involved in autonomous navigation. This experience not only solidified our grasp of theoretical concepts but also provided invaluable practical insights into the challenges of implementing efficient path planning in autonomous systems.
+<img src=''/>
 
----
+**Figure 9:** This displays just the Gaussian heatmap without the LiDAR points. The car is approaching a left turn and so the map displays an abundance of read markers on the right side and directly ahead of the car, indicating an obstacle there. It also shows there's an open area on the left side, free from any Gaussian intensities, repreesnting the optimal path to take. 
 
-## Final Project: Track Racing and City Driving Challenge
 
-***find the full briefing <a href="https://docs.google.com/presentation/d/1h5aXGOwIP4kKV5lHa6ky04JwQ3Wm1g_f2vDwT8EWEVI/edit#slide=id.p" target="_blank">here</a>.***
+So, in summary, our new control algorithm built on the Gaussian planner's output.  Rather than issuing agressive or discontinuous commands, the control logic scaled steering commands based on curvature and vehicle speed, adjusted throttle output to maintain stability through tight turns, reduced oscillations caused by overcorrection or sensor noise.  All of this ensured that planned trajectories were not just optimal in theory, but physically achievable by the real vehicle, accoutnign for all actuator responses, steering limits, and traction constraints on the track. 
 
-### Overview   
-The final challenge of the course was a comprehensive test of our autonomous race car, divided into two parts: Track Racing and City Driving. This culmination required the integration of all the techniques and algorithms we had developed, including Pure Pursuit, color segmentation, and a robust state machine for navigation.
 
-### Part A: Final Race 
-For the Track Racing component, we focused on line detection using HoughLines, filtering these lines based on their distance to the center. This method proved effective, but we faced challenges when fewer than two lines were detected. In such cases, we adapted by adjusting the lookahead point based on the available line data or the previous lookahead point in the absence of lines. Our approach included minimizing the change in the steering angle to ensure smooth navigation. 
 
-The car's speed, combined with line detection, led to varying performance. While we achieved successful runs on the Johnson Track with no lane violations at a speed of 1 m/s, higher speeds introduced challenges like oscillations and lane detection errors, such as detecting adjacent lanes.
 
-### Part B: City Driving
-The City Driving segment tested our car's ability to navigate a simulated urban environment. We implemented a line follower using color segmentation and Pure Pursuit. Additionally, Homography Transformation was utilized to determine the real-world pose of objects, enhancing our navigation capabilities.
-
-A crucial part of this segment was our State Machine, designed to navigate the course through three main states: Driving Straight, Turning Left, and Turning Right. The system's efficiency was evident in its successful completion of the course in the least average time, particularly evident in our Start to Portal 2 trial.
-
-### Performance Analysis
-Our Monte Carlo Localization and Pure Pursuit implementations were key in both segments. They allowed us to follow loaded trajectories with high accuracy and navigate efficiently in simulation. The Lane Detection system performed with a 96% success rate, though there is room for improvement in our filtering methods.
-
-### Takeaways and Reflections 
-Reflecting on the semester, we recognized areas for future improvement. Enhancing Hough Line color segmentation, adding stop sign detection, and integrating dynamic obstacle avoidance and lane switching are some of the potential upgrades. These improvements will not only increase the car's performance but also its applicability in more complex real-world scenarios.
-
-In conclusion, this project was a significant learning experience, challenging us to apply theoretical knowledge to practical problems and adapt to unexpected challenges. It underscored the importance of iterative development and testing in robotics and provided valuable insights into the intricacies of autonomous system design.
 
 [*back to top*](#)
