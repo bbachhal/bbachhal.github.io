@@ -13,7 +13,7 @@ Through project-team work and self-directed work, I've worked on CAD-driven desi
 
 ---
 
-<a href="./projects/rss/rss"><img class="description-photo" src="./projects/rss/ACRO_VIBE.png"/></a>
+<a href="./projects/rss/rss"><img class="description-photo" src="./projects/rss/square-image (1).jpg"/></a>
 
 ### [Autonomous F1Tenth Race Car: Implementing Effective Mechanical Design, Hardware Integration, LIDAR and Computer Vision for Dynamic Path-Planning and Real-Time Obstacle Navigation for a Competitive Autonomous Race Car](./projects/rss/rss)
 
