@@ -26,41 +26,46 @@ I was responsible for designing and implementing the electromechanical design an
 
 <img src="ACRO_CarBody.png"/>
 
-**Figure 3**: Overview of the electromechanical design and wiring of the vehicle's body including the chassis and the layout of various hardware components
+**Figure 2**: Overview of the electromechanical design and wiring of the vehicle's body including the chassis and the layout of various hardware components
 
 <img src="ACRO_BaseplateISO.png"/>
 <img src="ACRO_BaseplateTop.png"/>
 
-**Figure 4**: CAD model of the mounting baseplate of the vehicle which housed all of the hardware components and fit within the constraints of the designed chassis. 
+**Figure 3**: CAD model of the mounting baseplate of the vehicle which housed all of the hardware components and fit within the constraints of the designed chassis. 
+
+
 
 I designed and assembled the full wiring harness, routing power and signal lines to minimize electrical noise, reduced mechanical strain, and improve accesibility for debugging and maintenence. Most of my special attention was given to connector selection, cable management, strain relief, and vibration resistance, ensuring consistent performence during our high-speed operation. Early on during the electromechanical design process, most of the issues I ran into included understanding how to create an electrical framework which could sustain the extremely high speeds that our vehicle would move at. 
 
 In terms of Compute and Control Hardware, I chose to use the NVIDIA Jetson NX as the primary compute module due to its ability to support real-time LIDAR processing and future vision-based autonomy, while also remaining compact enough to fit in our 1:10 scaled vehicle. The compute unit was integrated with attention to thermal exposure, vibration isolation, and serviceability, particularly after experiencing a Jetson failure during testing, which reinforced the need for robust mounting and rapid replacement strategies. 
 
-<img src=''/>
-
+<img src='ACRO_Nvidia.png'/>
 
 **Figure 4**: Image of NVIDIA Jetson NX 
 
+
+
 For perception, we used the Hokuyo UST-10LX 2D LiDAR, chosen simply because of its lightweight form factor, preciseness with its scans, and suitability for faast dynamic obstacle detection in competitive environments. Its placement and wiring  were designed to maintain consistent scan geometry while minimizing inteference from drivetrain vibration and power electronics. 
 
-<img src=""/>
+<img src="ACRO_LiDAR.png"/>
 
 **Figure 5**: Image of Hokuyo UST-10LX 2D LiDAR
 
 
+
 Initial testing revealed that powering all subsystems from a single battery introduced electrical instability and inconsistent performence. To address this, we redesigned the power architecture to split the system across two battery sources, significantly improving electrical stability and reducing stress on sensitive components. For this a Gens Ace 3S 11.1V 500 mAh LiPo battery was selected as the primary energy source due to its current-delivery capability and enduracne under a sustained load. Supporting components including a CC BEC Pro switching regulatar, which was used to ensure stable voltage delivery to control electronics while isolating them from motor noise. 
 
-<img src=''/>
+<img src='ACRO_LiPO.png'/>
 
 **Figure 6**: Image of Gens Ace 3S 11.1 5000 mAh LiPo battery 
 
 
-<img src=''/>
+<img src='ACRO_Schematic.png'/>
 
 **Figure 7**: Image of Final Wiring Architecture and Design
 
 
+---
 
 ## Autonomous Path Planning and Real-Time Navigation
 
@@ -70,12 +75,12 @@ However, our existing control logic did not meet our expectations when we ran ou
 
 This approach provided several advantages including noise robustness against spurious LiDAR readings, smooth directional outputs, reducing abrupt steering changes, improved stability at speed, especially in narrow or cluttered track sections. This gaussian weighting effectively trasnformed our raw LiDAR distances into a continious cost landscape, creating more precise and reliable direction selection under much faster racing conditiions, with more dynamic obstacles including much more sharper turns and patterns to follow. 
 
-<img src=''/>
+<img src='ACRO_GaussianHeatmap.png'/>
 
 **Figure 8: This displays the Gaussian heatmap shown with our simulation on the right. The map also displays the LiDAR distance points from the car's latest sensor readings, demonstrating how the Gaussians collectively form a "map" of the track, similar to the way LiDAR points create a spatial representation. 
 
 
-<img src=''/>
+<img src='ACRO_GaussianHeatmap2.png'/>
 
 **Figure 9:** This displays just the Gaussian heatmap without the LiDAR points. The car is approaching a left turn and so the map displays an abundance of read markers on the right side and directly ahead of the car, indicating an obstacle there. It also shows there's an open area on the left side, free from any Gaussian intensities, repreesnting the optimal path to take. 
 
