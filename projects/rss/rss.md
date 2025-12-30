@@ -6,9 +6,9 @@ title: Autonomous RACECAR
 # Autonomous F1Tenth Race Car 
 ### Implementing Effective Mechanical Design, Hardware Integration, LIDAR and Computer Vision for Dynamic Path-Planning and Real-Time Obstacle Navigation for a Competitive Autonomous Race Car
 
-<img src="racecar.png"/>
+<img src="ACRO_VIBE.png"/>
 
-**Figure 1**: The BU F1Tenth Autonomous Race Car.
+**Figure 1**: The BU F1Tenth Autonomous Race Car in Action!
 
 ---
 
@@ -16,20 +16,22 @@ title: Autonomous RACECAR
 
 I worked on the development of a 1:10 scale autonomous race car as a part of Boston University's F1Tenth Autonomous Car Racing Organizazation, a hands-on robotics and autonomous systems project team that integrates electromechanical design, sensing, and control. The overall goal for this project was to design, assemble, and iterate on a fully-functional autonomous vehicle capable of navigating competitive race tracks using onboard sensing and real-time control. As an Executive Board Member and the project-lead for hardware for BU F1Tenth, most of my experience resides in the electromechanical design of the platform as well as the physical manufacturing of components on the platform. However, I did participate quite extensively on the software side of things, where I learned about and helped leverage LIDAR and computer vision for dynamic path-planning and real-time obstacle navigation for our compeittive platform. 
 
-***find all of our team's work <a href="https://www.buf1tenth.com/" target="_blank">here</a>.***
+***Find information about our team here! <a href="https://www.buf1tenth.com/" target="_blank">here</a>.***
 
 
 ---
 ## Electromechanical Design and Wiring Architecture
 
-***find the full lab report <a href="https://rss2023-9.github.io/website/#lab5" target="_blank">here</a>.***
-
 I was responsible for designing and implementing the electromechanical design and wiring architecture for an autonomous race car, selecting and integrating compute, sensing, power, and actuation components with a focus on reliability, serviceability, and real-world performence. 
 
-<img src="motion_model.png"/>
+<img src="ACRO_CarBody.png"/>
 
-**Figure 3**: Base plate created for the layout of all components to fit within our manufactured chassis.
-<br/>
+**Figure 3**: Overview of the electromechanical design and wiring of the vehicle's body including the chassis and the layout of various hardware components
+
+<img src="ACRO_BaseplateISO.png"/>
+<img src="ACRO_BaseplateTop.png"/>
+
+**Figure 4**: CAD model of the mounting baseplate of the vehicle which housed all of the hardware components and fit within the constraints of the designed chassis. 
 
 I designed and assembled the full wiring harness, routing power and signal lines to minimize electrical noise, reduced mechanical strain, and improve accesibility for debugging and maintenence. Most of my special attention was given to connector selection, cable management, strain relief, and vibration resistance, ensuring consistent performence during our high-speed operation. Early on during the electromechanical design process, most of the issues I ran into included understanding how to create an electrical framework which could sustain the extremely high speeds that our vehicle would move at. 
 
