@@ -53,7 +53,7 @@ For perception, we used the Hokuyo UST-10LX 2D LiDAR, chosen simply because of i
 
 
 
-Initial testing revealed that powering all subsystems from a single battery introduced electrical instability and inconsistent performence. To address this, we redesigned the power architecture to split the system across two battery sources, significantly improving electrical stability and reducing stress on sensitive components. For this a Gens Ace 3S 11.1V 500 mAh LiPo battery was selected as the primary energy source due to its current-delivery capability and enduracne under a sustained load. Supporting components including a CC BEC Pro switching regulatar, which was used to ensure stable voltage delivery to control electronics while isolating them from motor noise. 
+Initial testing revealed that powering all subsystems from a single battery introduced electrical instability and inconsistent performence. To address this, we redesigned the power architecture to split the system across two battery sources, significantly improving electrical stability and reducing stress on sensitive components. For this a Gens Ace 3S 11.1V 5000 mAh LiPo battery was selected as the primary energy source due to its current-delivery capability and enduracne under a sustained load. Supporting components including a CC BEC Pro switching regulatar, which was used to ensure stable voltage delivery to control electronics while isolating them from motor noise. 
 
 <img src='ACRO_LiPO.png'/>
 
