@@ -3,6 +3,8 @@ layout: default
 title: The Deskinator
 ---
 
+<img src=""/>
+
 # The Deskinator
 ### An Autonomous Desktop-Cleaning Robot
 Role: Mechanical and Robotics Systems Lead
