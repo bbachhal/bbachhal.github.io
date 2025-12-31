@@ -8,6 +8,8 @@ title: The Deskinator
 Role: Mechanical and Robotics Systems Lead
 Focus: Electromechanical Design, Motion Systems, Embedded Hardware, Autonomous Navigation
 
+The Deskinator Video here! 
+Access the full technical report [here](https://docs.google.com/document/d/1J7fj0Xwd_tkpN8rXVOZPwmj2ORiROpX2GtS6bQvDz3A/edit?usp=sharing)! 
 ---
 
 ## Overview and Motivations
