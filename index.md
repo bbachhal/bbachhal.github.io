@@ -22,13 +22,13 @@ This project encompassed the development of an autonomous race car for Boston Un
 
 ---
 <a href="./projects/stgcn_exploration_project/stgcn_exploration_project">
-    <img class="description-photo" src="./projects/stgcn_exploration_project/metrla.png"/>
+    <img class="description-photo" src="./projects/stgcn_exploration_project/Deskinator_Main_imresizer.jpg"/>
 </a>
 
-### [Analyzing the Impact of Temporal Data Sparsity on Predictive Accuracy: a Study of Spatio-Temporal Graph Convolutional Networks for Traffic Pattern Modeling](./projects/stgcn_exploration_project/stgcn_exploration_project)
+### [The Deskinator: An Autonomous Desktop-Cleaning Robot](./projects/stgcn_exploration_project/stgcn_exploration_project)
 
 
-This project investigates the impact of sparse temporal data on the predictive accuracy of Spatio-Temporal Graph Convolutional Networks (ST-GCNs) in traffic modeling, addressing a gap in understanding these models' performance under real-world data irregularities.
+Designed and built an autonomous desktop-cleaning robot by integrating electromechanical hardware, sensing, and real-time control. Implemented EKF-based SLAM to enable reliable localization and repeatable full-surface coverage without external markers.
 
 ---
 
