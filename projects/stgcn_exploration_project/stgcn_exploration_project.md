@@ -32,7 +32,7 @@ I designed and manufactured each mechanical component of the Deskinator, includi
 
 <img src="Deskinator_Assem.png"/>
 
-Figure 3: CAD of Deskinator's Assembly
+Figure 1: CAD of Deskinator's Assembly
 
 <img src="Deskinator_Fristing.png"/>
 
