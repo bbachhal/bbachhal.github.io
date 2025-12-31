@@ -3,7 +3,7 @@ layout: default
 title: The Deskinator
 ---
 
-<img src=""/>
+<img src="Deskinator_Main.png"/>
 
 # The Deskinator
 ### An Autonomous Desktop-Cleaning Robot
@@ -30,7 +30,11 @@ In summary, the Deskinator is a fully autonomous desktop-cleaning robot designed
 
 I designed and manufactured each mechanical component of the Deskinator, including the chassis, bumper system, vacuum sweep system, wheels, etc. I also designed and implemented the electrical systme for the robot, integrating motors, sensors, power, and compute into a compact, serviceable layout. As seen in Figure 2, I designed the full wiring architecture for all hardware components integrated within the Deskinator. I also integrated dual power rails (12V + 5V) to seperately power high-load actuators and sensitive electronics. With this, I also routed wiring to minimize EMI and mechancial strain during motion, and ensured modularity for debugging, replacement, and testing. All this was done with space contraints, serviceability, noise isolation, and reliability over repeated cycles of testing in mind. 
 
-<img src=""/>
+<img src="Deskinator_Assem.png"/>
+
+Figure 3: CAD of Deskinator's Assembly
+
+<img src="Deskinator_Fristing.png"/>
 
 Figure 2: Full wiring schematic of The Deskinator 
 
@@ -42,7 +46,7 @@ We chose the A4988 current-limited drivers because they maintain a stable sinuso
 
 The result of this combination of Nema 17 stepper motors and A4988 drivers was smooth, jitter-free differential drive motion with reliable odometry for autonomous navigation. 
 
-<img src=""/>
+<img src="Deskinator_NEMAmodeling.png"/>
 
 Figure 3: Preliminary testing of the NEMA 17 stepper motors' angular error. This plot shows simply how precise these motors were, with an error extremely close to 0. Also shown are basic statistics regarding the angular error. 
 
@@ -50,14 +54,13 @@ Figure 3: Preliminary testing of the NEMA 17 stepper motors' angular error. This
 
 Finding sensors required some discussion due to the fact that the precision and accuracy of our sensors is quite literally the most important aspect of our final design. Our SLAM algorithm relies directly to our front-facing sensors to provide the most accurate edge-detection and obstacle-detection for our robot's mobility. Therefore, after testing and experimenting with various infrared and proximity sensors, we decided on using the APDS9960 proximity sensors as our primary edge-detection hardware. Data from the testing done on the APDS9960 is shown in Figure 4. Although edge-detection was the most important application of these sensors, we did use one APDS9960 sensor in our final design for our gesture-based, touchless activation.  As you can see in Figure 5, the APDS9960 sensors were placed on the external "flaps" which reached out from the main frame of the Deskinator to detect the edges of the desktop surface before the body of the Deskinator reaches the edge. The central compute unit for this entire sensor setup was a Raspberry Pi 4B.  
 
-<img src=""/>
+<img src="Deskinator_APDStest.png"/>
 
 Figure 4: A chart showing the preliminary testing done on the APDS9960 proximity sensor showing the effectiveness of the sensor at various distances from an obstacle. 
 
-<img src=""/> 
+<img src="Deskinator_sensorcad.png"/> 
 
-Figure 5: Main Assembly CAD file. The "flaps" at the front of the Deskinato are where the sensors are placed for edge detection. For better understanding of their placement, please refer to the video linked under the overview! 
-
+Figure 5: CAD modeling of the sensor mounts. These flaps are located at the front of the deskinator's main frame. Refer to Figure 1 for their relative placement within the Deskinator assembly.
 
 ### Custom Vacuum and Mechanical Integration
 
@@ -65,7 +68,7 @@ Out of everything that I designed on the Deskinator, I believe this was the hard
 
 This sytem helped us achieve our desired accessibility and usability aspect. Our goal was to make the Deskinator as easy as possible to use; without the use of much maintainence, manual movement, and manual control. Our chute system with the detachable container provides us with just that. Through testing, we achieved 99.4% debris removal under the project's cost and weight limits. Figure 6 shows the design of the chute system as seen from the bottom of the robot body.
 
-<img src=''/>
+<img src='Deskinator_vacuumCAD.png'/>
 
 Figure 6: CAD drawing of the vacuum system on The Deskinator.
 
@@ -83,15 +86,15 @@ While hardware and manufacturing focused, I worked closely with the software sys
 
 I was specifically responsible for ensuring the SLAM approach aligned with the robot's mechanical and sensing limitations, including wheel slip, motor resolution, and sensor noise. Through iterative testing, I tuned filter parameters and motion constraints to improve localization stability, enabling the robot to maintain accurate positioning over full cleaning cycles without external markers or beacons. The figures below show some of the testing and simulations done to understand the motion of The Deskinator. 
 
-<img src=""/>
+<img src="Deskinator_wallfollower.png"/>
 
 Figure 7: Example of Wall Follower used to compute boundary based on found edges. This path was our initialization path. 
 
-<img src=""/>
+<img src="Deskinator_lawnmower.png"/>
 
 Figure 8: Example of computed and followed Boustrophedon path. This "lawn-mower" like path was our cleaning path. 
 
-<img src=""/>  
+<img src="Deskinator_time.png"/>  
 
 Figure 9: Graphs of Distribution of Time to complete boundary, discovery and total times, with Gaussian fitting. 
 
