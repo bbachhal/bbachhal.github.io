@@ -8,7 +8,7 @@ title: Future for Young Scientists
 # Room Temperature Monitoring System
 ### Embedded system design integrating sensing, control logic, and manufacturable hardware. 
 
-Access the full technical report [here]()! 
+Access the full technical report [here](https://docs.google.com/document/d/1Tuv2J6dJECbJdlIxamwfsLFoS41idi5W9Qwg7ItneGM/edit?usp=sharing)! 
 ---
 
 ## Overview and Motivation
