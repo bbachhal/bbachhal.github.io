@@ -3,7 +3,7 @@ layout: default
 title: Future for Young Scientists
 ---
 
-<img src=""/>
+<img src="EK131_External.png"/>
 
 # Room Temperature Monitoring System
 ### Embedded system design integrating sensing, control logic, and manufacturable hardware. 
@@ -24,7 +24,7 @@ The system is built around a simple Arduino Uno microcontroller, which serves as
 
 Real-time temperature values are displayed on a 16x2 I2C LCD, while embedded logic continuously evaluates whether the measured temperature falls outside the defined 80-90 degrees Fahrenheit "safe" range. When thresholds are exceeded, the Arduino activates both a red LED warning indicator and a piezo buzzer to provide immediate feedback to the user. 
 
-<img src=""/>
+<img src="EK131_TMP.png"/>
 
 Figure 1: Image of the TMP36 Temperature Sensor, a primary component of the Room Temperature Monitor
 
@@ -32,7 +32,7 @@ Figure 1: Image of the TMP36 Temperature Sensor, a primary component of the Room
 
 I designed and assembled the full electrical system with a focus on clarity, reliability, and safety. I implemented organized power and signal routing using 22 AWG solid-core wiring. Also, I used heat shrink tubing, twist caps, and spade connectors to ensure durable and clean electrical connections. With this, I applied a consistent color-coding scheme to simplify the debugging and maintenance that I had to do after my preliminary design. Moreover, I integrated an on/off switch and battery clip for standalone operation. This entire system is powered by a simple 9V battery, which supplies the Arduino within its supported input range while also allowing portable untethered use. 
 
-<img src=""/>
+<img src="EK131_Schematic.png"/>
 
 Figure 2: A complete schematic of the wiring done on each hardware component of the final project. 
 
@@ -48,7 +48,7 @@ All hardware components were housed into a 3D-printed ABS enclosure, including a
 
 All of the CAD designs were made using OnShape. I chose to use OnShape simply due to it being the only CAD software I had access to at the time. I only got access to SolidWorks and AutoCAD after completing this project. Looking back at it, SolidWorks or AutoCAD would definitely have been an easier and much more helpful CAD software to use for this project. 
 
-<img src=""/>
+<img src="EK131_CAD.png"/>
 
 Figure 3: Final CAD Model of the enclosure and the enclosure lid. Inside the enclosure is the 9V battery holder, and the Arduino Uno mounting plate. On the enclosure lid is the 16x2 I2C LCD screen. 
 
@@ -56,11 +56,11 @@ Figure 3: Final CAD Model of the enclosure and the enclosure lid. Inside the enc
 
 The completed prototype was validated through repeated testing and it all demonstrated accurate real-time temperature readings, reliable LCD updates in both Celsius and Fahrenheit, consistent alarm activation outside the 80-90 degrees Fahrenheit range, and stable electrical operation at a 5V internal logic level. Some limitations for this project obviously included the enclosure size. I hoped it would be a bit smaller, but I beleive that if I housed the internal components any different, I would lose organization and understanding of the wiring happening inside the enclosure. Also, the environmental exposure of the sensor would lead it to obtain some sort of error in long-term use. Therefore, finding a sensor more resistant to environmental exposure, or implementing some sort of sensor shielding would create a much more effective product. 
 
-<img src=""/>
+<img src="EK131_Internal.png"/>
 
 Figure 4: Final image of the internal component of the Room Temperature Monitoring System
 
-<img src=""/>
+<img src="EK131_External.png"/>
 
 Figure 5: Final image of the entire Room Temperature Monitoring System (Celsius is spelled wrong simply due to an inside joke that was made during the creation of the project!)
 
