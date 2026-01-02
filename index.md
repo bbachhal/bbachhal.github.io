@@ -42,13 +42,11 @@ This project investigates advanced KD-tree construction techniques to enhance ra
 
 ---
 
-<a href="https://futureforyoungscientists.org/" target="_blank"><img class="description-photo" src="./projects/fys/fys_logo.png"/></a>
+<a href="./projects/fys/fys"> <img class="description-photo" src="./projects/fys/EK131_External_imresizer.jpg"/></a>
 
-### <a href="https://futureforyoungscientists.org/" target="_blank">Future for Young Scientists</a>
+### [Room Temperature Monitoring System: An embedded system design integrating sensing, control logic, and manufacturable hardware](./projects/fys/fys)
 
-_educational organization offering free STEM courses to students in grades 2-7; website implemented with reactJS_
-
-We founded FYS with the mission to inspire children to think critically, like scientists. We believe that fostering scientific curiosity at a young age is essential to get our students on a path to learn about the STEM field. Through the engaging nature of hands-on learning, lessons become more appealing and fun while bringing out the inner curiosity that is present in every child.
+Designed and built a standalone embedded temperature monitoring system integrating sensing, control logic, and manufacturable hardware. The system provides real-time display and alert functionality through a microcontroller-based architecture.
 
 <!-- <p class="alignable pull-right"><a href="#"><i>back to top</i></a></p>>
 <br/> -->
