@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Future for Young Scientists
+title: Room Temperature Monitoring System
 ---
 
 <img src="EK131_External.png"/>
