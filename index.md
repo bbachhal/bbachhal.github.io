@@ -48,6 +48,14 @@ This project investigates advanced KD-tree construction techniques to enhance ra
 
 Designed and built a standalone embedded temperature monitoring system integrating sensing, control logic, and manufacturable hardware. The system provides real-time display and alert functionality through a microcontroller-based architecture.
 
+---
+
+<a href="./projects/ldsp_embeddings/lds_embeddings"><img class="description-photo" src=""/></a>
+
+###  [ECG Signal Processing and Heart Rate Variability Analysis: Biomedical Signal Analysis using MATLAB](./projects/ldsp_embeddings/ldsp_embeddings)
+
+Analyzed real-world ECG data using MATLAB to study how resting, post-exercise, and controlled breathing conditions affect heart rate variability. Developed signal processing and feature extraction algorithms to quantify cardiac cycle dynamics and visualize physiological changes. 
+
 <!-- <p class="alignable pull-right"><a href="#"><i>back to top</i></a></p>>
 <br/> -->
 
