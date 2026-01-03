@@ -56,8 +56,6 @@ Designed and built a standalone embedded temperature monitoring system integrati
 
 Analyzed real-world ECG data using MATLAB to study how resting, post-exercise, and controlled breathing conditions affect heart rate variability. Developed signal processing and feature extraction algorithms to quantify cardiac cycle dynamics and visualize physiological changes. 
 
-<!-- <p class="alignable pull-right"><a href="#"><i>back to top</i></a></p>>
-<br/> -->
 
 [_back to top_](#)
 
