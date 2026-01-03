@@ -50,7 +50,7 @@ Designed and built a standalone embedded temperature monitoring system integrati
 
 ---
 
-<a href="./projects/ldsp_embeddings/lds_embeddings"><img class="description-photo" src="ECG_COMPARE.png"/></a>
+<a href="./projects/ldsp_embeddings/ldsp_embeddings"><img class="description-photo" src="ECG_COMPARE.png"/></a>
 
 ###  [ECG Signal Processing and Heart Rate Variability Analysis: Biomedical Signal Analysis using MATLAB](./projects/ldsp_embeddings/ldsp_embeddings)
 
