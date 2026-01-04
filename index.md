@@ -32,13 +32,12 @@ Designed and built an autonomous desktop-cleaning robot by integrating electrome
 
 ---
 
-<a href="./projects/kdtree/kdtree"><img class="description-photo" src="./projects/kdtree/kd-tree.png"/></a>
+<a href="./projects/kdtree/kdtree"><img class="description-photo" src="./projects/kdtree/ORTHOCAD.png"/></a>
 
-### [Exploring Accelerated KD-Tree Construction Techniques for Efficient Ray Tracing](./projects/kdtree/kdtree)
+### [OrthoCAD Pro](./projects/kdtree/kdtree)
 
-_final project for mit course 6.4400 computer graphics_
 
-This project investigates advanced KD-tree construction techniques to enhance ray tracing efficiency, focusing on dynamic scenes where traditional methods are computationally intensive. It implements and analyzes the performance of O(N log N) and O(N log^2 N) SAH-based algorithms.
+Designed and implemented a fully parametric orthotic design system that converts biomechanical inputs into patient-specific, manufacturable CAD geometries. The system automates orthotic generation while enforcing biomechanical intent and production constraints. 
 
 ---
 
