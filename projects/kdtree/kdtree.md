@@ -5,6 +5,8 @@ title: OrthoCAD Pro
 
 # Advanced Orthotic Design System
 
+Access the full technical report [here](https://docs.google.com/document/d/12flzur0plXTipamo49_YXWJP81IszzX-5IrszjxPEfI/edit?usp=sharing)!
+
 ## Overview and Motivations
 
 OrthoCAD Pro was a personal project of mine, and it is an advanced orthotic design system developed to streamline the creation of custom foot orthoses by combining biomechanical principles, parametric CAD modeling, and manufacturability constraints. THe system was designed to reduce manual design time while improving consistency, repeatability and fit accuracy for patient-specific orthotics. This project focuses on a core engineering challenge: how to encode biomechanical intent, manufacturing constraints, and geometric robustness into a repeatable, automated design pipeline, rather than relying on manual CAD iteration. 
