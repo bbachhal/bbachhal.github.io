@@ -72,7 +72,7 @@ This section highlights a collection of CAD models and drawings focused on param
 
 ## Coursework
 
-<a **CAD and Machine Components: SolidWorks**</a> - a junior-level course on CAD modeling done through solidworks that helps students visualize and design manufacturable parts using a parametric designing system. 
+**CAD and Machine Components: SolidWorks**</a> - a junior-level course on CAD modeling done through solidworks that helps students visualize and design manufacturable parts using a parametric designing system. 
 
 **Engineering Mechanics**  - Studied the analysis of forces, moments, and equilibrium in structures and mechanical systems. Gained proficiency in free-body diagrams, trusses, beams, and frictional systems, applying principles of vector mechanics to solve real-world static equilibrium problems. Developed problem-solving skills in both analytical and computational contexts.
 
