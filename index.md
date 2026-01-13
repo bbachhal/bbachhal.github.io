@@ -62,7 +62,7 @@ Analyzed real-world ECG data in MATLAB to study how resting, post-exercise, and 
 
 ## CAD Projects
 
-<a href="./projects/CAD/CAD"><img class="description-photo" src="./projects/CAD/SolidWorks!.png"/></a>
+<a href="./projects/CAD/Cad"><img class="description-photo" src="./projects/CAD/SolidWorks!.png"/></a>
 
 ### [CAD Projects](./projects/CAD/Cad)
 
