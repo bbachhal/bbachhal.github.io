@@ -60,23 +60,13 @@ Analyzed real-world ECG data using MATLAB to study how resting, post-exercise, a
 
 ---
 
-## Work Experience
+## CAD Projects
 
-<a href="https://www.csail.mit.edu/research/decentralized-information-group-dig" target="_blank">
-<img class="description-photo-natural" src="./work/csail_logo.png"/>
-</a>
+<a href="./projects/CAD/CAD"><img class="description-photo" src="./projects/ldsp_embeddings/ECG_COMPARE.png"/></a>
 
-### <a href="https://www.csail.mit.edu/research/decentralized-information-group-dig" target="_blank">Natural Language Processing Researcher</a>
+### [CAD Projects](./projects/CAD/CAD)
 
-**MIT Computer Science and AI Laboratory; Decentralized Information Group**
-
-_cambridge, ma; february 2023 - present_
-
-Contributing to <a href="https://www.csail.mit.edu/research/privacyml-privacy-preserving-framework-machine-learning" target="_blank">**PrivacyML**</a> with a context-aware Named-Entity Recognition (NER) framework. Utilized **SpaCy**, **PyTorch** and **Pandas** to extract metadata from unstructured text, enhancing exposure metrics for a synthetic dataset generation pipeline employing **Generative Adversarial Network** (GAN) technology. _(paper to be published soon)_
-
-Conducting research in Natural Language Processing (NLP), focusing on the evaluation of Large Language Models (LLMs) for diverse use cases and the design of a comprehensive framework to assess model **performance**, **privacy**, and **bias**.
-
-Currently developing a suite of metrics, including **perplexity**, **BLEU score**, **METEOR score**, and **context-aware exposure**, to measure the quality and contextual appropriateness of LLM-generated text and translations. Benchmark datasets will cover a wide range of language understanding and generation tasks, ensuring consistent evaluation of LLMs' performance.
+This section highlights a collection of CAD models and drawings focused on parametric design, manufacturability, and system-level thinking. Each of these projects emphasizes robust geometry, clear-design intent, and practical constraints such as assembly, tolerances, material behavior, and production methods. All of these projects were completed on SolidWorks 2025.
 
 ---
 
