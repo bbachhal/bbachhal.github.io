@@ -1,9 +1,9 @@
-title: Navpreet Singh
-url: "https://realnav1234.github.io"
+title: Birinder Bachhal
+url: "https://bbachhal.github.io"
 baseurl: "/"
 
 markdown: kramdown
-ins_logo: "/mit_logo_white.png"
+ins_logo: "/bu logo.png"
 
 remote_theme: ankitsultana/researcher@gem
 
@@ -28,11 +28,7 @@ nav:
 #    link: "/"
  - name: "projects"
    link: "/#projects"
- - name: internships
-   link: "/#work-experience" 
- - name: coursework
-   link: "/#coursework"  
  - name: "resume"
-   link: "/resume.pdf"
+   link: "/Bachhal's Resume.pdf"
  - name: "contact"
    link: "/contact"
