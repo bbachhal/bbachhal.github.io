@@ -3,7 +3,7 @@ layout: default
 title: CAD Projects
 ---
 
-<img src=""/>
+<img src="SolidWorks!.png"/>
 
 #  CAD Projects
 ## All CAD projects that I have completed focused on parametric design, manufacturability, and system-level thinking. 
@@ -12,11 +12,11 @@ title: CAD Projects
 
 ## Project 1: Gauge Block Model/Mounting Bracket for Shaft Support
 
-<img src=""/> 
+<img src="GaugeMODEL.png"/> 
 
 Figure 1: Image of Gauge Block Model created on SolidWorks
 
-<img src=""/> 
+<img src="GaugeDRAW.png"/> 
 
 Figure 2: Drawing of Gauge Block model also on SolidWorks
 
@@ -25,23 +25,15 @@ Overview: This component is a strucutral shaft support and bearing housing desig
 
 ## Project 2: Ball Valve 
 
-<img src=""/> 
+<img src="GEARBOX_ASSEM.png"/> 
 
 Figure 1: Image of Ball Valve model created on SolidWorks
-
-<img src=""/> 
-
-Figure 2: Image of Ball Valve drawing created on SolidWorks
 
 Overview: This project models a mechanical ball-valve assembly designed to regulate fluid flow through rotational actuation of a spherical valve element. The design emphasizes clear sealing surfaces, component fit, and manufacturability, demonstrating understanding of fluid control mechanisms, tolerances, and assembly-level design. 
 
 ## Project 3: Gearbox 
 
-<img src=""/> 
-
-Figure 1: Image of Gearbox model created on SolidWorks
-
-<img src=""/> 
+<img src="FINALGearbOX.png"/> 
 
 Figure 2: Image of Gearbox drawing on SolidWorks
 
@@ -51,13 +43,14 @@ The external handle drives an internal shaft connected to the gear set, illustra
 
 ## Project 4: 4-Bar Linkage
 
-<img src=""/> 
+<img src="4BAR_Model.png"/> 
 
 Figure 1: Image of 4-Bar Linkage model created on SolidWorks 
 
-<img src=""/> 
+<img src="4BAR-DRAW1.png"/> 
+<img src="4BAR-DRAW2.png"/> 
 
-Figure 2: Image of a 4-Bar Linkage drawing created on SolidWorks
+Figure 2: Image of a 4-Bar Linkage drawings created on SolidWorks
 
 Overview: This project models a planar-four-bar linkage designed to convert rotary input motion into a constrained output trajectory through a system of pinned rigid links. The mechanism demonstrated understanding of kinematics constraints, link length selection, and joint articulation, which are fundamental to mechanical motion design in robotics and machinery. 
 
