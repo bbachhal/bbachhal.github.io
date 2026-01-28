@@ -4,7 +4,7 @@ url: "https://bbachhal.github.io/"
 baseurl: ""
 
 markdown: kramdown
-ins_logo: "/home/bu logo.png"
+ins_logo: "bu logo.png"
 
 remote_theme: ankitsultana/researcher@gem
 
@@ -14,7 +14,7 @@ plugins:
 tracking_id: #
 
 footer: no
-footer_url: "/home/#ins-logo"
+footer_url: "#ins-logo"
 footer_text: "back to top"
 
 # twitter_username: "bluh"
