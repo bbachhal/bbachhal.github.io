@@ -1,7 +1,7 @@
 
 title: Birinder Bachhal
 url: "https://bbachhal.github.io/"
-baseurl: "/home"
+baseurl: ""
 
 markdown: kramdown
 ins_logo: "/home/bu logo.png"
@@ -25,9 +25,9 @@ sass:
 
 nav:
  - name: "projects"
-   link: "/home/#projects"
+   link: "#projects"
  - name: "resume"
-   link: "/home/Bachhal's Resume.pdf"
+   link: "Bachhal's Resume.pdf"
  - name: "contact"
-   link: "/home/contact"
+   link: "contact"
 
