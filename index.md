@@ -55,9 +55,6 @@ Designed and built a standalone embedded temperature monitoring system integrati
 
 Analyzed real-world ECG data in MATLAB to study how resting, post-exercise, and controlled-breathing conditions affect heart rate variability. Developed signal-processing and feature-extraction algorithms to quantify cardiac cycle dynamics and visualize physiological changes.
 
-
-[_back to top_](#)
-
 ---
 
 ## CAD Projects
@@ -67,6 +64,9 @@ Analyzed real-world ECG data in MATLAB to study how resting, post-exercise, and 
 ### [CAD Projects](./projects/CAD/Cad)
 
 This section highlights a collection of CAD models and drawings focused on parametric design, manufacturability, and system-level thinking. Each of these projects emphasizes robust geometry, clear-design intent, and practical constraints such as assembly, tolerances, material behavior, and production methods. All of these projects were completed on SolidWorks 2025.
+
+[_back to top_](#)
+
 
 ---
 
