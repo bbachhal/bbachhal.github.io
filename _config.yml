@@ -14,7 +14,7 @@ plugins:
 tracking_id: #
 
 footer: no
-# footer_url: "https://github.com/realnav1234"
+# footer_url: "https://github.com/bbachhal"
 # footer_text: "Page design by Ankit Sultana"
 
 # twitter_username: "bluh"
@@ -28,6 +28,8 @@ nav:
 #    link: "/"
  - name: "projects"
    link: "/#projects"
+ - name: coursework
+   link: "/#coursework"  
  - name: "resume"
    link: "/Bachhal's Resume.pdf"
  - name: "contact"
