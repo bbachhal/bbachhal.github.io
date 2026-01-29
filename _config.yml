@@ -1,9 +1,9 @@
 title: Birinder Bachhal
 url: "https://bbachhal.github.io"
-baseurl: "/"
+baseurl: ""
 
 markdown: kramdown
-ins_logo: "/bu logo.png"
+ins_logo: "bu logo.png"
 
 remote_theme: ankitsultana/researcher@gem
 
@@ -27,10 +27,10 @@ nav:
 #  - name: "about"
 #    link: "/"
  - name: "projects"
-   link: "/#projects"
+   link: "#projects"
  - name: coursework
-   link: "/#coursework"  
+   link: "#coursework"  
  - name: "resume"
-   link: "/Bachhal's Resume.pdf"
+   link: "#Bachhal's Resume.pdf"
  - name: "contact"
-   link: "/contact"
+   link: "#contact"
