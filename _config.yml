@@ -28,9 +28,9 @@ nav:
 #    link: "/"
  - name: "projects"
    link: "#projects"
- - name: coursework
+ - name: "coursework"
    link: "#coursework"  
  - name: "resume"
-   link: "#Bachhal's Resume.pdf"
+   link: "Bachhal's Resume.pdf"
  - name: "contact"
-   link: "#contact"
+   link: "contact"
