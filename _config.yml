@@ -5,7 +5,7 @@ baseurl: "/personalportfolio"
 markdown: kramdown
 ins_logo: "bu logo.png"
 
-remote_theme: ankitsultana/researcher@gem
+remote_theme: ankitsultana/researcher
 
 plugins:
 - jekyll-remote-theme
