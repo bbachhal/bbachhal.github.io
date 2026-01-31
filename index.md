@@ -3,8 +3,6 @@ layout: default
 title: Birinder Bachhal's Portfolio
 ---
 
-# 🚨 THIS IS A TEST — IF YOU SEE THIS, THE SITE UPDATED
-
 
 <img class="profile-picture" src="IMG_0448.jpeg">
 
