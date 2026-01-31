@@ -3,6 +3,9 @@ layout: default
 title: Birinder Bachhal's Portfolio
 ---
 
+# 🚨 THIS IS A TEST — IF YOU SEE THIS, THE SITE UPDATED
+
+
 <img class="profile-picture" src="IMG_0448.jpeg">
 
 Hi! My name is Birinder Bachhal, and I am a second-year undergraduate at Boston University studying Mechanical Engineering with concentrations in Manufacturing and Robotics. I am especially interested in medical devices and wearable technologies, where mechanical design, electronics, and real-world constraints intersect.
