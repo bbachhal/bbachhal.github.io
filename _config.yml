@@ -1,6 +1,6 @@
 title: Birinder Bachhal
 url: "https://bbachhal.github.io"
-baseurl: "/personalportfolio"
+baseurl: ""
 
 markdown: kramdown
 ins_logo: "bulogo.png"
@@ -31,6 +31,6 @@ nav:
  - name: "coursework"
    link: "#coursework"  
  - name: "resume"
-   link: "/personalportfolio/BachhalResume.pdf"
+   link: "/BachhalResume.pdf"
  - name: "contact"
    link: "contact"
