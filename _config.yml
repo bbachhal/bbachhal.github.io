@@ -3,7 +3,7 @@ url: "https://bbachhal.github.io"
 baseurl: "/personalportfolio"
 
 markdown: kramdown
-ins_logo: "bu logo.png"
+ins_logo: "bulogo.png"
 
 remote_theme: ankitsultana/researcher
 
