@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Room Temperature Monitoring System
 ---
 
