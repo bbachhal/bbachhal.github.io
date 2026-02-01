@@ -3,7 +3,7 @@ url: "https://bbachhal.github.io"
 baseurl: ""
 
 markdown: kramdown
-ins_logo: "bulogo.png"
+ins_logo: "/bulogo.png"
 
 remote_theme: ankitsultana/researcher
 
