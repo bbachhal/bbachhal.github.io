@@ -1,19 +1,22 @@
 title: Birinder Bachhal
-description: Mechanical Engineering Portfolio
+description: Personal Portfolio
+url: "https://bbachhal.github.io"
+baseurl: "/personalportfolio"
 
-remote_theme: ankitsultana/researcher
+remote_theme: ankitsultana/researcher@gem
 
 plugins:
   - jekyll-remote-theme
+  - jekyll-seo-tag
 
-  # Navbar links
-nav:
-  - name: "Projects"
-    link: "/#projects"
-  - name: "Coursework"
-    link: "/#coursework"
-  - name: "Resume"
-  - link: "/BachhalResume.pdf"
-  - name: "Contact"
-    link: "/#contact"
+markdown: kramdown
 
+navbar:
+  - title: Projects
+    url: /projects/
+  - title: Resume
+    url: /resume/
+  - title: Contact
+    url: /contact/
+
+footer: false
