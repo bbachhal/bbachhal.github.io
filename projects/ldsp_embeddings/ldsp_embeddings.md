@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: ECG Signal Processing and Heart Rate Variability Analysis
 ---
 
