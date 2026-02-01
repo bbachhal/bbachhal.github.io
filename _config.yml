@@ -3,7 +3,7 @@ description: Personal Portfolio
 url: "https://bbachhal.github.io"
 baseurl: "/personalportfolio"
 
-remote_theme: ankitsultana/researcher@gem
+remote_theme: ankitsultana/researcher
 
 plugins:
   - jekyll-remote-theme
