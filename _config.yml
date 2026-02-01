@@ -1,22 +1,36 @@
 title: Birinder Bachhal
-description: Personal Portfolio
 url: "https://bbachhal.github.io"
 baseurl: "/personalportfolio"
+
+markdown: kramdown
+ins_logo: "bu logo.png"
 
 remote_theme: ankitsultana/researcher
 
 plugins:
-  - jekyll-remote-theme
-  - jekyll-seo-tag
+- jekyll-remote-theme
+- jekyll-seo-tag
 
-markdown: kramdown
+tracking_id: #
 
-navbar:
-  - title: Projects
-    url: /projects/
-  - title: Resume
-    url: /resume/
-  - title: Contact
-    url: /contact/
+footer: no
+# footer_url: "https://github.com/bbachhal"
+# footer_text: "Page design by Ankit Sultana"
 
-footer: false
+# twitter_username: "bluh"
+ 
+sass:
+    style: compressed
+    sass_dir: _sass
+
+nav:
+#  - name: "about"
+#    link: "/"
+ - name: "projects"
+   link: "#projects"
+ - name: "coursework"
+   link: "#coursework"  
+ - name: "resume"
+   link: "/personalportfolio/BachhalResume.pdf"
+ - name: "contact"
+   link: "contact"
