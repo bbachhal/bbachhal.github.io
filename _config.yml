@@ -5,3 +5,15 @@ remote_theme: ankitsultana/researcher
 
 plugins:
   - jekyll-remote-theme
+
+  # Navbar links
+nav:
+  - name: "Projects"
+    link: "/#projects"
+  - name: "Coursework"
+    link: "/#coursework"
+  - name: "Resume"
+  - link: "/BachhalResume.pdf"
+  - name: "Contact"
+    link: "/#contact"
+
