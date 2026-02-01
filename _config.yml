@@ -1,36 +1,7 @@
 title: Birinder Bachhal
-url: "https://bbachhal.github.io"
-baseurl: ""
-
-markdown: kramdown
-ins_logo: "/bulogo.png"
+description: Mechanical Engineering Portfolio
 
 remote_theme: ankitsultana/researcher
 
 plugins:
-- jekyll-remote-theme
-- jekyll-seo-tag
-
-tracking_id: #
-
-footer: no
-# footer_url: "https://github.com/bbachhal"
-# footer_text: "Page design by Ankit Sultana"
-
-# twitter_username: "bluh"
- 
-sass:
-    style: compressed
-    sass_dir: _sass
-
-nav:
-#  - name: "about"
-#    link: "/"
- - name: "projects"
-   link: "/#projects"
- - name: "coursework"
-   link: "/#coursework"  
- - name: "resume"
-   link: "/BachhalResume.pdf"
- - name: "contact"
-   link: "/#contact"
+  - jekyll-remote-theme
