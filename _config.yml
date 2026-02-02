@@ -1,16 +1,13 @@
-title: Birinder Bachhal
 url: "https://bbachhal.github.io"
-baseurl: "/personalportfolio"
-
-markdown: kramdown
-ins_logo: "bu logo.png"
+baseurl: ""
 
 remote_theme: ankitsultana/researcher@gem
 
 plugins:
-- github-pages
-- jekyll-remote-theme
-- jekyll-seo-tag
+  - github-pages
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
 
 tracking_id: #
 
