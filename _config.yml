@@ -8,6 +8,9 @@ plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
 
+  
+ins_logo: "/bulogo.png"
+
 
 tracking_id: #
 
@@ -22,3 +25,14 @@ sass:
     sass_dir: _sass
     
 footer: no
+
+nav:
+  - name: "Projects"
+    link: "/#projects"
+  - name: "Coursework"
+    link: "/#coursework"
+  - name: "Resume"
+    link: "/BachhalResume.pdf"
+  - name: "Contact"
+    link: "/contact"
+
