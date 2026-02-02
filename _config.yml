@@ -5,9 +5,10 @@ baseurl: "/personalportfolio"
 markdown: kramdown
 ins_logo: "bu logo.png"
 
-remote_theme: ankitsultana/researcher
+remote_theme: ankitsultana/researcher@gem
 
 plugins:
+- github-pages
 - jekyll-remote-theme
 - jekyll-seo-tag
 
@@ -22,15 +23,5 @@ footer: no
 sass:
     style: compressed
     sass_dir: _sass
-
-nav:
-#  - name: "about"
-#    link: "/"
- - name: "projects"
-   link: "#projects"
- - name: "coursework"
-   link: "#coursework"  
- - name: "resume"
-   link: "/personalportfolio/BachhalResume.pdf"
- - name: "contact"
-   link: "contact"
+    
+footer: no
