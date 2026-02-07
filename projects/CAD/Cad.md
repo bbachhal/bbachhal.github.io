@@ -35,7 +35,7 @@ Overview: This project models a mechanical ball-valve assembly designed to regul
 
 <img src="FINALGearbOX.png"/> 
 
-Figure 2: Image of Gearbox drawing on SolidWorks
+Figure 2: Image of Gearbox on SolidWorks
 
 Overview: This project models a compact enclosed gearbox designed to transmit and reduce rotational motion through an internal gear train housed within a rigid, bolted enclosure. The design emphasizes shaft alignment, load containment, and serviceable assembly, incorporating features such as reinforced housing, flanged covers, and accessible fasteners suitable for CNC manufacturing.
 
@@ -50,7 +50,7 @@ Figure 1: Image of 4-Bar Linkage model created on SolidWorks
 <img src="4BAR-DRAW1.png"/> 
 <img src="4BAR-DRAW2.png"/> 
 
-Figure 2: Image of a 4-Bar Linkage drawings created on SolidWorks
+Figure 2: Image of a 4-Bar Linkage drawing created on SolidWorks
 
 Overview: This project models a planar four-bar linkage designed to convert rotary input motion into a constrained output trajectory through a system of pinned rigid links. The mechanism demonstrates an understanding of kinematic constraints, link length selection, and joint articulation, which are fundamental to mechanical motion design in robotics and machinery.
 
