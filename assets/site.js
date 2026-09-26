@@ -1,4 +1,4 @@
-/* Birinder Bachhal — small, deliberate. No libraries.
+/* Birinder Bachhal. Small and deliberate, no libraries.
    Nothing here is required for content to be visible. */
 (function () {
   'use strict';

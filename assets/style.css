@@ -1,4 +1,4 @@
-/* Birinder Bachhal — portfolio
+/* Birinder Bachhal, portfolio
    Manila paper, warm black, oxide red. Editorial, not template. */
 :root{
   --paper:#EBE6DA; --paper2:#F5F1E8; --card:#FDFBF5;
@@ -22,7 +22,7 @@ img{max-width:100%;display:block}
 h1,h2,h3,.d{font-family:var(--disp);font-variation-settings:var(--wonk);font-weight:650}
 .m{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
 
-/* marker highlight — the one flourish */
+/* marker highlight: the one flourish */
 mark{background:none;color:inherit;position:relative;white-space:nowrap}
 mark::before{content:"";position:absolute;left:-.16em;right:-.16em;top:.12em;bottom:.04em;
   background:var(--mark);z-index:-1;transform-origin:left;
@@ -112,7 +112,7 @@ section{padding:78px 0}
 .job ul{list-style:none;max-width:66ch}
 .job li{position:relative;padding-left:26px;margin-bottom:12px;font-size:17px;
   color:var(--ink2);line-height:1.62}
-.job li::before{content:"—";position:absolute;left:0;top:0;color:var(--rust);font-family:var(--body)}
+.job li::before{content:"";position:absolute;left:0;top:.72em;width:15px;height:1px;background:var(--rust)}
 .kit{margin-top:22px;font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;
   color:var(--ink3);line-height:2.1;max-width:66ch;text-transform:uppercase}
 .kit s{text-decoration:none;color:var(--ink2)}
@@ -122,7 +122,7 @@ section{padding:78px 0}
 /* ---------------- projects ---------------- */
 .feat{display:block;border-top:1px solid var(--ink);padding-top:30px;margin-bottom:8px}
 .feat .ph{overflow:hidden;position:relative;background:var(--rule)}
-.feat .ph img{width:100%;aspect-ratio:21/9;max-height:540px;object-fit:cover;object-position:50% 42%;
+.feat .ph img{width:100%;aspect-ratio:21/9;max-height:540px;object-fit:cover;object-position:50% 94%;
   transition:transform 1.1s var(--ease);filter:saturate(.92)}
 .feat:hover .ph img{transform:scale(1.025)}
 .feat .cap{display:grid;grid-template-columns:1fr 360px;gap:46px;align-items:start;padding-top:24px}
@@ -137,7 +137,8 @@ section{padding:78px 0}
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:46px;margin-top:64px}
 .duo article{border-top:1px solid var(--ink);padding-top:26px}
 .duo .ph{overflow:hidden;background:var(--rule)}
-.duo .ph img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1s var(--ease)}
+.duo .ph img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 50%;transition:transform 1s var(--ease)}
+.duo .ph img.nose{object-position:0% 50%;background:var(--paper2)}
 .duo article:hover .ph img{transform:scale(1.03)}
 .duo h3{font-size:clamp(23px,2.7vw,32px);letter-spacing:-.028em;margin:20px 0 10px;line-height:1.06}
 .duo .k{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;
@@ -218,7 +219,7 @@ article.doc p{margin-bottom:19px;font-size:18px;line-height:1.7;color:#2a251f}
 article.doc ul{list-style:none;margin:0 0 20px}
 article.doc li{position:relative;padding-left:26px;margin-bottom:11px;font-size:17.5px;
   line-height:1.62;color:#2a251f}
-article.doc li::before{content:"—";position:absolute;left:0;color:var(--rust)}
+article.doc li::before{content:"";position:absolute;left:0;top:.78em;width:15px;height:1px;background:var(--rust)}
 article.doc a{color:var(--rust);border-bottom:1px solid rgba(188,63,24,.35)}
 article.doc a:hover{border-bottom-color:var(--rust)}
 figure{margin:40px 0 44px}
