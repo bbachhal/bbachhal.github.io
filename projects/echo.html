@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ECHO &mdash; Birinder Bachhal</title>
+<meta name="description" content="ECHO: throwable rescue nodes that find people in collapsed structures by knocking and listening, not just looking for heat. Concept, mechanical design and CAD.">
+<meta name="theme-color" content="#f5f4ef">
+<meta property="og:title" content="ECHO &mdash; Birinder Bachhal">
+<meta property="og:description" content="Throwable rescue nodes that knock, listen, and relay over a LoRa mesh.">
+<meta property="og:image" content="https://bbachhal.github.io/projects/echo/echo_section.svg">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<div id="grid"></div>
+<div id="noise"></div>
+<div id="bar"></div>
+<div id="chair"><i class="h"></i><i class="v"></i><b></b></div>
+
+<nav class="nav"><div class="wrap">
+  <a class="id" href="/"><em></em> Birinder Bachhal</a>
+  <ul>
+    <li><a href="/#experience">Experience</a></li>
+    <li><a href="/#work">Work</a></li>
+    <li><a href="/#capabilities">Capabilities</a></li>
+    <li><a href="/#contact">Contact</a></li>
+    <li><a class="pill" href="/resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+  </ul>
+</div></nav>
+
+<header class="ph"><div class="wrap">
+  <a class="bk" href="/#work">&larr; Index of work</a>
+  <div style="margin-bottom:18px"><span class="wip">Work in progress &middot; design phase</span></div>
+  <h1>ECHO</h1>
+  <p class="dek">Throwable rescue nodes that find people trapped in collapsed structures by
+  talking to them, not just looking for heat.</p>
+  <div class="phm rv">
+    <div><span>Status</span><b>Design and CAD complete<br>Not yet built</b></div>
+    <div><span>Role</span><b>System concept, build plan,<br>mechanical design</b></div>
+    <div><span>Target</span><b>Code Metal Forge<br>Hackathon 2026</b></div>
+    <div><span>CAD</span><b>14-part assembly<br>STEP AP214</b></div>
+  </div>
+</div></header>
+
+<div class="wrap"><article>
+
+<div class="note2 rv"><b>Where this stands</b>
+<p>Everything on this page is design work. The concept, the system architecture, the bill of
+materials and the full mechanical assembly exist; no hardware has been built yet. I am
+publishing it because the reasoning is the part worth showing, and because I would rather be
+judged on a design I can defend than on a photo of something finished.</p></div>
+
+<h2>The problem</h2>
+<p>When a building collapses, rescuers cannot see into voids, cell networks are down, and radios
+struggle through rubble. Thermal sensing alone has a specific blind spot: it can tell you a warm
+body is present, but it cannot tell you whether that person is conscious. That distinction is
+exactly what drives triage, so a sensor that cannot make it leaves the hardest decision
+unanswered.</p>
+
+<h2>The concept</h2>
+<p>Responders throw or place small nodes onto the debris. Each node knocks a pattern into the
+structure, listens through a contact sensor for taps coming back, and passively watches for
+breathing, body heat, phones and gas. Nodes relay short prioritised alerts over a LoRa mesh to a
+laptop at the perimeter.</p>
+<p>The nodes are weighted darts, so they fly and land nose-first and the contact sensor actually
+meets the debris. If a radio link drops, a node holds its alerts until a responder carrying a
+handheld collector walks back within range.</p>
+<p>The reason I like this idea is that it is not a new procedure. Rescue teams already knock,
+call out and listen. ECHO automates a routine they train on, and adds a lifeline through the
+victim's own phone.</p>
+
+<div class="kv rv">
+  <div><span>Locate without GPS or cell</span><b>Tap loudness and arrival order across nodes give a dig zone</b></div>
+  <div><span>Detect life and hazards</span><b>Tapping, mmWave breathing, thermal, phone presence, gas/VOC</b></div>
+  <div><span>Map changing conditions</span><b>Live dashboard of nodes, victims, gas, and nodes gone silent</b></div>
+  <div><span>Degraded comms</span><b>~20-byte packets, 3-hop mesh, store-and-forward, data mule</b></div>
+</div>
+
+<h2>The node</h2>
+<p>I modelled the node as a 14-part assembly. The constraint that drives the whole geometry is
+that a contact sensor is worthless unless it is pressed against the structure, which means the
+body has to land nose-first, every time, after being thrown by a tired person onto an uneven
+pile.</p>
+
+<figure class="rv"><img src="/projects/echo/echo_section.svg" alt="Sectioned view of the ECHO node showing the nose stack, solenoid, steel shot ring, battery, board and fins">
+<figcaption><span class="fignum">FIG. 01</span>Section through the node. Numbers match the part
+names in the CAD assembly. Schematic proportions.</figcaption></figure>
+
+<h3>Why the nose is a rigid stack</h3>
+<p>From the tip: flat rubber contact pad, piezo disc, solid steel strike plate. Nothing loose
+sits anywhere in that stack. Any compliance between the piezo and the structure shows up as lost
+signal, and the taps we are trying to hear are already close to the noise floor.</p>
+<p>The solenoid lies along the long axis with its plunger pointing straight at the strike plate,
+so the knock energy goes into the structure rather than into the housing.</p>
+
+<h3>Why the steel shot sits in a ring</h3>
+<p>This is the detail I am most pleased with. The node needs mass in the nose for flight
+stability, and it needs to not bounce when it lands. Loose steel shot solves both, the way a
+dead-blow hammer does. But if you put the shot <em>in front of</em> the strike plate, it damps
+the very knock you are trying to deliver.</p>
+<p>So the shot fills only a ring-shaped pocket around the strike plate, never ahead of it. The
+landing bounce dies; the knock does not.</p>
+
+<h3>Stability</h3>
+<ul>
+<li>Centre of mass sits at least one body diameter ahead of the centre of pressure. Solenoid, shot, magnet and battery all live in the front half.</li>
+<li>Four solid TPU fins, slightly canted to add a stabilising spin.</li>
+<li>A neodymium magnet ring flush with the nose rim clamps the pad down hard on steel surfaces, which is where coupling is best anyway. It is spaced from the plunger with plastic so it does not drag it.</li>
+<li>If it wobbles in testing, the fix is more nose weight and bigger fins, not a redesign. That call is written into the build plan on purpose, because 2&nbsp;a.m. is a bad time to start over.</li>
+</ul>
+<p>The validation plan is deliberately boring: PVC-tube mockups at target weight, twenty throws,
+count how many land nose-first. A roughly 350&nbsp;g dart with a hard nose can injure someone, so
+it only ever gets thrown at the pile.</p>
+
+<h2>Knock, blank, listen</h2>
+<p>A node cannot hear its own knock. The solenoid firing saturates its own piezo completely, so
+the firmware blanks that input for 150&nbsp;ms after each pulse and lets the <em>other</em> nodes
+do the listening for that knock. That one constraint is why this only works as a network.</p>
+
+<figure class="rv"><img src="/projects/echo/echo_timing.svg" alt="Timing diagram showing three knocks, blanking intervals, the listen window and reply taps">
+<figcaption><span class="fignum">FIG. 02</span>Knock and listen cycle: three pulses 0.5&nbsp;s
+apart, 150&nbsp;ms blanking on the local piezo, then a 4&nbsp;s listen window.</figcaption></figure>
+
+<p>Detection runs a band-pass from 100 to 2000&nbsp;Hz, takes the envelope, and counts sharp
+peaks above an adaptive threshold set from the rolling background. Peaks that also show up on the
+air microphone at similar strength are thrown out, because that is the room, not the rubble. A
+reply is two to four taps spaced 0.2 to 1.5&nbsp;s apart inside the window.</p>
+<p>Localisation compares peak amplitude across three or more nodes and reports a <em>zone</em>,
+not a coordinate. Claiming precision I cannot deliver would be worse than useless to someone
+deciding where to dig.</p>
+
+<h2>Getting the message out</h2>
+<p>The comms problem is the one most likely to fail in a real collapse, so the design assumes it
+will. Packets are about 20 bytes. Flooding with a hop limit of three and duplicate suppression by
+message ID. Every node keeps a priority queue, and anything it cannot send it stores.</p>
+
+<figure class="rv"><img src="/projects/echo/echo_mesh.svg" alt="Architecture diagram of the ECHO LoRa mesh, base station, dashboard and handheld collector">
+<figcaption><span class="fignum">FIG. 03</span>Mesh architecture. Solid paths are LoRa hops; the
+dashed path is a responder physically carrying stored alerts back when the mesh
+breaks.</figcaption></figure>
+
+<p>One node runs an open access point called SOS RESCUE with a DNS server that redirects every
+request to a single page with three large buttons: <em>I'm hurt</em>, <em>I can move</em>,
+<em>Others with me</em>. A press becomes a top-priority packet. Phone presence elsewhere is
+detected by logging Wi-Fi probe requests and their signal strength, counting devices and never
+storing MAC addresses.</p>
+
+<h2>Triage is the output</h2>
+<p>The system does not report sensor values. It reports three labels, because that is what a
+person standing on rubble can act on.</p>
+<div class="kv rv">
+  <div><span>Responding</span><b>Tapped back inside the listen window</b></div>
+  <div><span>Signs of life</span><b>Breathing on radar, or thermal blob, or a phone present</b></div>
+  <div><span>Possible</span><b>Weak or single-channel indication only</b></div>
+  <div><span>Hazard</span><b>VOC jump above baseline, or node over-temperature</b></div>
+</div>
+
+<h2>What I expect to go wrong</h2>
+<ul>
+<li><strong>A demo room is loud.</strong> Air-mic subtraction helps, pressing the sensors harder into the pile helps more, and calling a "quiet, listening" pause is what real teams do anyway.</li>
+<li><strong>A node lands on its side.</strong> Thermal, radar and phone channels still work; only the knocker is compromised. There is a lanyard so it can be retrieved and re-thrown.</li>
+<li><strong>The solenoid browns out the microcontroller.</strong> A boost converter trickle-charges a 2200&nbsp;&micro;F capacitor and each knock dumps that, rather than pulling the coil current through the logic supply.</li>
+<li><strong>A node breaks on a throw.</strong> Bring a spare, place it by hand, show the throw-test footage.</li>
+</ul>
+<p>The cut list is written in advance and in order: spoken prompt, then handheld collector, then
+phone sniffing, then the second thermal camera. What never gets cut is knock-and-tap detection,
+the mesh, the dashboard and the triage labels, because those four things are the idea.</p>
+
+<h2>Files</h2>
+<p>The full assembly and a half-section, both STEP AP214:</p>
+<ul>
+<li><a href="/projects/echo/rescue_node_full_AP214.step">rescue_node_full_AP214.step</a> &mdash; complete 14-part assembly</li>
+<li><a href="/projects/echo/rescue_node_half_AP214.step">rescue_node_half_AP214.step</a> &mdash; half-section for internal layout review</li>
+</ul>
+
+</article></div>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div class="rv">
+      <h2>Let's build<br><em>something.</em></h2>
+      <p>Looking for a Summer 2027 engineering internship in robotics, manufacturing,
+      aerospace, or medical devices. U.S. citizen, export-control eligible, happy to relocate.</p>
+    </div>
+    <ul class="fl rv">
+      <li><span class="t">Email</span><a href="mailto:bachhalbirinder1@gmail.com">bachhalbirinder1@gmail.com</a></li>
+      <li><span class="t">LinkedIn</span><a href="https://www.linkedin.com/in/birinder-bachhal/" target="_blank" rel="noopener">birinder-bachhal</a></li>
+      <li><span class="t">Document</span><a href="/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
+      <li><span class="t">Index</span><a href="/#work">All projects</a></li>
+    </ul>
+  </div>
+  <div class="stamp">
+    <div><span>Drawn by</span><b>B. BACHHAL</b></div>
+    <div><span>Discipline</span><b>MECH ENG</b></div>
+    <div><span>Revision</span><b id="dstamp">2026</b></div>
+    <div><span>Sheet</span><b>1 OF 1</b></div>
+  </div>
+</div></footer>
+
+<script src="/assets/site.js"></script>
+</body>
+</html>
