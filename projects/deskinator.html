@@ -3,40 +3,38 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Deskinator &mdash; Birinder Bachhal</title>
+<title>The Deskinator — Birinder Bachhal</title>
 <meta name="description" content="An autonomous desktop-cleaning robot: electromechanical design, stepper drive selection, sensor integration, a custom vacuum system, and EKF-based SLAM.">
-<meta name="theme-color" content="#f5f4ef">
-<meta property="og:title" content="The Deskinator &mdash; Birinder Bachhal">
+<meta name="theme-color" content="#EBE6DA">
+<meta property="og:title" content="The Deskinator — Birinder Bachhal">
 <meta property="og:description" content="An autonomous desktop-cleaning robot: electromechanical design, stepper drive selection, sensor integration, a custom vacuum system, and EKF-based SLAM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,0..100,0..1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
-<div id="grid"></div>
-<div id="noise"></div>
-<div id="bar"></div>
-<div id="chair"><i class="h"></i><i class="v"></i><b></b></div>
-
 <nav class="nav"><div class="wrap">
-  <a class="id" href="/"><em></em> Birinder Bachhal</a>
+  <a class="me" href="/">Birinder Bachhal</a>
   <ul>
-    <li><a href="/#experience">Experience</a></li>
     <li><a href="/#work">Work</a></li>
-    <li><a href="/#capabilities">Capabilities</a></li>
+    <li><a href="/#experience">Experience</a></li>
+    <li><a href="/#skills">Skills</a></li>
+    <li><a href="/resume.pdf" target="_blank" rel="noopener">R&eacute;sum&eacute;</a></li>
     <li><a href="/#contact">Contact</a></li>
-    <li><a class="pill" href="/resume.pdf" target="_blank" rel="noopener">Resume</a></li>
   </ul>
 </div></nav>
 
-<header class="ph"><div class="wrap">
-  <a class="bk" href="/#work">&larr; Index of work</a>
+<header class="ph2"><div class="wrap">
+  <a class="bk" href="/#work">&larr; Back to work</a>
   <h1>The Deskinator</h1>
   <p class="dek">A fully autonomous desktop-cleaning robot that detects boundaries, plans coverage paths, and removes debris without human intervention, built under strict time, safety, and cost constraints.</p>
-  <div class="phm rv"><div><span>Role</span><b>Mechanical and Robotics Systems Lead</b></div><div><span>Timeline</span><b>Sep 2025 &ndash; Dec 2025</b></div><div><span>Focus</span><b>Electromechanical design, motion systems, embedded hardware, autonomy</b></div><div><span>Links</span><b><a href="https://drive.google.com/file/d/17UYgUKBP8n6Xr2Mj3MLHvpmgbl_ftx7z/view?usp=sharing" target="_blank" rel="noopener">Video</a> &middot; <a href="https://docs.google.com/document/d/1J7fj0Xwd_tkpN8rXVOZPwmj2ORiROpX2GtS6bQvDz3A/edit?usp=sharing" target="_blank" rel="noopener">Technical report</a></b></div></div>
+  <div class="facts"><div><span>Role</span><b>Mechanical and Robotics Systems Lead</b></div><div><span>Timeline</span><b>Sep 2025 &ndash; Dec 2025</b></div><div><span>Focus</span><b>Electromechanical design, motion systems, embedded hardware, autonomy</b></div><div><span>Links</span><b><a href="https://drive.google.com/file/d/17UYgUKBP8n6Xr2Mj3MLHvpmgbl_ftx7z/view?usp=sharing" target="_blank" rel="noopener">Video</a> &middot; <a href="https://docs.google.com/document/d/1J7fj0Xwd_tkpN8rXVOZPwmj2ORiROpX2GtS6bQvDz3A/edit?usp=sharing" target="_blank" rel="noopener">Technical report</a></b></div></div>
 </div></header>
 
-<div class="wrap"><article>
-<figure class="rv"><img src="/projects/deskinator/Deskinator_Main.png" alt=""><figcaption><span class="fignum">FIG. 01</span>The completed Deskinator.</figcaption></figure>
+<div class="wrap"><article class="doc">
+<figure><img class="wipe" src="/projects/deskinator/Deskinator_Main.png" alt=""><figcaption><span class="fignum">FIG. 01</span>The completed Deskinator.</figcaption></figure>
 <h2>Overview and Motivation</h2>
 <p>This project explores how an autonomous electromechanical system can be designed to reliably
 perform full-surface coverage in a constrained, human-facing environment. The Deskinator was built
@@ -59,7 +57,7 @@ layout.</p>
 5&nbsp;V, to separately power high-load actuators and sensitive electronics. Wiring was routed to
 minimize EMI and mechanical strain during motion while staying modular for debugging, replacement,
 and testing.</p>
-<figure class="rv"><img src="/projects/deskinator/Deskinator_Assem.png" alt=""><figcaption><span class="fignum">FIG. 02</span>CAD of the Deskinator assembly.</figcaption></figure><figure class="rv"><img src="/projects/deskinator/Deskinator_Fristing.png" alt=""><figcaption><span class="fignum">FIG. 03</span>Full wiring schematic.</figcaption></figure>
+<figure><img class="wipe" src="/projects/deskinator/Deskinator_Assem.png" alt=""><figcaption><span class="fignum">FIG. 02</span>CAD of the Deskinator assembly.</figcaption></figure><figure><img class="wipe" src="/projects/deskinator/Deskinator_Fristing.png" alt=""><figcaption><span class="fignum">FIG. 03</span>Full wiring schematic.</figcaption></figure>
 <h2>Motor Selection and Drive System</h2>
 <p>I selected NEMA 17 stepper motors paired with A4988 stepper drivers to achieve precise,
 repeatable motion while staying desk-safe. During development we replaced an initial DC motor and
@@ -68,7 +66,7 @@ H-bridge setup after identifying thermal foldback and a loss of microstepping.</
 the motors at a consistent microstepping limit. Before selecting the NEMA 17s, we ran extensive
 testing measuring angular error over time, prioritizing repeatability and accuracy. Many of the
 steppers we tested did not meet the small angular error required for safe operation.</p>
-<figure class="rv"><img src="/projects/deskinator/Deskinator_NEMAmodeling.png" alt=""><figcaption><span class="fignum">FIG. 04</span>Preliminary testing of NEMA 17 angular error, showing error extremely close to zero along with basic statistics.</figcaption></figure>
+<figure><img class="wipe" src="/projects/deskinator/Deskinator_NEMAmodeling.png" alt=""><figcaption><span class="fignum">FIG. 04</span>Preliminary testing of NEMA 17 angular error, showing error extremely close to zero along with basic statistics.</figcaption></figure>
 <p>The result was smooth, jitter-free differential drive motion with reliable odometry for
 autonomous navigation.</p>
 
@@ -78,16 +76,16 @@ accurate edge detection and obstacle avoidance. After testing a range of infrare
 sensors, we selected the APDS9960 as the primary edge-detection hardware. One APDS9960 also drives
 gesture-based touchless activation in the final design. The central compute unit was a Raspberry Pi
 4B.</p>
-<figure class="rv"><img src="/projects/deskinator/Deskinator_APDStest.png" alt=""><figcaption><span class="fignum">FIG. 05</span>Preliminary testing of the APDS9960 proximity sensor at varying distances from an obstacle.</figcaption></figure><figure class="rv"><img src="/projects/deskinator/Deskinator_sensorcad.png" alt=""><figcaption><span class="fignum">FIG. 06</span>CAD of the sensor mounts. These flaps extend from the front of the main frame so the robot detects the desk edge before its body reaches it.</figcaption></figure>
+<figure><img class="wipe" src="/projects/deskinator/Deskinator_APDStest.png" alt=""><figcaption><span class="fignum">FIG. 05</span>Preliminary testing of the APDS9960 proximity sensor at varying distances from an obstacle.</figcaption></figure><figure><img class="wipe" src="/projects/deskinator/Deskinator_sensorcad.png" alt=""><figcaption><span class="fignum">FIG. 06</span>CAD of the sensor mounts. These flaps extend from the front of the main frame so the robot detects the desk edge before its body reaches it.</figcaption></figure>
 <h2>Custom Vacuum System</h2>
 <p>Of everything I designed for the Deskinator, the vacuum system was the hardest, and the final
 version worked flawlessly. A vacuum scoop mounts to the bottom of the main frame, powered by a
 12&nbsp;V DC fan, with a custom chute geometry directing debris into a removable container.</p>
-<div class="note2"><b>Result</b>
+<div class="pull"><b>Result</b>
 <p>Testing showed <b>99.4% debris removal</b> while staying inside project cost and weight limits.
 The detachable container was key to the usability goal: minimal maintenance, no manual movement, no
 manual control.</p></div>
-<figure class="rv"><img src="/projects/deskinator/Deskinator_vacuumCAD.png" alt=""><figcaption><span class="fignum">FIG. 07</span>CAD of the vacuum and chute system, viewed from the underside of the robot.</figcaption></figure>
+<figure><img class="wipe" src="/projects/deskinator/Deskinator_vacuumCAD.png" alt=""><figcaption><span class="fignum">FIG. 07</span>CAD of the vacuum and chute system, viewed from the underside of the robot.</figcaption></figure>
 <h2>Manufacturing Process</h2>
 <p>I manufactured every component. The wheels were laser-cut from stock plywood on an Epilog laser
 cutter and covered with rubber tread. The main body was 3D printed in PLA on an FDM printer. The
@@ -107,29 +105,25 @@ and sensing limitations, including wheel slip, motor resolution, and sensor nois
 iterative testing I tuned filter parameters and motion constraints to improve localization
 stability, letting the robot hold accurate positioning across full cleaning cycles with no external
 markers or beacons.</p>
-<figure class="rv"><img src="/projects/deskinator/Deskinator_wallfollower.png" alt=""><figcaption><span class="fignum">FIG. 08</span>Wall follower used to compute the desk boundary from detected edges. This was our initialization path.</figcaption></figure><figure class="rv"><img src="/projects/deskinator/Deskinator_lawnmower.png" alt=""><figcaption><span class="fignum">FIG. 09</span>Computed and followed Boustrophedon path. This lawnmower pattern was the cleaning path.</figcaption></figure><figure class="rv"><img src="/projects/deskinator/Deskinator_time.png" alt=""><figcaption><span class="fignum">FIG. 10</span>Distribution of time to complete boundary discovery and total cycle, with Gaussian fitting.</figcaption></figure>
+<figure><img class="wipe" src="/projects/deskinator/Deskinator_wallfollower.png" alt=""><figcaption><span class="fignum">FIG. 08</span>Wall follower used to compute the desk boundary from detected edges. This was our initialization path.</figcaption></figure><figure><img class="wipe" src="/projects/deskinator/Deskinator_lawnmower.png" alt=""><figcaption><span class="fignum">FIG. 09</span>Computed and followed Boustrophedon path. This lawnmower pattern was the cleaning path.</figcaption></figure><figure><img class="wipe" src="/projects/deskinator/Deskinator_time.png" alt=""><figcaption><span class="fignum">FIG. 10</span>Distribution of time to complete boundary discovery and total cycle, with Gaussian fitting.</figcaption></figure>
 </article></div>
 
 <footer><div class="wrap">
-  <div class="fgrid">
-    <div class="rv">
-      <h2>Let's build<br><em>something.</em></h2>
-      <p>Looking for a Summer 2027 engineering internship in robotics, manufacturing,
-      aerospace, or medical devices. U.S. citizen, export-control eligible, happy to relocate.</p>
+  <div class="fg">
+    <div>
+      <h2>Let's build <i>something.</i></h2>
+      <p>I'm looking for a Summer 2027 engineering internship &mdash; robotics, manufacturing,
+      aerospace, or medical devices. U.S. citizen, export-control eligible, and I'll go wherever
+      the work is.</p>
     </div>
-    <ul class="fl rv">
-      <li><span class="t">Email</span><a href="mailto:bachhalbirinder1@gmail.com">bachhalbirinder1@gmail.com</a></li>
-      <li><span class="t">LinkedIn</span><a href="https://www.linkedin.com/in/birinder-bachhal/" target="_blank" rel="noopener">birinder-bachhal</a></li>
-      <li><span class="t">Document</span><a href="/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
-      <li><span class="t">Index</span><a href="/#work">All projects</a></li>
+    <ul>
+      <li><span>Email</span><a href="mailto:bachhalbirinder1@gmail.com">bachhalbirinder1@gmail.com</a></li>
+      <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/birinder-bachhal/" target="_blank" rel="noopener">birinder-bachhal</a></li>
+      <li><span>R&eacute;sum&eacute;</span><a href="/resume.pdf" target="_blank" rel="noopener">Download PDF</a></li>
+      <li><span>Index</span><a href="/#work">All projects</a></li>
     </ul>
   </div>
-  <div class="stamp">
-    <div><span>Drawn by</span><b>B. BACHHAL</b></div>
-    <div><span>Discipline</span><b>MECH ENG</b></div>
-    <div><span>Revision</span><b id="dstamp">2026</b></div>
-    <div><span>Sheet</span><b>1 OF 1</b></div>
-  </div>
+  <div class="sig"><span>Birinder Bachhal &middot; B.S. Mechanical Engineering &middot; Boston University</span><span>Built by hand, Boston</span></div>
 </div></footer>
 
 <script src="/assets/site.js"></script>

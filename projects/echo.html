@@ -3,49 +3,47 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ECHO &mdash; Birinder Bachhal</title>
-<meta name="description" content="ECHO: throwable rescue nodes that find people in collapsed structures by knocking and listening, not just looking for heat. Concept, mechanical design and CAD.">
-<meta name="theme-color" content="#f5f4ef">
-<meta property="og:title" content="ECHO &mdash; Birinder Bachhal">
-<meta property="og:description" content="Throwable rescue nodes that knock, listen, and relay over a LoRa mesh.">
-<meta property="og:image" content="https://bbachhal.github.io/projects/echo/echo_section.svg">
+<title>ECHO — Birinder Bachhal</title>
+<meta name="description" content="ECHO: throwable rescue nodes that knock, listen for taps back, and relay over a LoRa mesh. Concept, mechanical design and CAD.">
+<meta name="theme-color" content="#EBE6DA">
+<meta property="og:title" content="ECHO — Birinder Bachhal">
+<meta property="og:description" content="ECHO: throwable rescue nodes that knock, listen for taps back, and relay over a LoRa mesh. Concept, mechanical design and CAD.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,0..100,0..1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
-<div id="grid"></div>
-<div id="noise"></div>
-<div id="bar"></div>
-<div id="chair"><i class="h"></i><i class="v"></i><b></b></div>
-
 <nav class="nav"><div class="wrap">
-  <a class="id" href="/"><em></em> Birinder Bachhal</a>
+  <a class="me" href="/">Birinder Bachhal</a>
   <ul>
-    <li><a href="/#experience">Experience</a></li>
     <li><a href="/#work">Work</a></li>
-    <li><a href="/#capabilities">Capabilities</a></li>
+    <li><a href="/#experience">Experience</a></li>
+    <li><a href="/#skills">Skills</a></li>
+    <li><a href="/resume.pdf" target="_blank" rel="noopener">R&eacute;sum&eacute;</a></li>
     <li><a href="/#contact">Contact</a></li>
-    <li><a class="pill" href="/resume.pdf" target="_blank" rel="noopener">Resume</a></li>
   </ul>
 </div></nav>
 
-<header class="ph"><div class="wrap">
-  <a class="bk" href="/#work">&larr; Index of work</a>
-  <div style="margin-bottom:18px"><span class="wip">Work in progress &middot; design phase</span></div>
+<header class="ph2"><div class="wrap">
+  <a class="bk" href="/#work">&larr; Back to work</a>
+  <div style="margin-bottom:20px"><span class="flag">In progress &middot; design phase</span></div>
   <h1>ECHO</h1>
-  <p class="dek">Throwable rescue nodes that find people trapped in collapsed structures by
-  talking to them, not just looking for heat.</p>
-  <div class="phm rv">
-    <div><span>Status</span><b>Design and CAD complete<br>Not yet built</b></div>
-    <div><span>Role</span><b>System concept, build plan,<br>mechanical design</b></div>
+  <p class="dek">Throwable nodes that find people under collapsed buildings by talking to them,
+  not just looking for heat.</p>
+  <div class="facts">
+    <div><span>Status</span><b>Design and CAD done.<br>Nothing built yet.</b></div>
+    <div><span>My part</span><b>Concept, build plan,<br>mechanical design</b></div>
     <div><span>Target</span><b>Code Metal Forge<br>Hackathon 2026</b></div>
     <div><span>CAD</span><b>14-part assembly<br>STEP AP214</b></div>
   </div>
 </div></header>
 
-<div class="wrap"><article>
+<div class="wrap"><article class="doc">
 
-<div class="note2 rv"><b>Where this stands</b>
+
+<div class="pull"><b>Where this stands</b>
 <p>Everything on this page is design work. The concept, the system architecture, the bill of
 materials and the full mechanical assembly exist; no hardware has been built yet. I am
 publishing it because the reasoning is the part worth showing, and because I would rather be
@@ -70,7 +68,7 @@ handheld collector walks back within range.</p>
 call out and listen. ECHO automates a routine they train on, and adds a lifeline through the
 victim's own phone.</p>
 
-<div class="kv rv">
+<div class="tbl">
   <div><span>Locate without GPS or cell</span><b>Tap loudness and arrival order across nodes give a dig zone</b></div>
   <div><span>Detect life and hazards</span><b>Tapping, mmWave breathing, thermal, phone presence, gas/VOC</b></div>
   <div><span>Map changing conditions</span><b>Live dashboard of nodes, victims, gas, and nodes gone silent</b></div>
@@ -83,7 +81,7 @@ that a contact sensor is worthless unless it is pressed against the structure, w
 body has to land nose-first, every time, after being thrown by a tired person onto an uneven
 pile.</p>
 
-<figure class="rv"><img src="/projects/echo/echo_section.svg" alt="Sectioned view of the ECHO node showing the nose stack, solenoid, steel shot ring, battery, board and fins">
+<figure><img class="wipe" src="/projects/echo/echo_section.svg" alt="Sectioned view of the ECHO node showing the nose stack, solenoid, steel shot ring, battery, board and fins">
 <figcaption><span class="fignum">FIG. 01</span>Section through the node. Numbers match the part
 names in the CAD assembly. Schematic proportions.</figcaption></figure>
 
@@ -118,7 +116,7 @@ it only ever gets thrown at the pile.</p>
 the firmware blanks that input for 150&nbsp;ms after each pulse and lets the <em>other</em> nodes
 do the listening for that knock. That one constraint is why this only works as a network.</p>
 
-<figure class="rv"><img src="/projects/echo/echo_timing.svg" alt="Timing diagram showing three knocks, blanking intervals, the listen window and reply taps">
+<figure><img class="wipe" src="/projects/echo/echo_timing.svg" alt="Timing diagram showing three knocks, blanking intervals, the listen window and reply taps">
 <figcaption><span class="fignum">FIG. 02</span>Knock and listen cycle: three pulses 0.5&nbsp;s
 apart, 150&nbsp;ms blanking on the local piezo, then a 4&nbsp;s listen window.</figcaption></figure>
 
@@ -135,7 +133,7 @@ deciding where to dig.</p>
 will. Packets are about 20 bytes. Flooding with a hop limit of three and duplicate suppression by
 message ID. Every node keeps a priority queue, and anything it cannot send it stores.</p>
 
-<figure class="rv"><img src="/projects/echo/echo_mesh.svg" alt="Architecture diagram of the ECHO LoRa mesh, base station, dashboard and handheld collector">
+<figure><img class="wipe" src="/projects/echo/echo_mesh.svg" alt="Architecture diagram of the ECHO LoRa mesh, base station, dashboard and handheld collector">
 <figcaption><span class="fignum">FIG. 03</span>Mesh architecture. Solid paths are LoRa hops; the
 dashed path is a responder physically carrying stored alerts back when the mesh
 breaks.</figcaption></figure>
@@ -149,7 +147,7 @@ storing MAC addresses.</p>
 <h2>Triage is the output</h2>
 <p>The system does not report sensor values. It reports three labels, because that is what a
 person standing on rubble can act on.</p>
-<div class="kv rv">
+<div class="tbl">
   <div><span>Responding</span><b>Tapped back inside the listen window</b></div>
   <div><span>Signs of life</span><b>Breathing on radar, or thermal blob, or a phone present</b></div>
   <div><span>Possible</span><b>Weak or single-channel indication only</b></div>
@@ -177,25 +175,21 @@ the mesh, the dashboard and the triage labels, because those four things are the
 </article></div>
 
 <footer><div class="wrap">
-  <div class="fgrid">
-    <div class="rv">
-      <h2>Let's build<br><em>something.</em></h2>
-      <p>Looking for a Summer 2027 engineering internship in robotics, manufacturing,
-      aerospace, or medical devices. U.S. citizen, export-control eligible, happy to relocate.</p>
+  <div class="fg">
+    <div>
+      <h2>Let's build <i>something.</i></h2>
+      <p>I'm looking for a Summer 2027 engineering internship &mdash; robotics, manufacturing,
+      aerospace, or medical devices. U.S. citizen, export-control eligible, and I'll go wherever
+      the work is.</p>
     </div>
-    <ul class="fl rv">
-      <li><span class="t">Email</span><a href="mailto:bachhalbirinder1@gmail.com">bachhalbirinder1@gmail.com</a></li>
-      <li><span class="t">LinkedIn</span><a href="https://www.linkedin.com/in/birinder-bachhal/" target="_blank" rel="noopener">birinder-bachhal</a></li>
-      <li><span class="t">Document</span><a href="/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
-      <li><span class="t">Index</span><a href="/#work">All projects</a></li>
+    <ul>
+      <li><span>Email</span><a href="mailto:bachhalbirinder1@gmail.com">bachhalbirinder1@gmail.com</a></li>
+      <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/birinder-bachhal/" target="_blank" rel="noopener">birinder-bachhal</a></li>
+      <li><span>R&eacute;sum&eacute;</span><a href="/resume.pdf" target="_blank" rel="noopener">Download PDF</a></li>
+      <li><span>Index</span><a href="/#work">All projects</a></li>
     </ul>
   </div>
-  <div class="stamp">
-    <div><span>Drawn by</span><b>B. BACHHAL</b></div>
-    <div><span>Discipline</span><b>MECH ENG</b></div>
-    <div><span>Revision</span><b id="dstamp">2026</b></div>
-    <div><span>Sheet</span><b>1 OF 1</b></div>
-  </div>
+  <div class="sig"><span>Birinder Bachhal &middot; B.S. Mechanical Engineering &middot; Boston University</span><span>Built by hand, Boston</span></div>
 </div></footer>
 
 <script src="/assets/site.js"></script>
