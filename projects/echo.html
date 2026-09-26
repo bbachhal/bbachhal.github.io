@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,0..100,0..1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css?v=4">
+<link rel="stylesheet" href="/assets/style.css?v=5">
 </head>
 <body>
 
@@ -82,7 +82,7 @@ that a contact sensor is worthless unless it is pressed against the structure, w
 body has to land nose-first, every time, after being thrown by a tired person onto an uneven
 pile.</p>
 
-<figure><img class="wipe" src="/projects/echo/echo_section.svg" alt="Sectioned view of the ECHO node showing the nose stack, solenoid, steel shot ring, battery, board and fins">
+<figure><img src="/projects/echo/echo_section.svg" alt="Sectioned view of the ECHO node showing the nose stack, solenoid, steel shot ring, battery, board and fins">
 <figcaption><span class="fignum">FIG. 01</span>Section through the node. Numbers match the part
 names in the CAD assembly. Schematic proportions.</figcaption></figure>
 
@@ -117,7 +117,7 @@ it only ever gets thrown at the pile.</p>
 the firmware blanks that input for 150&nbsp;ms after each pulse and lets the <em>other</em> nodes
 do the listening for that knock. That one constraint is why this only works as a network.</p>
 
-<figure><img class="wipe" src="/projects/echo/echo_timing.svg" alt="Timing diagram showing three knocks, blanking intervals, the listen window and reply taps">
+<figure><img src="/projects/echo/echo_timing.svg" alt="Timing diagram showing three knocks, blanking intervals, the listen window and reply taps">
 <figcaption><span class="fignum">FIG. 02</span>Knock and listen cycle: three pulses 0.5&nbsp;s
 apart, 150&nbsp;ms blanking on the local piezo, then a 4&nbsp;s listen window.</figcaption></figure>
 
@@ -134,7 +134,7 @@ deciding where to dig.</p>
 will. Packets are about 20 bytes. Flooding with a hop limit of three and duplicate suppression by
 message ID. Every node keeps a priority queue, and anything it cannot send it stores.</p>
 
-<figure><img class="wipe" src="/projects/echo/echo_mesh.svg" alt="Architecture diagram of the ECHO LoRa mesh, base station, dashboard and handheld collector">
+<figure><img src="/projects/echo/echo_mesh.svg" alt="Architecture diagram of the ECHO LoRa mesh, base station, dashboard and handheld collector">
 <figcaption><span class="fignum">FIG. 03</span>Mesh architecture. Solid paths are LoRa hops; the
 dashed path is a responder physically carrying stored alerts back when the mesh
 breaks.</figcaption></figure>
@@ -193,6 +193,6 @@ the mesh, the dashboard and the triage labels, because those four things are the
   <div class="sig"><span>Birinder Bachhal &middot; B.S. Mechanical Engineering &middot; Boston University</span><span>Built by hand, Boston</span></div>
 </div></footer>
 
-<script src="/assets/site.js?v=4"></script>
+<script src="/assets/site.js?v=5"></script>
 </body>
 </html>

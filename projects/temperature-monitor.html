@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,0..100,0..1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css?v=4">
+<link rel="stylesheet" href="/assets/style.css?v=5">
 </head>
 <body>
 
@@ -35,7 +35,7 @@
 </div></header>
 
 <div class="wrap"><article class="doc">
-<figure><img class="wipe" src="/projects/temperature-monitor/EK131_External.png" alt=""><figcaption><span class="fignum">FIG. 01</span>The completed Room Temperature Monitoring System.</figcaption></figure>
+<figure><img src="/projects/temperature-monitor/EK131_External.png" alt=""><figcaption><span class="fignum">FIG. 01</span>The completed Room Temperature Monitoring System.</figcaption></figure>
 <h2>Overview and Motivation</h2>
 <p>This project explores how a simple, reliable embedded system can continuously monitor
 environmental conditions and provide clear real-time feedback. The motivation was to move past
@@ -54,7 +54,7 @@ Fahrenheit in software.</p>
 <p>Readings display on a 16&times;2 I&sup2;C LCD while embedded logic continuously evaluates whether
 the measured temperature falls outside the defined 80&ndash;90&nbsp;&deg;F safe range. When
 thresholds are exceeded, the Arduino activates a red LED warning indicator and a piezo buzzer.</p>
-<figure><img class="wipe" src="/projects/temperature-monitor/EK131_TMP.png" alt=""><figcaption><span class="fignum">FIG. 02</span>The TMP36 temperature sensor, the primary sensing component.</figcaption></figure>
+<figure><img src="/projects/temperature-monitor/EK131_TMP.png" alt=""><figcaption><span class="fignum">FIG. 02</span>The TMP36 temperature sensor, the primary sensing component.</figcaption></figure>
 <h2>Electrical Design and Wiring</h2>
 <p>I designed and assembled the full electrical system with a focus on clarity, reliability, and
 safety. Power and signal lines were organized using 22 AWG solid-core wiring, with durable
@@ -62,7 +62,7 @@ connections made through heat shrink tubing, twist caps, and spade connectors. A
 color-coding scheme simplified debugging and maintenance after preliminary testing. I integrated an
 on/off switch and a battery clip for standalone operation, powered by a 9&nbsp;V battery within the
 Arduino's supported input range.</p>
-<figure><img class="wipe" src="/projects/temperature-monitor/EK131_Schematic.png" alt=""><figcaption><span class="fignum">FIG. 03</span>Complete wiring schematic for every hardware component.</figcaption></figure>
+<figure><img src="/projects/temperature-monitor/EK131_Schematic.png" alt=""><figcaption><span class="fignum">FIG. 03</span>Complete wiring schematic for every hardware component.</figcaption></figure>
 <h2>Component Selection and Electrical Calculations</h2>
 <p>All choices were guided by electrical constraints and reliability. The TMP36 was chosen for its
 linear voltage-to-temperature response, wide operating range, and compact size. Resistors were
@@ -83,7 +83,7 @@ handling and testing.</p>
 <p>All CAD was created in Onshape, chosen for accessibility at the time. I only gained access to
 SolidWorks and AutoCAD after finishing this project, and in retrospect either would have simplified
 the process and offered more functionality.</p>
-<figure><img class="wipe" src="/projects/temperature-monitor/EK131_CAD.png" alt=""><figcaption><span class="fignum">FIG. 04</span>Final CAD of the enclosure and lid. Inside are the 9&nbsp;V battery holder and Arduino mounting plate; the lid carries the 16&times;2 I&sup2;C LCD.</figcaption></figure>
+<figure><img src="/projects/temperature-monitor/EK131_CAD.png" alt=""><figcaption><span class="fignum">FIG. 04</span>Final CAD of the enclosure and lid. Inside are the 9&nbsp;V battery holder and Arduino mounting plate; the lid carries the 16&times;2 I&sup2;C LCD.</figcaption></figure>
 <h2>Testing, Performance, and Validation</h2>
 <p>The prototype was validated through repeated testing, demonstrating accurate real-time readings,
 reliable LCD updates in both units, consistent alarm activation outside the 80&ndash;90&nbsp;&deg;F
@@ -92,7 +92,7 @@ range, and stable operation at a 5&nbsp;V internal logic level.</p>
 would have compromised wiring organization and clarity. Environmental exposure of the TMP36 may
 also introduce error over long-term use. Future improvements would include a sensor more resistant
 to environmental conditions, or shielding to improve measurement reliability.</p>
-<figure><img class="wipe" src="/projects/temperature-monitor/EK131_Internal.png" alt=""><figcaption><span class="fignum">FIG. 05</span>Internal layout of the completed system.</figcaption></figure><figure><img class="wipe" src="/projects/temperature-monitor/EK131_External.png" alt=""><figcaption><span class="fignum">FIG. 06</span>The finished Room Temperature Monitoring System.</figcaption></figure>
+<figure><img src="/projects/temperature-monitor/EK131_Internal.png" alt=""><figcaption><span class="fignum">FIG. 05</span>Internal layout of the completed system.</figcaption></figure><figure><img src="/projects/temperature-monitor/EK131_External.png" alt=""><figcaption><span class="fignum">FIG. 06</span>The finished Room Temperature Monitoring System.</figcaption></figure>
 </article></div>
 
 <footer><div class="wrap">
@@ -113,6 +113,6 @@ to environmental conditions, or shielding to improve measurement reliability.</p
   <div class="sig"><span>Birinder Bachhal &middot; B.S. Mechanical Engineering &middot; Boston University</span><span>Built by hand, Boston</span></div>
 </div></footer>
 
-<script src="/assets/site.js?v=4"></script>
+<script src="/assets/site.js?v=5"></script>
 </body>
 </html>

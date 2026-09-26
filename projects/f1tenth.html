@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,0..100,0..1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css?v=4">
+<link rel="stylesheet" href="/assets/style.css?v=5">
 </head>
 <body>
 
@@ -35,7 +35,7 @@
 </div></header>
 
 <div class="wrap"><article class="doc">
-<figure><img class="wipe" src="/projects/f1tenth/f1tenth_roboracer.jpg" alt=""><figcaption><span class="fignum">FIG. 01</span>Running our vehicle at the RoboRacer competition hosted at IEEE VTC2026-Fall in Boston.</figcaption></figure>
+<figure><img src="/projects/f1tenth/f1tenth_roboracer.jpg" alt=""><figcaption><span class="fignum">FIG. 01</span>Running our vehicle at the RoboRacer competition hosted at IEEE VTC2026-Fall in Boston.</figcaption></figure>
 <h2>Overview</h2>
 <p>I work on the development of a 1:10 scale autonomous race car as part of Boston University's
 F1Tenth Autonomous Car Racing Organization, a hands-on robotics project team integrating
@@ -63,7 +63,7 @@ touches a course.</p>
 <p>I was responsible for designing and implementing the electromechanical system and wiring
 architecture, selecting and integrating compute, sensing, power, and actuation components with a
 focus on reliability, serviceability, and real-world performance.</p>
-<figure><img class="wipe" src="/projects/f1tenth/ACRO_CarBody.png" alt=""><figcaption><span class="fignum">FIG. 03</span>Overview of the electromechanical design and wiring of the vehicle body, including the chassis and the layout of hardware components.</figcaption></figure><figure class="pair"><img class="wipe" src="/projects/f1tenth/ACRO_BaseplateISO.png" alt=""><img class="wipe" src="/projects/f1tenth/ACRO_BaseplateTop.png" alt=""><figcaption><span class="fignum">FIG. 04</span>CAD model of the mounting baseplate, which houses all hardware components within the constraints of the designed chassis.</figcaption></figure>
+<figure><img src="/projects/f1tenth/ACRO_CarBody.png" alt=""><figcaption><span class="fignum">FIG. 03</span>Overview of the electromechanical design and wiring of the vehicle body, including the chassis and the layout of hardware components.</figcaption></figure><figure class="pair"><img src="/projects/f1tenth/ACRO_BaseplateISO.png" alt=""><img src="/projects/f1tenth/ACRO_BaseplateTop.png" alt=""><figcaption><span class="fignum">FIG. 04</span>CAD model of the mounting baseplate, which houses all hardware components within the constraints of the designed chassis.</figcaption></figure>
 <p>I designed and assembled the full wiring harness, routing power and signal lines to minimize
 electrical noise, reduce mechanical strain, and improve accessibility for debugging and
 maintenance. Connector selection, cable management, strain relief, and vibration resistance all
@@ -77,12 +77,12 @@ real-time LIDAR processing and future vision-based autonomy while staying compac
 1:10 scale vehicle. It was integrated with attention to thermal exposure, vibration isolation, and
 serviceability, particularly after a Jetson failure during testing made the case for robust
 mounting and a rapid replacement strategy.</p>
-<figure><img class="wipe" src="/projects/f1tenth/ACRO_Nvidia.png" alt=""><figcaption><span class="fignum">FIG. 05</span>NVIDIA Jetson NX compute module.</figcaption></figure>
+<figure><img src="/projects/f1tenth/ACRO_Nvidia.png" alt=""><figcaption><span class="fignum">FIG. 05</span>NVIDIA Jetson NX compute module.</figcaption></figure>
 <p>For perception we use the Hokuyo UST-10LX 2D LIDAR, chosen for its lightweight form factor,
 precise scanning, and suitability for fast dynamic obstacle detection. Its placement and wiring
 were designed to maintain consistent scan geometry while minimizing interference from drivetrain
 vibration and power electronics.</p>
-<figure><img class="wipe" src="/projects/f1tenth/ACRO_LiDAR.png" alt=""><figcaption><span class="fignum">FIG. 06</span>Hokuyo UST-10LX 2D LIDAR.</figcaption></figure>
+<figure><img src="/projects/f1tenth/ACRO_LiDAR.png" alt=""><figcaption><span class="fignum">FIG. 06</span>Hokuyo UST-10LX 2D LIDAR.</figcaption></figure>
 <div class="pull"><b>Failure that changed the design</b>
 <p>Initial testing showed that powering all subsystems from a single battery introduced electrical
 instability and inconsistent performance. We redesigned the power architecture to split the system
@@ -92,7 +92,7 @@ components.</p></div>
 current-delivery capability and endurance under sustained load, supported by a CC BEC Pro switching
 regulator that delivers stable voltage to the control electronics while isolating them from motor
 noise.</p>
-<figure><img class="wipe" src="/projects/f1tenth/ACRO_LiPO.png" alt=""><figcaption><span class="fignum">FIG. 07</span>Gens Ace 3S 11.1&nbsp;V 5000&nbsp;mAh LiPo battery.</figcaption></figure><figure><img class="wipe" src="/projects/f1tenth/ACRO_Schematic.png" alt=""><figcaption><span class="fignum">FIG. 08</span>Final wiring architecture and design.</figcaption></figure>
+<figure><img src="/projects/f1tenth/ACRO_LiPO.png" alt=""><figcaption><span class="fignum">FIG. 07</span>Gens Ace 3S 11.1&nbsp;V 5000&nbsp;mAh LiPo battery.</figcaption></figure><figure><img src="/projects/f1tenth/ACRO_Schematic.png" alt=""><figcaption><span class="fignum">FIG. 08</span>Final wiring architecture and design.</figcaption></figure>
 <h2>Path Planning and Real-Time Navigation</h2>
 <p>Although most of my time goes to electromechanical design and hardware integration, I also
 contributed to the path-planning and autonomous navigation pipeline, focused on translating
@@ -112,7 +112,7 @@ smoothing noisy sensor data.</p>
 <p>The Gaussian weighting effectively transforms raw LIDAR distances into a continuous cost
 landscape, enabling more precise direction selection under faster racing conditions with dynamic
 obstacles and sharper turns.</p>
-<figure><img class="wipe" src="/projects/f1tenth/ACRO_GaussianHeatmap.png" alt=""><figcaption><span class="fignum">FIG. 09</span>The Gaussian heatmap shown alongside simulation. The map also displays LIDAR distance points from the car's latest sensor readings, showing how the Gaussians collectively form a spatial map of the track.</figcaption></figure><figure><img class="wipe" src="/projects/f1tenth/ACRO_GaussianHeatmap2.png" alt=""><figcaption><span class="fignum">FIG. 10</span>The Gaussian heatmap without LIDAR points. The car is approaching a left turn, so the map shows dense markers to the right and directly ahead indicating obstacles, with an open area to the left representing the optimal path.</figcaption></figure>
+<figure><img src="/projects/f1tenth/ACRO_GaussianHeatmap.png" alt=""><figcaption><span class="fignum">FIG. 09</span>The Gaussian heatmap shown alongside simulation. The map also displays LIDAR distance points from the car's latest sensor readings, showing how the Gaussians collectively form a spatial map of the track.</figcaption></figure><figure><img src="/projects/f1tenth/ACRO_GaussianHeatmap2.png" alt=""><figcaption><span class="fignum">FIG. 10</span>The Gaussian heatmap without LIDAR points. The car is approaching a left turn, so the map shows dense markers to the right and directly ahead indicating obstacles, with an open area to the left representing the optimal path.</figcaption></figure>
 <p>The control layer built on the planner's output. Rather than issuing aggressive or discontinuous
 commands, it scales steering based on curvature and vehicle speed and adjusts throttle to maintain
 stability through tight turns, reducing oscillation caused by overcorrection or sensor noise. The
@@ -139,6 +139,6 @@ achievable, accounting for actuator response, steering limits, and traction.</p>
   <div class="sig"><span>Birinder Bachhal &middot; B.S. Mechanical Engineering &middot; Boston University</span><span>Built by hand, Boston</span></div>
 </div></footer>
 
-<script src="/assets/site.js?v=4"></script>
+<script src="/assets/site.js?v=5"></script>
 </body>
 </html>

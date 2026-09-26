@@ -238,15 +238,12 @@ figcaption{padding-top:12px;font-family:var(--mono);font-size:10.5px;line-height
   color:var(--rust)}
 .tbl b{font-weight:400;font-size:16.5px;line-height:1.5}
 
-/* ---------------- reveal: images only ---------------- */
+/* ---------------- reveal ---------------- */
 /* visible by default. only the .js flag arms the animation, so a stale or
    failed script can never hide an image. */
-.js .wipe{clip-path:inset(0 0 100% 0);transition:clip-path .95s var(--ease)}
-.js .wipe.in{clip-path:inset(0 0 0 0)}
 .js mark::before{transform:scaleX(0)}
 mark::before{transform:scaleX(1)}
 @media(prefers-reduced-motion:reduce){
-  .wipe,.wipe.in{clip-path:none;transition:none}
   .scribble path{stroke-dashoffset:0;animation:none}
   mark::before{transform:scaleX(1);transition:none}
 }

@@ -1,23 +1,24 @@
-/* Birinder Bachhal — small, deliberate. No libraries. */
+/* Birinder Bachhal — small, deliberate. No libraries.
+   Nothing here is required for content to be visible. */
 (function () {
   'use strict';
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var fine = matchMedia('(pointer: fine)').matches;
   var $$ = function (s) { return [].slice.call(document.querySelectorAll(s)); };
 
-  /* images wipe up; marker highlights swipe in */
-  var targets = $$('.wipe, mark');
+  /* marker highlights swipe in */
+  var marks = $$('mark');
   if (!('IntersectionObserver' in window) || reduce) {
-    targets.forEach(function (n) { n.classList.add(n.tagName === 'MARK' ? 'lit' : 'in'); });
+    marks.forEach(function (n) { n.classList.add('lit'); });
   } else {
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) {
         if (!e.isIntersecting) return;
-        e.target.classList.add(e.target.tagName === 'MARK' ? 'lit' : 'in');
+        e.target.classList.add('lit');
         io.unobserve(e.target);
       });
-    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.15 });
-    targets.forEach(function (n) { io.observe(n); });
+    }, { threshold: 0.4 });
+    marks.forEach(function (n) { io.observe(n); });
   }
 
   /* peek: pulled-out photo on the compact project list */
