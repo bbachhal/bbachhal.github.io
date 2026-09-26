@@ -5,14 +5,32 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Birinder Bachhal &mdash; Mechanical Engineer</title>
 <meta name="description" content="Birinder Bachhal. Mechanical Engineering at Boston University, concentrating in Robotics and Manufacturing. Robotic work cells, fixturing, and ruggedized hardware.">
+<meta name="theme-color" content="#f5f4ef">
 <meta property="og:title" content="Birinder Bachhal &mdash; Mechanical Engineer">
 <meta property="og:description" content="Robotic work cells, fixturing, and hardware built to run in production.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://bbachhal.github.io/projects/f1tenth/f1tenth_roboracer.jpg">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
+<div id="grid"></div>
+<div id="noise"></div>
+<div id="bar"></div>
+<div id="chair"><i class="h"></i><i class="v"></i><b></b></div>
+<div id="prev"><img src="" alt=""><div class="lb"></div></div>
+
+<nav id="rail">
+  <a href="#top"      data-sec="top">Top</a>
+  <a href="#experience" data-sec="experience">Experience</a>
+  <a href="#work"     data-sec="work">Work</a>
+  <a href="#capabilities" data-sec="capabilities">Skills</a>
+  <a href="#coursework" data-sec="coursework">Courses</a>
+  <a href="#contact"  data-sec="contact">Contact</a>
+</nav>
+
 <nav class="nav"><div class="wrap">
-  <a class="id" href="/">Birinder Bachhal</a>
+  <a class="id" href="/"><em></em> Birinder Bachhal</a>
   <ul>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#work">Work</a></li>
@@ -22,19 +40,24 @@
   </ul>
 </div></nav>
 
-<header class="mast"><div class="wrap">
+<header class="mast" id="top"><div class="wrap">
   <div class="mastgrid">
     <div>
       <div class="eyebrow">Portfolio &mdash; Rev. 2027 &mdash; Boston, MA</div>
-      <h1>Birinder<br>Bachhal</h1>
+      <h1><span class="ln"><span>Birinder</span></span><span class="ln"><span>Bachhal</span></span></h1>
+      <div class="dimline">
+        <i class="cap"></i><i class="ln"></i>
+        <span class="tx">Mechanical Engineering &mdash; B.S. 2028</span>
+        <i class="ln"></i><i class="cap"></i>
+      </div>
       <p class="role">Mechanical engineer. Robotics and manufacturing.</p>
     </div>
-    <div class="shot">
-      <img src="/IMG_0448.jpeg" alt="Birinder Bachhal">
-      <div class="cap"><span>B. Bachhal</span><span>BU '28</span></div>
+    <div class="shot tick">
+      <div class="im"><img src="/IMG_0448.jpeg" alt="Birinder Bachhal"></div>
+      <div class="cap"><span>B. Bachhal</span><span>BU &rsquo;28</span></div>
     </div>
   </div>
-  <div class="tblock">
+  <div class="tblock rv">
     <div><span>Discipline</span><b>B.S. Mechanical Engineering</b></div>
     <div><span>Concentrations</span><b>Robotics &middot; Manufacturing</b></div>
     <div><span>Institution</span><b>Boston University, Class of 2028</b></div>
@@ -43,8 +66,8 @@
 </div></header>
 
 <div class="stmt"><div class="wrap"><div class="cols">
-  <p class="big">I build hardware that has to keep working after I leave.</p>
-  <div class="body">
+  <p class="big rv">I build hardware that has to <em>keep working</em> after I leave.</p>
+  <div class="body rv">
     <p>Most of what I am proudest of is <strong>process, not product</strong>. The fixture that
     makes the part land the same way every time. The interlock that keeps somebody's hands out
     of a running machine. The drawing package good enough that an outside shop builds to print
@@ -60,19 +83,27 @@
   </div>
 </div></div></div>
 
-<div class="wrap"><div class="spec" style="margin:0 0 6px">
+<div class="wrap"><div class="spec rv">
   <div class="row"><div class="k">01</div><div class="v">90 &rarr; 45 min</div><div class="d">Production cycle time after deploying a robotic work cell I built from scratch</div></div>
   <div class="row"><div class="k">02</div><div class="v">+20%</div><div class="d">Usable yield, from three workholding fixtures that replaced hand clamping</div></div>
   <div class="row"><div class="k">03</div><div class="v">+30% / &minus;15%</div><div class="d">Chassis rigidity gained and weight removed through FEA-driven iteration</div></div>
   <div class="row"><div class="k">04</div><div class="v">99.4%</div><div class="d">Debris removal on a custom vacuum and chute system I designed and manufactured</div></div>
 </div></div>
 
+<div class="marq"><div class="tr">
+  <span>SolidWorks</span><span>GD&amp;T</span><span>Tolerance Stack-Up</span><span>Universal Robots</span>
+  <span>RoboDK</span><span>5-Axis CNC</span><span>Fixture Design</span><span>Rockwell PLC</span>
+  <span>Machine Safety</span><span>Metrology</span><span>FEA</span><span>DFM</span>
+  <span>Six Sigma</span><span>Root Cause Analysis</span><span>Raspberry Pi</span><span>Python</span>
+  <span>MATLAB</span><span>Additive Manufacturing</span>
+</div></div>
+
 <section id="experience"><div class="wrap">
-  <div class="sh"><span class="no">&sect; 01</span><h2>Experience</h2>
+  <div class="sh rv"><span class="no">&sect; 01</span><h2>Experience</h2>
     <span class="rt">Hardware detail<br>limited by NDA</span></div>
 
-  <div class="exp">
-    <div class="top"><h3>The Renatural</h3><span class="dates">Jul 2026 &mdash; Aug 2026</span></div>
+  <div class="exp rv">
+    <div class="top"><h3>The Renatural</h3><span class="dates">JUL 2026 &mdash; AUG 2026</span></div>
     <div class="sub">Engineering Intern, Robotics &amp; Manufacturing &middot; Brooklyn, NY</div>
     <p class="lead">Built a <strong>Universal Robots UR12e work cell from scratch</strong>,
     replacing a manual-intervention 5-axis CNC process. Started from a bare footprint on the
@@ -89,8 +120,8 @@
     <p class="note">CAD, imagery, and detailed hardware geometry from this role are company property and covered by NDA, so they are not shown here. Happy to discuss the engineering reasoning in conversation.</p>
   </div>
 
-  <div class="exp">
-    <div class="top"><h3>Deteqt</h3><span class="dates">Jan 2026 &mdash; Jun 2026</span></div>
+  <div class="exp rv">
+    <div class="top"><h3>Deteqt</h3><span class="dates">JAN 2026 &mdash; JUN 2026</span></div>
     <div class="sub">Mechanical Engineering Intern &middot; Sydney, Australia</div>
     <p class="lead">Designed the enclosure and thermal hardware for a <strong>diamond-based quantum
     magnetometer</strong>, a sensor developed for GPS-denied navigation and detection. Because
@@ -106,12 +137,14 @@
     <p class="note">Design files and product imagery from this role are covered by NDA and are not shown here.</p>
   </div>
 
-  <div class="exp">
-    <div class="top"><h3>BU F1Tenth / RoboRacer</h3><span class="dates">Dec 2024 &mdash; Present</span></div>
+  <div class="exp rv">
+    <div class="top"><h3>BU F1Tenth / RoboRacer</h3><span class="dates">DEC 2024 &mdash; PRESENT</span></div>
     <div class="sub">Vice President, Hardware &middot; Boston, MA</div>
     <p class="lead">Lead the mechanical and electromechanical side of Boston University's
-    autonomous racing team, now including a <strong>Guinness World Record attempt</strong>
-    converting a 2008 Corvette into an autonomous platform.</p>
+    autonomous racing team. Competed at the <strong>RoboRacer competition hosted at IEEE
+    VTC2026-Fall</strong> in Boston, and now leading mechanical design on a
+    <strong>Guinness World Record attempt</strong> converting a 2008 Corvette into an
+    autonomous platform.</p>
     <ol>
       <li>Redesigned the 1:10 chassis through FEA-driven iteration, improving structural rigidity 30% while reducing weight 15%.</li>
       <li>Designed and assembled the full wiring harness and power architecture, splitting the system across two battery sources after single-source testing revealed electrical instability.</li>
@@ -122,25 +155,25 @@
 </div></section>
 
 <section id="work"><div class="wrap">
-  <div class="sh"><span class="no">&sect; 02</span><h2>Selected Work</h2>
+  <div class="sh rv"><span class="no">&sect; 02</span><h2>Selected Work</h2>
     <span class="rt">Six projects<br>full writeups</span></div>
   <div class="idx">
 
-    <a class="pj" href="/projects/f1tenth.html">
+    <a class="pj rv" href="/projects/f1tenth.html"
+       data-prev="/projects/f1tenth/f1tenth_roboracer.jpg" data-lab="RoboRacer &middot; IEEE VTC2026-Fall">
       <div class="n">001</div>
       <div>
         <div class="tag">Autonomous Systems &middot; Hardware Lead</div>
         <h3>Autonomous F1Tenth Race Car</h3>
         <p>Full electromechanical design and wiring architecture for a 1:10 scale autonomous
         racer, plus a Gaussian path planner that replaced minimum-distance selection and held
-        stability past 20&nbsp;mph. Compute and sensor selection, a power architecture redesigned
-        after a field failure, and turning LIDAR perception into physically achievable motion.</p>
-        <span class="go">Read writeup &rarr;</span>
+        stability past 20&nbsp;mph. Competed at RoboRacer, IEEE VTC2026-Fall Boston.</p>
       </div>
-      <div class="th"><img src="/projects/f1tenth/ACRO_VIBE.png" alt="BU F1Tenth autonomous race car"></div>
+      <div class="arw">&rarr;</div>
     </a>
 
-    <a class="pj" href="/projects/deskinator.html">
+    <a class="pj rv" href="/projects/deskinator.html"
+       data-prev="/projects/deskinator/Deskinator_Main.png" data-lab="The Deskinator">
       <div class="n">002</div>
       <div>
         <div class="tag">Robotics &middot; Design Lead</div>
@@ -148,12 +181,12 @@
         <p>A fully autonomous desktop-cleaning robot. NEMA 17 steppers selected on measured
         angular error, dual power rails, APDS9960 edge detection, a custom vacuum and chute
         system at 99.4% debris removal, and EKF-based SLAM tuned around real mechanical limits.</p>
-        <span class="go">Read writeup &rarr;</span>
       </div>
-      <div class="th"><img src="/projects/deskinator/Deskinator_Main.png" alt="The Deskinator"></div>
+      <div class="arw">&rarr;</div>
     </a>
 
-    <a class="pj" href="/projects/orthocad.html">
+    <a class="pj rv" href="/projects/orthocad.html"
+       data-prev="/projects/orthocad/orthocad.png" data-lab="OrthoCAD Pro">
       <div class="n">003</div>
       <div>
         <div class="tag">Design Automation &middot; Personal</div>
@@ -161,12 +194,12 @@
         <p>A parametric orthotic design system that encodes biomechanical intent and
         manufacturing constraints directly into the CAD pipeline, so patient-specific geometry
         regenerates without manual rework. Constraints developed with a local orthotics lab.</p>
-        <span class="go">Read writeup &rarr;</span>
       </div>
-      <div class="th"><img src="/projects/orthocad/orthocad.png" alt="OrthoCAD Pro"></div>
+      <div class="arw">&rarr;</div>
     </a>
 
-    <a class="pj" href="/projects/cad.html">
+    <a class="pj rv" href="/projects/cad.html"
+       data-prev="/projects/cad-drawings/solidworks.png" data-lab="CAD &amp; Drawings">
       <div class="n">004</div>
       <div>
         <div class="tag">CAD &middot; SolidWorks 2025</div>
@@ -174,12 +207,12 @@
         <p>Shaft support and bearing housing, ball valve assembly, enclosed gearbox, and a
         four-bar linkage with motion study. Parametric models and fully dimensioned drawings,
         each built around manufacturability, tolerances, and assembly-level design intent.</p>
-        <span class="go">View models &rarr;</span>
       </div>
-      <div class="th"><img src="/projects/cad-drawings/solidworks.png" alt="SolidWorks CAD work"></div>
+      <div class="arw">&rarr;</div>
     </a>
 
-    <a class="pj" href="/projects/temperature-monitor.html">
+    <a class="pj rv" href="/projects/temperature-monitor.html"
+       data-prev="/projects/temperature-monitor/EK131_External.png" data-lab="Temperature Monitor">
       <div class="n">005</div>
       <div>
         <div class="tag">Embedded Hardware</div>
@@ -187,12 +220,12 @@
         <p>An end-to-end embedded system: TMP36 sensing, Arduino control logic, threshold alarms,
         resistor sizing by hand, a measured 80&nbsp;mA draw yielding about 9.5 hours of runtime,
         and a 3D-printed ABS enclosure with a laser-cut mounting plate.</p>
-        <span class="go">Read writeup &rarr;</span>
       </div>
-      <div class="th"><img src="/projects/temperature-monitor/EK131_External.png" alt="Room temperature monitoring system"></div>
+      <div class="arw">&rarr;</div>
     </a>
 
-    <a class="pj" href="/projects/ecg.html">
+    <a class="pj rv" href="/projects/ecg.html"
+       data-prev="/projects/ecg/ecg_compare.png" data-lab="ECG &amp; HRV Analysis">
       <div class="n">006</div>
       <div>
         <div class="tag">Biomedical Signal Processing</div>
@@ -200,47 +233,46 @@
         <p>A MATLAB pipeline for three-lead ECG recorded at rest, after exertion, and under box
         breathing. R-peak detection, P/QRS/T feature extraction, and RR-interval HRV analysis on
         raw data rather than idealized datasets.</p>
-        <span class="go">Read writeup &rarr;</span>
       </div>
-      <div class="th"><img src="/projects/ecg/ecg_compare.png" alt="ECG analysis"></div>
+      <div class="arw">&rarr;</div>
     </a>
 
   </div>
 </div></section>
 
 <section id="capabilities"><div class="wrap">
-  <div class="sh"><span class="no">&sect; 03</span><h2>Capabilities</h2></div>
+  <div class="sh rv"><span class="no">&sect; 03</span><h2>Capabilities</h2></div>
   <div class="caps">
-    <div class="cap"><h4>CAD &amp; Analysis</h4><p>SolidWorks, Fusion 360, AutoCAD, Onshape, GD&amp;T, tolerance stack-up, DFM and DFA, FEA, CAM, production drawing packages</p></div>
-    <div class="cap"><h4>Robotics &amp; Automation</h4><p>Universal Robots UR12e, RoboDK offline programming, robot cell design, end-effector design, path planning, LIDAR and sensor integration, EKF-SLAM</p></div>
-    <div class="cap"><h4>Manufacturing</h4><p>5-axis CNC machining, fixture and workholding design, FDM and SLA printing, laser cutting, rapid prototyping, additive manufacturing, Six Sigma training</p></div>
-    <div class="cap"><h4>Test &amp; Quality</h4><p>Metrology, dimensional inspection, calipers, first-article inspection, root cause analysis, corrective action, design verification, bench test procedures</p></div>
-    <div class="cap"><h4>Controls &amp; Electronics</h4><p>Rockwell PLC, relay logic, machine safety systems including light curtains and E-stop interlocks, Arduino, Raspberry Pi, PID control, stepper drive, pneumatics, wiring harness design</p></div>
-    <div class="cap"><h4>Software</h4><p>Python, MATLAB, JavaScript, Power BI, signal processing, data analysis</p></div>
+    <div class="cap rv"><h4>CAD &amp; Analysis</h4><p>SolidWorks, Fusion 360, AutoCAD, Onshape, GD&amp;T, tolerance stack-up, DFM and DFA, FEA, CAM, production drawing packages</p></div>
+    <div class="cap rv"><h4>Robotics &amp; Automation</h4><p>Universal Robots UR12e, RoboDK offline programming, robot cell design, end-effector design, path planning, LIDAR and sensor integration, EKF-SLAM</p></div>
+    <div class="cap rv"><h4>Manufacturing</h4><p>5-axis CNC machining, fixture and workholding design, FDM and SLA printing, laser cutting, rapid prototyping, additive manufacturing, Six Sigma training</p></div>
+    <div class="cap rv"><h4>Test &amp; Quality</h4><p>Metrology, dimensional inspection, calipers, first-article inspection, root cause analysis, corrective action, design verification, bench test procedures</p></div>
+    <div class="cap rv"><h4>Controls &amp; Electronics</h4><p>Rockwell PLC, relay logic, machine safety systems including light curtains and E-stop interlocks, Arduino, Raspberry Pi, PID control, stepper drive, pneumatics, wiring harness design</p></div>
+    <div class="cap rv"><h4>Software</h4><p>Python, MATLAB, JavaScript, Power BI, signal processing, data analysis</p></div>
   </div>
 </div></section>
 
 <section id="coursework"><div class="wrap">
-  <div class="sh"><span class="no">&sect; 04</span><h2>Coursework</h2>
+  <div class="sh rv"><span class="no">&sect; 04</span><h2>Coursework</h2>
     <span class="rt">Boston University<br>Kilachand Honors College</span></div>
   <div class="crs">
-    <div><b>CAD and Machine Components</b><span>Junior-level parametric modeling in SolidWorks, focused on designing manufacturable parts and machine elements.</span></div>
-    <div><b>Engineering Mechanics</b><span>Forces, moments, and equilibrium in structures. Free-body diagrams, trusses, beams, frictional systems, and vector mechanics.</span></div>
-    <div><b>Probability and Data Statistics</b><span>Probability theory, random variables, and statistical inference. Hypothesis testing, regression, and probabilistic modeling for engineering data.</span></div>
-    <div><b>Introduction to Engineering Design</b><span>Problem definition, ideation, prototyping, and iterative testing, with hands-on CAD and fabrication.</span></div>
-    <div><b>Multivariable Calculus</b><span>Partial derivatives, multiple integrals, vector fields, and gradient, divergence, and curl applied to motion and field analysis.</span></div>
-    <div><b>Computational Linear Algebra</b><span>Matrix theory and linear transformations with numerical methods for linear systems, eigenvalue problems, and SVD.</span></div>
+    <div class="rv"><b>CAD and Machine Components</b><span>Junior-level parametric modeling in SolidWorks, focused on designing manufacturable parts and machine elements.</span></div>
+    <div class="rv"><b>Engineering Mechanics</b><span>Forces, moments, and equilibrium in structures. Free-body diagrams, trusses, beams, frictional systems, and vector mechanics.</span></div>
+    <div class="rv"><b>Probability and Data Statistics</b><span>Probability theory, random variables, and statistical inference. Hypothesis testing, regression, and probabilistic modeling for engineering data.</span></div>
+    <div class="rv"><b>Introduction to Engineering Design</b><span>Problem definition, ideation, prototyping, and iterative testing, with hands-on CAD and fabrication.</span></div>
+    <div class="rv"><b>Multivariable Calculus</b><span>Partial derivatives, multiple integrals, vector fields, and gradient, divergence, and curl applied to motion and field analysis.</span></div>
+    <div class="rv"><b>Computational Linear Algebra</b><span>Matrix theory and linear transformations with numerical methods for linear systems, eigenvalue problems, and SVD.</span></div>
   </div>
 </div></section>
 
 <footer id="contact"><div class="wrap">
   <div class="fgrid">
-    <div>
-      <h2>Let's build<br>something.</h2>
+    <div class="rv">
+      <h2>Let's build<br><em>something.</em></h2>
       <p>I am looking for a Summer 2027 engineering internship in robotics, manufacturing,
       aerospace, or medical devices. U.S. citizen, export-control eligible, and happy to relocate.</p>
     </div>
-    <ul class="fl">
+    <ul class="fl rv">
       <li><span class="t">Email</span><a href="mailto:bachhalbirinder1@gmail.com">bachhalbirinder1@gmail.com</a></li>
       <li><span class="t">University</span><a href="mailto:bbachhal@bu.edu">bbachhal@bu.edu</a></li>
       <li><span class="t">LinkedIn</span><a href="https://www.linkedin.com/in/birinder-bachhal/" target="_blank" rel="noopener">birinder-bachhal</a></li>
@@ -251,10 +283,11 @@
   <div class="stamp">
     <div><span>Drawn by</span><b>B. BACHHAL</b></div>
     <div><span>Discipline</span><b>MECH ENG</b></div>
-    <div><span>Location</span><b>BOSTON, MA</b></div>
+    <div><span>Revision</span><b id="dstamp">2026</b></div>
     <div><span>Sheet</span><b>1 OF 1</b></div>
   </div>
 </div></footer>
 
+<script src="/assets/site.js"></script>
 </body>
 </html>

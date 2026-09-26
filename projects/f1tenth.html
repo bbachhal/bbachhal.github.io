@@ -5,12 +5,20 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Autonomous F1Tenth Race Car &mdash; Birinder Bachhal</title>
 <meta name="description" content="Electromechanical design, wiring architecture, LIDAR integration, and Gaussian path planning for a 1:10 scale autonomous race car at Boston University.">
+<meta name="theme-color" content="#f5f4ef">
+<meta property="og:title" content="Autonomous F1Tenth Race Car &mdash; Birinder Bachhal">
+<meta property="og:description" content="Electromechanical design, wiring architecture, LIDAR integration, and Gaussian path planning for a 1:10 scale autonomous race car at Boston University.">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
+<div id="grid"></div>
+<div id="noise"></div>
+<div id="bar"></div>
+<div id="chair"><i class="h"></i><i class="v"></i><b></b></div>
+
 <nav class="nav"><div class="wrap">
-  <a class="id" href="/">Birinder Bachhal</a>
+  <a class="id" href="/"><em></em> Birinder Bachhal</a>
   <ul>
     <li><a href="/#experience">Experience</a></li>
     <li><a href="/#work">Work</a></li>
@@ -24,11 +32,11 @@
   <a class="bk" href="/#work">&larr; Index of work</a>
   <h1>Autonomous F1Tenth Race Car</h1>
   <p class="dek">Electromechanical design, wiring architecture, and a Gaussian path planner for a competitive 1:10 scale autonomous racer that stays stable past 20&nbsp;mph.</p>
-  <div class="phm"><div><span>Role</span><b>Vice President, Hardware</b></div><div><span>Organization</span><b>BU F1Tenth / RoboRacer</b></div><div><span>Timeline</span><b>Dec 2024 &ndash; Present</b></div><div><span>Focus</span><b>Electromechanical design, sensing, real-time control</b></div></div>
+  <div class="phm rv"><div><span>Role</span><b>Vice President, Hardware</b></div><div><span>Organization</span><b>BU F1Tenth / RoboRacer</b></div><div><span>Timeline</span><b>Dec 2024 &ndash; Present</b></div><div><span>Focus</span><b>Electromechanical design, sensing, real-time control</b></div></div>
 </div></header>
 
 <div class="wrap"><article>
-<figure><img src="/projects/f1tenth/ACRO_VIBE.png" alt=""><figcaption><span class="fignum">FIG. 01</span>The BU F1Tenth autonomous race car in action.</figcaption></figure>
+<figure class="rv"><img src="/projects/f1tenth/f1tenth_roboracer.jpg" alt=""><figcaption><span class="fignum">FIG. 01</span>Running our vehicle at the RoboRacer competition hosted at IEEE VTC2026-Fall in Boston.</figcaption></figure>
 <h2>Overview</h2>
 <p>I work on the development of a 1:10 scale autonomous race car as part of Boston University's
 F1Tenth Autonomous Car Racing Organization, a hands-on robotics project team integrating
@@ -40,11 +48,23 @@ and the physical manufacturing of its components. I also contribute on the softw
 with LIDAR and computer vision to enable dynamic path planning and real-time obstacle navigation.</p>
 <p>More about the team at <a href="https://www.buf1tenth.com/" target="_blank" rel="noopener">buf1tenth.com</a>.</p>
 
+<h2>RoboRacer &mdash; IEEE VTC2026-Fall, Boston</h2>
+<p>We brought the car to the RoboRacer competition hosted at the IEEE Vehicular Technology
+Conference in Boston, running it on a purpose-built track against other university teams. A
+conference floor is a genuinely hostile environment for this vehicle. The track is bounded by
+soft ducting rather than rigid walls, the carpet changes the traction budget, and the lighting
+and wireless environment are nothing like the lab we tuned in.</p>
+<p>That is the part I found most useful. Everything that had been comfortable on our own track
+became a variable, and the failures we hit were the ones our bench testing had not covered. It
+is the clearest argument I have for why I write verification procedures before the car ever
+touches a course.</p>
+<figure class="rv"><img src="/projects/f1tenth/ACRO_VIBE.png" alt=""><figcaption><span class="fignum">FIG. 02</span>The BU F1Tenth car in action.</figcaption></figure>
+
 <h2>Electromechanical Design and Wiring Architecture</h2>
 <p>I was responsible for designing and implementing the electromechanical system and wiring
 architecture, selecting and integrating compute, sensing, power, and actuation components with a
 focus on reliability, serviceability, and real-world performance.</p>
-<figure><img src="/projects/f1tenth/ACRO_CarBody.png" alt=""><figcaption><span class="fignum">FIG. 02</span>Overview of the electromechanical design and wiring of the vehicle body, including the chassis and the layout of hardware components.</figcaption></figure><figure class="pair"><img src="/projects/f1tenth/ACRO_BaseplateISO.png" alt=""><img src="/projects/f1tenth/ACRO_BaseplateTop.png" alt=""><figcaption><span class="fignum">FIG. 03</span>CAD model of the mounting baseplate, which houses all hardware components within the constraints of the designed chassis.</figcaption></figure>
+<figure class="rv"><img src="/projects/f1tenth/ACRO_CarBody.png" alt=""><figcaption><span class="fignum">FIG. 03</span>Overview of the electromechanical design and wiring of the vehicle body, including the chassis and the layout of hardware components.</figcaption></figure><figure class="pair rv"><img src="/projects/f1tenth/ACRO_BaseplateISO.png" alt=""><img src="/projects/f1tenth/ACRO_BaseplateTop.png" alt=""><figcaption><span class="fignum">FIG. 04</span>CAD model of the mounting baseplate, which houses all hardware components within the constraints of the designed chassis.</figcaption></figure>
 <p>I designed and assembled the full wiring harness, routing power and signal lines to minimize
 electrical noise, reduce mechanical strain, and improve accessibility for debugging and
 maintenance. Connector selection, cable management, strain relief, and vibration resistance all
@@ -58,12 +78,12 @@ real-time LIDAR processing and future vision-based autonomy while staying compac
 1:10 scale vehicle. It was integrated with attention to thermal exposure, vibration isolation, and
 serviceability, particularly after a Jetson failure during testing made the case for robust
 mounting and a rapid replacement strategy.</p>
-<figure><img src="/projects/f1tenth/ACRO_Nvidia.png" alt=""><figcaption><span class="fignum">FIG. 04</span>NVIDIA Jetson NX compute module.</figcaption></figure>
+<figure class="rv"><img src="/projects/f1tenth/ACRO_Nvidia.png" alt=""><figcaption><span class="fignum">FIG. 05</span>NVIDIA Jetson NX compute module.</figcaption></figure>
 <p>For perception we use the Hokuyo UST-10LX 2D LIDAR, chosen for its lightweight form factor,
 precise scanning, and suitability for fast dynamic obstacle detection. Its placement and wiring
 were designed to maintain consistent scan geometry while minimizing interference from drivetrain
 vibration and power electronics.</p>
-<figure><img src="/projects/f1tenth/ACRO_LiDAR.png" alt=""><figcaption><span class="fignum">FIG. 05</span>Hokuyo UST-10LX 2D LIDAR.</figcaption></figure>
+<figure class="rv"><img src="/projects/f1tenth/ACRO_LiDAR.png" alt=""><figcaption><span class="fignum">FIG. 06</span>Hokuyo UST-10LX 2D LIDAR.</figcaption></figure>
 <div class="note2"><b>Failure that changed the design</b>
 <p>Initial testing showed that powering all subsystems from a single battery introduced electrical
 instability and inconsistent performance. We redesigned the power architecture to split the system
@@ -73,7 +93,7 @@ components.</p></div>
 current-delivery capability and endurance under sustained load, supported by a CC BEC Pro switching
 regulator that delivers stable voltage to the control electronics while isolating them from motor
 noise.</p>
-<figure><img src="/projects/f1tenth/ACRO_LiPO.png" alt=""><figcaption><span class="fignum">FIG. 06</span>Gens Ace 3S 11.1&nbsp;V 5000&nbsp;mAh LiPo battery.</figcaption></figure><figure><img src="/projects/f1tenth/ACRO_Schematic.png" alt=""><figcaption><span class="fignum">FIG. 07</span>Final wiring architecture and design.</figcaption></figure>
+<figure class="rv"><img src="/projects/f1tenth/ACRO_LiPO.png" alt=""><figcaption><span class="fignum">FIG. 07</span>Gens Ace 3S 11.1&nbsp;V 5000&nbsp;mAh LiPo battery.</figcaption></figure><figure class="rv"><img src="/projects/f1tenth/ACRO_Schematic.png" alt=""><figcaption><span class="fignum">FIG. 08</span>Final wiring architecture and design.</figcaption></figure>
 <h2>Path Planning and Real-Time Navigation</h2>
 <p>Although most of my time goes to electromechanical design and hardware integration, I also
 contributed to the path-planning and autonomous navigation pipeline, focused on translating
@@ -93,7 +113,7 @@ smoothing noisy sensor data.</p>
 <p>The Gaussian weighting effectively transforms raw LIDAR distances into a continuous cost
 landscape, enabling more precise direction selection under faster racing conditions with dynamic
 obstacles and sharper turns.</p>
-<figure><img src="/projects/f1tenth/ACRO_GaussianHeatmap.png" alt=""><figcaption><span class="fignum">FIG. 08</span>The Gaussian heatmap shown alongside simulation. The map also displays LIDAR distance points from the car's latest sensor readings, showing how the Gaussians collectively form a spatial map of the track.</figcaption></figure><figure><img src="/projects/f1tenth/ACRO_GaussianHeatmap2.png" alt=""><figcaption><span class="fignum">FIG. 09</span>The Gaussian heatmap without LIDAR points. The car is approaching a left turn, so the map shows dense markers to the right and directly ahead indicating obstacles, with an open area to the left representing the optimal path.</figcaption></figure>
+<figure class="rv"><img src="/projects/f1tenth/ACRO_GaussianHeatmap.png" alt=""><figcaption><span class="fignum">FIG. 09</span>The Gaussian heatmap shown alongside simulation. The map also displays LIDAR distance points from the car's latest sensor readings, showing how the Gaussians collectively form a spatial map of the track.</figcaption></figure><figure class="rv"><img src="/projects/f1tenth/ACRO_GaussianHeatmap2.png" alt=""><figcaption><span class="fignum">FIG. 10</span>The Gaussian heatmap without LIDAR points. The car is approaching a left turn, so the map shows dense markers to the right and directly ahead indicating obstacles, with an open area to the left representing the optimal path.</figcaption></figure>
 <p>The control layer built on the planner's output. Rather than issuing aggressive or discontinuous
 commands, it scales steering based on curvature and vehicle speed and adjusts throttle to maintain
 stability through tight turns, reducing oscillation caused by overcorrection or sensor noise. The
@@ -104,12 +124,12 @@ achievable, accounting for actuator response, steering limits, and traction.</p>
 
 <footer><div class="wrap">
   <div class="fgrid">
-    <div>
-      <h2>Let's build<br>something.</h2>
+    <div class="rv">
+      <h2>Let's build<br><em>something.</em></h2>
       <p>Looking for a Summer 2027 engineering internship in robotics, manufacturing,
       aerospace, or medical devices. U.S. citizen, export-control eligible, happy to relocate.</p>
     </div>
-    <ul class="fl">
+    <ul class="fl rv">
       <li><span class="t">Email</span><a href="mailto:bachhalbirinder1@gmail.com">bachhalbirinder1@gmail.com</a></li>
       <li><span class="t">LinkedIn</span><a href="https://www.linkedin.com/in/birinder-bachhal/" target="_blank" rel="noopener">birinder-bachhal</a></li>
       <li><span class="t">Document</span><a href="/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
@@ -119,10 +139,11 @@ achievable, accounting for actuator response, steering limits, and traction.</p>
   <div class="stamp">
     <div><span>Drawn by</span><b>B. BACHHAL</b></div>
     <div><span>Discipline</span><b>MECH ENG</b></div>
-    <div><span>Location</span><b>BOSTON, MA</b></div>
+    <div><span>Revision</span><b id="dstamp">2026</b></div>
     <div><span>Sheet</span><b>1 OF 1</b></div>
   </div>
 </div></footer>
 
+<script src="/assets/site.js"></script>
 </body>
 </html>

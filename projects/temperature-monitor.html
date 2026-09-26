@@ -5,12 +5,20 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Room Temperature Monitoring System &mdash; Birinder Bachhal</title>
 <meta name="description" content="An end-to-end embedded system integrating TMP36 sensing, Arduino control logic, threshold alarms, and a 3D-printed enclosure.">
+<meta name="theme-color" content="#f5f4ef">
+<meta property="og:title" content="Room Temperature Monitoring System &mdash; Birinder Bachhal">
+<meta property="og:description" content="An end-to-end embedded system integrating TMP36 sensing, Arduino control logic, threshold alarms, and a 3D-printed enclosure.">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
+<div id="grid"></div>
+<div id="noise"></div>
+<div id="bar"></div>
+<div id="chair"><i class="h"></i><i class="v"></i><b></b></div>
+
 <nav class="nav"><div class="wrap">
-  <a class="id" href="/">Birinder Bachhal</a>
+  <a class="id" href="/"><em></em> Birinder Bachhal</a>
   <ul>
     <li><a href="/#experience">Experience</a></li>
     <li><a href="/#work">Work</a></li>
@@ -24,11 +32,11 @@
   <a class="bk" href="/#work">&larr; Index of work</a>
   <h1>Room Temperature Monitoring System</h1>
   <p class="dek">An embedded system built end to end: sensing, control logic, electrical safety, manufacturable wiring, and enclosure integration.</p>
-  <div class="phm"><div><span>Role</span><b>Sole designer and builder</b></div><div><span>Timeline</span><b>First-year design project</b></div><div><span>Stack</span><b>Arduino Uno, TMP36, 16&times;2 I&sup2;C LCD, Onshape</b></div><div><span>Links</span><b><a href="https://docs.google.com/document/d/1Tuv2J6dJECbJdlIxamwfsLFoS41idi5W9Qwg7ItneGM/edit?usp=sharing" target="_blank" rel="noopener">Technical report</a></b></div></div>
+  <div class="phm rv"><div><span>Role</span><b>Sole designer and builder</b></div><div><span>Timeline</span><b>First-year design project</b></div><div><span>Stack</span><b>Arduino Uno, TMP36, 16&times;2 I&sup2;C LCD, Onshape</b></div><div><span>Links</span><b><a href="https://docs.google.com/document/d/1Tuv2J6dJECbJdlIxamwfsLFoS41idi5W9Qwg7ItneGM/edit?usp=sharing" target="_blank" rel="noopener">Technical report</a></b></div></div>
 </div></header>
 
 <div class="wrap"><article>
-<figure><img src="/projects/temperature-monitor/EK131_External.png" alt=""><figcaption><span class="fignum">FIG. 01</span>The completed Room Temperature Monitoring System.</figcaption></figure>
+<figure class="rv"><img src="/projects/temperature-monitor/EK131_External.png" alt=""><figcaption><span class="fignum">FIG. 01</span>The completed Room Temperature Monitoring System.</figcaption></figure>
 <h2>Overview and Motivation</h2>
 <p>This project explores how a simple, reliable embedded system can continuously monitor
 environmental conditions and provide clear real-time feedback. The motivation was to move past
@@ -47,7 +55,7 @@ Fahrenheit in software.</p>
 <p>Readings display on a 16&times;2 I&sup2;C LCD while embedded logic continuously evaluates whether
 the measured temperature falls outside the defined 80&ndash;90&nbsp;&deg;F safe range. When
 thresholds are exceeded, the Arduino activates a red LED warning indicator and a piezo buzzer.</p>
-<figure><img src="/projects/temperature-monitor/EK131_TMP.png" alt=""><figcaption><span class="fignum">FIG. 02</span>The TMP36 temperature sensor, the primary sensing component.</figcaption></figure>
+<figure class="rv"><img src="/projects/temperature-monitor/EK131_TMP.png" alt=""><figcaption><span class="fignum">FIG. 02</span>The TMP36 temperature sensor, the primary sensing component.</figcaption></figure>
 <h2>Electrical Design and Wiring</h2>
 <p>I designed and assembled the full electrical system with a focus on clarity, reliability, and
 safety. Power and signal lines were organized using 22 AWG solid-core wiring, with durable
@@ -55,7 +63,7 @@ connections made through heat shrink tubing, twist caps, and spade connectors. A
 color-coding scheme simplified debugging and maintenance after preliminary testing. I integrated an
 on/off switch and a battery clip for standalone operation, powered by a 9&nbsp;V battery within the
 Arduino's supported input range.</p>
-<figure><img src="/projects/temperature-monitor/EK131_Schematic.png" alt=""><figcaption><span class="fignum">FIG. 03</span>Complete wiring schematic for every hardware component.</figcaption></figure>
+<figure class="rv"><img src="/projects/temperature-monitor/EK131_Schematic.png" alt=""><figcaption><span class="fignum">FIG. 03</span>Complete wiring schematic for every hardware component.</figcaption></figure>
 <h2>Component Selection and Electrical Calculations</h2>
 <p>All choices were guided by electrical constraints and reliability. The TMP36 was chosen for its
 linear voltage-to-temperature response, wide operating range, and compact size. Resistors were
@@ -76,7 +84,7 @@ handling and testing.</p>
 <p>All CAD was created in Onshape, chosen for accessibility at the time. I only gained access to
 SolidWorks and AutoCAD after finishing this project, and in retrospect either would have simplified
 the process and offered more functionality.</p>
-<figure><img src="/projects/temperature-monitor/EK131_CAD.png" alt=""><figcaption><span class="fignum">FIG. 04</span>Final CAD of the enclosure and lid. Inside are the 9&nbsp;V battery holder and Arduino mounting plate; the lid carries the 16&times;2 I&sup2;C LCD.</figcaption></figure>
+<figure class="rv"><img src="/projects/temperature-monitor/EK131_CAD.png" alt=""><figcaption><span class="fignum">FIG. 04</span>Final CAD of the enclosure and lid. Inside are the 9&nbsp;V battery holder and Arduino mounting plate; the lid carries the 16&times;2 I&sup2;C LCD.</figcaption></figure>
 <h2>Testing, Performance, and Validation</h2>
 <p>The prototype was validated through repeated testing, demonstrating accurate real-time readings,
 reliable LCD updates in both units, consistent alarm activation outside the 80&ndash;90&nbsp;&deg;F
@@ -85,17 +93,17 @@ range, and stable operation at a 5&nbsp;V internal logic level.</p>
 would have compromised wiring organization and clarity. Environmental exposure of the TMP36 may
 also introduce error over long-term use. Future improvements would include a sensor more resistant
 to environmental conditions, or shielding to improve measurement reliability.</p>
-<figure><img src="/projects/temperature-monitor/EK131_Internal.png" alt=""><figcaption><span class="fignum">FIG. 05</span>Internal layout of the completed system.</figcaption></figure><figure><img src="/projects/temperature-monitor/EK131_External.png" alt=""><figcaption><span class="fignum">FIG. 06</span>The finished Room Temperature Monitoring System.</figcaption></figure>
+<figure class="rv"><img src="/projects/temperature-monitor/EK131_Internal.png" alt=""><figcaption><span class="fignum">FIG. 05</span>Internal layout of the completed system.</figcaption></figure><figure class="rv"><img src="/projects/temperature-monitor/EK131_External.png" alt=""><figcaption><span class="fignum">FIG. 06</span>The finished Room Temperature Monitoring System.</figcaption></figure>
 </article></div>
 
 <footer><div class="wrap">
   <div class="fgrid">
-    <div>
-      <h2>Let's build<br>something.</h2>
+    <div class="rv">
+      <h2>Let's build<br><em>something.</em></h2>
       <p>Looking for a Summer 2027 engineering internship in robotics, manufacturing,
       aerospace, or medical devices. U.S. citizen, export-control eligible, happy to relocate.</p>
     </div>
-    <ul class="fl">
+    <ul class="fl rv">
       <li><span class="t">Email</span><a href="mailto:bachhalbirinder1@gmail.com">bachhalbirinder1@gmail.com</a></li>
       <li><span class="t">LinkedIn</span><a href="https://www.linkedin.com/in/birinder-bachhal/" target="_blank" rel="noopener">birinder-bachhal</a></li>
       <li><span class="t">Document</span><a href="/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
@@ -105,10 +113,11 @@ to environmental conditions, or shielding to improve measurement reliability.</p
   <div class="stamp">
     <div><span>Drawn by</span><b>B. BACHHAL</b></div>
     <div><span>Discipline</span><b>MECH ENG</b></div>
-    <div><span>Location</span><b>BOSTON, MA</b></div>
+    <div><span>Revision</span><b id="dstamp">2026</b></div>
     <div><span>Sheet</span><b>1 OF 1</b></div>
   </div>
 </div></footer>
 
+<script src="/assets/site.js"></script>
 </body>
 </html>
