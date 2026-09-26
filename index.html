@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.className+=" js"</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Birinder Bachhal — Mechanical Engineer</title>
 <meta name="description" content="Birinder Bachhal. Mechanical Engineering at Boston University, robotics and manufacturing. Robotic work cells, fixturing, and hardware built to run in production.">
@@ -12,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,0..100,0..1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css?v=4">
 </head>
 <body>
 
@@ -52,11 +53,17 @@
   </div>
 </div></header>
 
-<div class="wrap"><div class="nums">
-  <div class="r"><b>90→45</b><span>Minutes per part, after I built a robotic work cell to replace a manual 5-axis process.</span></div>
-  <div class="r"><b>+20%</b><span>Usable yield. Three aluminum fixtures, not the robot. This is the one I'd want to talk about.</span></div>
-  <div class="r"><b>2–5W</b><span>Dissipated through a sealed enclosure at 40 °C ambient, where thermal drift meant the sensor lied.</span></div>
-  <div class="r"><b>350g</b><span>A dart that has to land nose-first on rubble every single time, or the whole idea fails.</span></div>
+<div class="wrap"><div class="now">
+  <div>
+    <h2>Right now</h2>
+    <div class="when">September 2026</div>
+  </div>
+  <ul>
+    <li>Junior at BU, leading hardware on a Guinness World Record attempt to make a 2008 Corvette drive itself.</li>
+    <li>Designing <b>ECHO</b>, throwable nodes that find people under collapsed buildings. Fourteen parts in CAD, none of them built yet.</li>
+    <li>Just finished a summer in Brooklyn building a robot cell from nothing. Still thinking about the defect I didn't solve.</li>
+    <li>Looking for a <mark>Summer 2027 internship</mark> in robotics, manufacturing, aerospace or medical devices.</li>
+  </ul>
 </div></div>
 
 <section id="work"><div class="wrap">
@@ -211,13 +218,17 @@
 
 <section id="coursework"><div class="wrap">
   <div class="sh"><span class="n">Coursework</span><h2>Boston University</h2></div>
+  <p style="max-width:46ch;color:var(--ink2);margin:0 0 28px">The ones that actually show up in
+  my work. I've left off the calculus.</p>
   <div class="crs">
-    <p><b>CAD and Machine Components.</b> Parametric modeling in SolidWorks, aimed at parts that can actually be made.</p>
-    <p><b>Engineering Mechanics.</b> Forces, moments, equilibrium. Free-body diagrams, trusses, beams, friction.</p>
-    <p><b>Probability and Data Statistics.</b> Random variables and inference. Hypothesis testing, regression, probabilistic modeling.</p>
-    <p><b>Introduction to Engineering Design.</b> Problem definition through prototyping and iterative testing.</p>
-    <p><b>Multivariable Calculus.</b> Partial derivatives, multiple integrals, vector fields, gradient and divergence.</p>
-    <p><b>Computational Linear Algebra.</b> Matrix theory and numerical methods — linear systems, eigenvalues, SVD.</p>
+    <p><b>Manufacturing Processes.</b> Machining, forming, casting, joining — and how the process you pick changes what tolerance you're allowed to ask for.</p>
+    <p><b>Introduction to Robotics.</b> Kinematics, transforms, workspace and motion planning. The theory under the cell I spent the summer building.</p>
+    <p><b>CAD and Machine Components.</b> Parametric modeling in SolidWorks, aimed at parts that can actually be made, and the machine elements that go in them.</p>
+    <p><b>Structural Mechanics.</b> Stress, strain, deflection and failure. What I reach for when a chassis is too flexible or a mount is carrying more than it looks like.</p>
+    <p><b>Thermodynamics.</b> Energy, heat transfer and the limits on both. Directly behind the sealed enclosure I designed with nowhere for the heat to go.</p>
+    <p><b>Fluid Mechanics.</b> Flow, pressure and losses. Useful the moment a design involves pneumatics, a vacuum path or anything sealed.</p>
+    <p><b>Fundamentals of Electronic Circuits.</b> Enough to size a resistor, read a schematic properly, and find the fault when a cell won't sequence.</p>
+    <p><b>Probability and Data Statistics.</b> Distributions, inference and regression. The reason I use worst-case stack-ups when I don't have the data to justify RSS.</p>
   </div>
 </div></section>
 
@@ -240,6 +251,6 @@
   <div class="sig"><span>Birinder Bachhal · B.S. Mechanical Engineering · Boston University</span><span>Built by hand, Boston</span></div>
 </div></footer>
 
-<script src="/assets/site.js"></script>
+<script src="/assets/site.js?v=4"></script>
 </body>
 </html>
