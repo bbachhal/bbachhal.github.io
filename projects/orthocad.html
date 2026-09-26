@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OrthoCAD Pro &mdash; Birinder Bachhal</title>
+<meta name="description" content="A parametric orthotic design system encoding biomechanical intent and manufacturing constraints into an automated, repeatable CAD pipeline.">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<nav class="nav"><div class="wrap">
+  <a class="id" href="/">Birinder Bachhal</a>
+  <ul>
+    <li><a href="/#experience">Experience</a></li>
+    <li><a href="/#work">Work</a></li>
+    <li><a href="/#capabilities">Capabilities</a></li>
+    <li><a href="/#contact">Contact</a></li>
+    <li><a class="pill" href="/resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+  </ul>
+</div></nav>
+
+<header class="ph"><div class="wrap">
+  <a class="bk" href="/#work">&larr; Index of work</a>
+  <h1>OrthoCAD&nbsp;Pro</h1>
+  <p class="dek">An advanced orthotic design system that turns biomechanical inputs into patient-specific, manufacturable CAD geometry, without manual CAD iteration.</p>
+  <div class="phm"><div><span>Role</span><b>Sole designer and developer</b></div><div><span>Type</span><b>Personal project</b></div><div><span>Timeline</span><b>Jul 2025 &ndash; Sep 2025</b></div><div><span>Links</span><b><a href="https://docs.google.com/document/d/12flzur0plXTipamo49_YXWJP81IszzX-5IrszjxPEfI/edit?usp=sharing" target="_blank" rel="noopener">Technical report</a></b></div></div>
+</div></header>
+
+<div class="wrap"><article>
+<figure><img src="/projects/orthocad/orthocad.png" alt=""><figcaption><span class="fignum">FIG. 01</span>OrthoCAD Pro generated orthotic geometry.</figcaption></figure>
+<h2>Overview and Motivation</h2>
+<p>OrthoCAD Pro is a personal project I developed to streamline the creation of custom foot orthoses
+by integrating biomechanical principles, parametric CAD modeling, and manufacturability constraints.
+The system reduces manual design time while improving consistency, repeatability, and fit accuracy.</p>
+<p>It addresses a core engineering challenge: how to encode biomechanical intent, manufacturing
+constraints, and geometric robustness into a repeatable automated design pipeline, rather than
+relying on manual CAD iteration.</p>
+<p>The motivation was personal. Many of the elders in my family require orthotic soles to walk
+comfortably. I wanted to build a framework for orthotic design that could be more accessible and
+produced faster than traditional manufacturing allows.</p>
+
+<h2>System Architecture</h2>
+<p>The system is structured as a multi-stage pipeline, with each stage enforcing engineering
+constraints to prevent downstream failures.</p>
+<ul>
+<li><b>Input acquisition</b> captures foot geometry from a 3D scan or a parameterized foot profile.</li>
+<li><b>Design logic</b> maps biomechanical inputs to orthotic features.</li>
+<li><b>Parametric CAD generation</b> produces fully constrained orthotic geometry.</li>
+<li><b>Manufacturing validation</b> checks thickness, curvature, and material feasibility.</li>
+</ul>
+<p>Each stage is deterministic, repeatable, and tolerant of noisy inputs, which reflects the
+variability of real clinical data.</p>
+
+<h2>Parametric CAD Model</h2>
+<p>The orthotic is a fully parametric model where every major functional feature is driven by
+explicit design variables rather than manual geometry edits.</p>
+<div class="kv">
+<div><span>Arch</span><b>Height and stiffness profile</b></div>
+<div><span>Heel</span><b>Cup depth and wall angle</b></div>
+<div><span>Posting</span><b>Medial and lateral geometry</b></div>
+<div><span>Forefoot</span><b>Thickness and flexibility zones</b></div>
+<div><span>Envelope</span><b>Length, width, edge taper</b></div>
+<div><span>Behavior</span><b>Hierarchically linked parameters</b></div>
+</div>
+<p>All parameters are hierarchically linked to ensure smooth surface continuity, no
+self-intersections or invalid solids, and predictable response to parameter changes. That
+eliminates fragile CAD behavior and allows rapid regeneration of new designs without manual rework.</p>
+
+<h2>Biomechanics-Driven Design Logic</h2>
+<p>Rather than treating the orthotic as a purely geometric shell, I encoded biomechanical intent
+directly into the design logic. High heel pressure is addressed by increasing heel cup depth and
+localized thickness. A collapsed arch profile is corrected with an elevated medial arch and a
+gradual stiffness transition. Forefoot load imbalance is mitigated through asymmetric thickness
+modulation. The result is an orthotic that is functionally corrective, not just anatomically
+fitted.</p>
+
+<h2>Manufacturing Constraints</h2>
+<p>A major focus was making sure every generated design is manufacturable without manual
+intervention. This was the hardest part, and to solve it I consulted local orthotics manufacturing
+experts. Prothotic Laboratories helped me build a list of constraints that I embedded directly in
+the design logic.</p>
+<ul>
+<li>Minimum and maximum wall thickness</li>
+<li>Curvature limits to prevent print failures</li>
+<li>Smooth transitions to reduce stress concentrations</li>
+<li>Compatibility with TPU and other flexible polymers</li>
+</ul>
+<p>Output geometry is directly suitable for FDM and SLS additive manufacturing as well as CNC
+milling from EVA or polymer blanks.</p>
+
+<h2>Validation</h2>
+<p>I validated the system by generating orthotics across a wide range of input profiles and
+evaluating geometric robustness under extreme parameter combinations, surface smoothness,
+consistency between generated designs, and expected load distribution behavior. The system
+consistently produced dimensionally accurate, structurally sound orthotics with no manual CAD
+adjustment required.</p>
+
+</article></div>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <h2>Let's build<br>something.</h2>
+      <p>Looking for a Summer 2027 engineering internship in robotics, manufacturing,
+      aerospace, or medical devices. U.S. citizen, export-control eligible, happy to relocate.</p>
+    </div>
+    <ul class="fl">
+      <li><span class="t">Email</span><a href="mailto:bachhalbirinder1@gmail.com">bachhalbirinder1@gmail.com</a></li>
+      <li><span class="t">LinkedIn</span><a href="https://www.linkedin.com/in/birinder-bachhal/" target="_blank" rel="noopener">birinder-bachhal</a></li>
+      <li><span class="t">Document</span><a href="/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
+      <li><span class="t">Index</span><a href="/#work">All projects</a></li>
+    </ul>
+  </div>
+  <div class="stamp">
+    <div><span>Drawn by</span><b>B. BACHHAL</b></div>
+    <div><span>Discipline</span><b>MECH ENG</b></div>
+    <div><span>Location</span><b>BOSTON, MA</b></div>
+    <div><span>Sheet</span><b>1 OF 1</b></div>
+  </div>
+</div></footer>
+
+</body>
+</html>

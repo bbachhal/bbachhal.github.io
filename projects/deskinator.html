@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Deskinator &mdash; Birinder Bachhal</title>
+<meta name="description" content="An autonomous desktop-cleaning robot: electromechanical design, stepper drive selection, sensor integration, a custom vacuum system, and EKF-based SLAM.">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<nav class="nav"><div class="wrap">
+  <a class="id" href="/">Birinder Bachhal</a>
+  <ul>
+    <li><a href="/#experience">Experience</a></li>
+    <li><a href="/#work">Work</a></li>
+    <li><a href="/#capabilities">Capabilities</a></li>
+    <li><a href="/#contact">Contact</a></li>
+    <li><a class="pill" href="/resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+  </ul>
+</div></nav>
+
+<header class="ph"><div class="wrap">
+  <a class="bk" href="/#work">&larr; Index of work</a>
+  <h1>The Deskinator</h1>
+  <p class="dek">A fully autonomous desktop-cleaning robot that detects boundaries, plans coverage paths, and removes debris without human intervention, built under strict time, safety, and cost constraints.</p>
+  <div class="phm"><div><span>Role</span><b>Mechanical and Robotics Systems Lead</b></div><div><span>Timeline</span><b>Sep 2025 &ndash; Dec 2025</b></div><div><span>Focus</span><b>Electromechanical design, motion systems, embedded hardware, autonomy</b></div><div><span>Links</span><b><a href="https://drive.google.com/file/d/17UYgUKBP8n6Xr2Mj3MLHvpmgbl_ftx7z/view?usp=sharing" target="_blank" rel="noopener">Video</a> &middot; <a href="https://docs.google.com/document/d/1J7fj0Xwd_tkpN8rXVOZPwmj2ORiROpX2GtS6bQvDz3A/edit?usp=sharing" target="_blank" rel="noopener">Technical report</a></b></div></div>
+</div></header>
+
+<div class="wrap"><article>
+<figure><img src="/projects/deskinator/Deskinator_Main.png" alt=""><figcaption><span class="fignum">FIG. 01</span>The completed Deskinator.</figcaption></figure>
+<h2>Overview and Motivation</h2>
+<p>This project explores how an autonomous electromechanical system can be designed to reliably
+perform full-surface coverage in a constrained, human-facing environment. The Deskinator was built
+to translate motion-planning and autonomy concepts into a physically robust, low-cost robot,
+emphasizing safe operation, repeatable performance, and real-world reliability.</p>
+<p>The motivation was simple. There is a gap between theoretical autonomy concepts and physically
+realizable systems that operate consistently under real constraints. As a student, my desk is
+everything to me, from a place to do classwork to where I eat lunch, so the most applicable use of
+an autonomous system in my life was a desktop-cleaning robot.</p>
+<p>Beyond demonstrating autonomy, the project emphasizes repeatability, manufacturability, and
+robustness. Those findings are relevant not only to service robotics but to manufacturing and
+product development, where consistent performance under real-world variability is the whole game.</p>
+
+<h2>Electromechanical Design and Wiring Architecture</h2>
+<p>I designed and manufactured every mechanical component of the Deskinator, including the chassis,
+bumper system, vacuum sweep system, and wheels. I also designed and implemented the electrical
+system, integrating motors, sensors, power, and computing hardware into a compact, serviceable
+layout.</p>
+<p>I developed the full wiring architecture and integrated dual power rails, 12&nbsp;V and
+5&nbsp;V, to separately power high-load actuators and sensitive electronics. Wiring was routed to
+minimize EMI and mechanical strain during motion while staying modular for debugging, replacement,
+and testing.</p>
+<figure><img src="/projects/deskinator/Deskinator_Assem.png" alt=""><figcaption><span class="fignum">FIG. 02</span>CAD of the Deskinator assembly.</figcaption></figure><figure><img src="/projects/deskinator/Deskinator_Fristing.png" alt=""><figcaption><span class="fignum">FIG. 03</span>Full wiring schematic.</figcaption></figure>
+<h2>Motor Selection and Drive System</h2>
+<p>I selected NEMA 17 stepper motors paired with A4988 stepper drivers to achieve precise,
+repeatable motion while staying desk-safe. During development we replaced an initial DC motor and
+H-bridge setup after identifying thermal foldback and a loss of microstepping.</p>
+<p>The A4988 current-limited drivers maintain a stable sinusoidal phase current under load, keeping
+the motors at a consistent microstepping limit. Before selecting the NEMA 17s, we ran extensive
+testing measuring angular error over time, prioritizing repeatability and accuracy. Many of the
+steppers we tested did not meet the small angular error required for safe operation.</p>
+<figure><img src="/projects/deskinator/Deskinator_NEMAmodeling.png" alt=""><figcaption><span class="fignum">FIG. 04</span>Preliminary testing of NEMA 17 angular error, showing error extremely close to zero along with basic statistics.</figcaption></figure>
+<p>The result was smooth, jitter-free differential drive motion with reliable odometry for
+autonomous navigation.</p>
+
+<h2>Sensor Integration and Embedded Debugging</h2>
+<p>Sensor selection mattered because our SLAM approach relies directly on front-facing sensors for
+accurate edge detection and obstacle avoidance. After testing a range of infrared and proximity
+sensors, we selected the APDS9960 as the primary edge-detection hardware. One APDS9960 also drives
+gesture-based touchless activation in the final design. The central compute unit was a Raspberry Pi
+4B.</p>
+<figure><img src="/projects/deskinator/Deskinator_APDStest.png" alt=""><figcaption><span class="fignum">FIG. 05</span>Preliminary testing of the APDS9960 proximity sensor at varying distances from an obstacle.</figcaption></figure><figure><img src="/projects/deskinator/Deskinator_sensorcad.png" alt=""><figcaption><span class="fignum">FIG. 06</span>CAD of the sensor mounts. These flaps extend from the front of the main frame so the robot detects the desk edge before its body reaches it.</figcaption></figure>
+<h2>Custom Vacuum System</h2>
+<p>Of everything I designed for the Deskinator, the vacuum system was the hardest, and the final
+version worked flawlessly. A vacuum scoop mounts to the bottom of the main frame, powered by a
+12&nbsp;V DC fan, with a custom chute geometry directing debris into a removable container.</p>
+<div class="note2"><b>Result</b>
+<p>Testing showed <b>99.4% debris removal</b> while staying inside project cost and weight limits.
+The detachable container was key to the usability goal: minimal maintenance, no manual movement, no
+manual control.</p></div>
+<figure><img src="/projects/deskinator/Deskinator_vacuumCAD.png" alt=""><figcaption><span class="fignum">FIG. 07</span>CAD of the vacuum and chute system, viewed from the underside of the robot.</figcaption></figure>
+<h2>Manufacturing Process</h2>
+<p>I manufactured every component. The wheels were laser-cut from stock plywood on an Epilog laser
+cutter and covered with rubber tread. The main body was 3D printed in PLA on an FDM printer. The
+hardware mounting plate was laser-cut acrylic, with components secured using M3 hex screws.</p>
+<p>Sensor flaps, the vacuum chute and container, the battery holder, NEMA 17 motor mounts, and fan
+mounts were all 3D printed in PLA on a Bambu Lab FDM printer. Every component was first prototyped
+in cardboard and wood to evaluate effectiveness and find design improvements before final
+fabrication.</p>
+
+<h2>Localization and SLAM</h2>
+<p>While my work focused on hardware and manufacturing, I worked closely with the software side to
+make sure mechanical decisions supported autonomy. I contributed to the localization and SLAM
+pipeline, combining wheel odometry with IMU data through an Extended Kalman Filter to reduce drift
+and maintain stable pose estimates.</p>
+<p>My specific responsibility was making sure the SLAM approach aligned with the robot's mechanical
+and sensing limitations, including wheel slip, motor resolution, and sensor noise. Through
+iterative testing I tuned filter parameters and motion constraints to improve localization
+stability, letting the robot hold accurate positioning across full cleaning cycles with no external
+markers or beacons.</p>
+<figure><img src="/projects/deskinator/Deskinator_wallfollower.png" alt=""><figcaption><span class="fignum">FIG. 08</span>Wall follower used to compute the desk boundary from detected edges. This was our initialization path.</figcaption></figure><figure><img src="/projects/deskinator/Deskinator_lawnmower.png" alt=""><figcaption><span class="fignum">FIG. 09</span>Computed and followed Boustrophedon path. This lawnmower pattern was the cleaning path.</figcaption></figure><figure><img src="/projects/deskinator/Deskinator_time.png" alt=""><figcaption><span class="fignum">FIG. 10</span>Distribution of time to complete boundary discovery and total cycle, with Gaussian fitting.</figcaption></figure>
+</article></div>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <h2>Let's build<br>something.</h2>
+      <p>Looking for a Summer 2027 engineering internship in robotics, manufacturing,
+      aerospace, or medical devices. U.S. citizen, export-control eligible, happy to relocate.</p>
+    </div>
+    <ul class="fl">
+      <li><span class="t">Email</span><a href="mailto:bachhalbirinder1@gmail.com">bachhalbirinder1@gmail.com</a></li>
+      <li><span class="t">LinkedIn</span><a href="https://www.linkedin.com/in/birinder-bachhal/" target="_blank" rel="noopener">birinder-bachhal</a></li>
+      <li><span class="t">Document</span><a href="/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
+      <li><span class="t">Index</span><a href="/#work">All projects</a></li>
+    </ul>
+  </div>
+  <div class="stamp">
+    <div><span>Drawn by</span><b>B. BACHHAL</b></div>
+    <div><span>Discipline</span><b>MECH ENG</b></div>
+    <div><span>Location</span><b>BOSTON, MA</b></div>
+    <div><span>Sheet</span><b>1 OF 1</b></div>
+  </div>
+</div></footer>
+
+</body>
+</html>
