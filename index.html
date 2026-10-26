@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,0..100,0..1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css?v=6">
+<link rel="stylesheet" href="/assets/style.css?v=7">
 </head>
 <body>
 
@@ -56,10 +56,11 @@
 <div class="wrap"><div class="now">
   <div>
     <h2>Right now</h2>
-    <div class="when">September 2026</div>
+    <div class="when">October 2026</div>
   </div>
   <ul>
     <li>Junior at BU, running hardware for the autonomous racing team while we rebuild the car for the next competition season.</li>
+    <li>Just won 1st overall and the Healthcare Track at the DS+X Hackathon with <b>EMBR</b>, a $30 wearable that tells you when it doesn't know your core temperature.</li>
     <li>Designing <b>ECHO</b>, throwable nodes that find people under collapsed buildings. Fourteen parts in CAD, none of them built yet.</li>
     <li>Just finished a summer in Brooklyn building a robot cell from nothing. Still thinking about the defect I didn't solve.</li>
     <li>Looking for a <mark>Summer 2027 internship</mark> in robotics, manufacturing, aerospace or medical devices.</li>
@@ -68,31 +69,40 @@
 
 <section id="work"><div class="wrap">
   <div class="sh"><span class="n">Work</span><h2>Things I've built</h2></div>
-  <p style="max-width:50ch;color:var(--ink2);margin-bottom:38px">Seven projects. The first three
+  <p style="max-width:50ch;color:var(--ink2);margin-bottom:38px">Eight projects. The first three
   are the ones I'd bring to an interview.</p>
 
-  <a class="feat" href="/projects/f1tenth.html">
-    <div class="ph"><img src="/projects/f1tenth/f1tenth_roboracer.jpg"
-      alt="Running the BU F1Tenth car at the RoboRacer competition, IEEE VTC2026-Fall Boston"></div>
+  <a class="feat" href="/projects/embr.html">
+    <div class="ph"><img class="team" src="/projects/embr/embr_team.jpg"
+      alt="The EMBR team holding the chest strap at the DS+X Hackathon"></div>
     <div class="cap">
       <div>
-        <div class="k">001 &middot; Autonomous systems &middot; VP Hardware</div>
-        <h3>Autonomous F1Tenth<br>Race Car</h3>
+        <div class="k">001 &middot; Wearables &amp; data science <span class="flag win">1st overall</span></div>
+        <h3>EMBR</h3>
       </div>
       <div>
-        <p>I own the electromechanical design: chassis, harness, power architecture, sensor
-        mounting. Also wrote the Gaussian path planner that replaced minimum-distance selection
-        after the old logic fell apart above 20 mph. We raced it at RoboRacer, hosted at IEEE
-        VTC2026-Fall in Boston, on carpet and soft ducting instead of the walls we'd tuned
-        against.</p>
-        <span class="go">Read it →</span>
+        <p>A $30 chest strap that estimates core body temperature from heart rate and tells you
+        when it doesn't know. The Army filter everyone builds on claims a 90% range that is
+        actually right 34% of the time; ours is right 89%. I built the device: wiring, the
+        parametric PETG enclosure, hardware bring-up, and the pitch. Won the Healthcare Track and
+        1st overall at the DS+X Hackathon at BU.</p>
+        <span class="go">Read it &rarr;</span>
       </div>
     </div>
   </a>
 
   <div class="duo">
+    <a href="/projects/f1tenth.html"><article>
+      <div class="k">002 &middot; Autonomous systems &middot; VP Hardware</div>
+      <div class="ph"><img src="/projects/f1tenth/f1tenth_roboracer.jpg" alt="Running the BU F1Tenth car at the RoboRacer competition"></div>
+      <h3>Autonomous F1Tenth Race Car</h3>
+      <p>I own the electromechanical design: chassis, harness, power architecture, sensor mounting.
+      I also wrote the Gaussian path planner that replaced minimum-distance selection after the old
+      logic fell apart above 20 mph. We raced it at RoboRacer, IEEE VTC2026-Fall in Boston.</p>
+    </article></a>
+
     <a href="/projects/echo.html"><article>
-      <div class="k">002 &middot; Search &amp; rescue <span class="flag">In progress</span></div>
+      <div class="k">003 &middot; Search &amp; rescue <span class="flag">In progress</span></div>
       <div class="ph"><img class="nose" src="/projects/echo/echo_section.svg" alt="Sectioned view of the ECHO rescue node"></div>
       <h3>ECHO Rescue Node</h3>
       <p>Throwable nodes that find people under collapsed buildings by knocking and listening for
@@ -101,34 +111,31 @@
       yet, and I'd rather show you the reasoning than wait.</p>
     </article></a>
 
-    <a href="/projects/deskinator.html"><article>
-      <div class="k">003 &middot; Robotics &middot; Design lead</div>
-      <div class="ph"><img src="/projects/deskinator/Deskinator_Main.png" alt="The Deskinator autonomous desktop robot"></div>
-      <h3>The Deskinator</h3>
-      <p>An autonomous desk-cleaning robot, built because my desk is where I do everything. I
-      machined every part, picked NEMA 17 steppers on measured angular error rather than the
-      datasheet, and spent most of the semester on the vacuum chute. It clears 99.4% of debris.</p>
-    </article></a>
   </div>
 
   <div class="rest">
-    <a href="/projects/orthocad.html" data-peek="/projects/orthocad/orthocad.png">
+    <a href="/projects/deskinator.html" data-peek="/projects/deskinator/Deskinator_Main.png">
       <span class="n">004</span>
+      <div><h3>The Deskinator</h3><em>An autonomous desk-cleaning robot. I machined every part and spent most of the semester on the vacuum chute. 99.4% debris removal.</em></div>
+      <span class="t">Robotics</span>
+    </a>
+    <a href="/projects/orthocad.html" data-peek="/projects/orthocad/orthocad.png">
+      <span class="n">005</span>
       <div><h3>OrthoCAD Pro</h3><em>Parametric orthotics that regenerate without manual CAD rework. Built for my grandparents.</em></div>
       <span class="t">Design automation</span>
     </a>
     <a href="/projects/cad.html" data-peek="/projects/cad-drawings/solidworks.png">
-      <span class="n">005</span>
+      <span class="n">006</span>
       <div><h3>CAD &amp; Drawings</h3><em>Shaft support, ball valve, gearbox, four-bar linkage. Models and fully dimensioned prints.</em></div>
       <span class="t">SolidWorks</span>
     </a>
     <a href="/projects/temperature-monitor.html" data-peek="/projects/temperature-monitor/EK131_External.png">
-      <span class="n">006</span>
+      <span class="n">007</span>
       <div><h3>Room Temperature Monitor</h3><em>My first real end-to-end build. Sensing, control logic, wiring, enclosure, 9.5 hours on a 9V.</em></div>
       <span class="t">Embedded</span>
     </a>
     <a href="/projects/ecg.html" data-peek="/projects/ecg/ecg_compare.png">
-      <span class="n">007</span>
+      <span class="n">008</span>
       <div><h3>ECG &amp; Heart Rate Variability</h3><em>Three-lead ECG at rest, after exertion, under box breathing. Raw signals, not clean datasets.</em></div>
       <span class="t">MATLAB</span>
     </a>
@@ -251,6 +258,6 @@
   <div class="sig"><span>Birinder Bachhal · B.S. Mechanical Engineering · Boston University</span><span>Built by hand, Boston</span></div>
 </div></footer>
 
-<script src="/assets/site.js?v=6"></script>
+<script src="/assets/site.js?v=7"></script>
 </body>
 </html>

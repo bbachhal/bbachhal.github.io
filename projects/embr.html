@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.className+=" js"</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EMBR | Birinder Bachhal</title>
+<meta name="description" content="EMBR: a $30 chest-strap wearable that estimates core body temperature from heart rate and shows a calibrated range. Winner, Healthcare Track and 1st overall, DS+X Hackathon at Boston University.">
+<meta name="theme-color" content="#EBE6DA">
+<meta property="og:title" content="EMBR | Birinder Bachhal">
+<meta property="og:description" content="A $30 wearable that knows what it doesn't know. 1st overall at the DS+X Hackathon.">
+<meta property="og:image" content="https://bbachhal.github.io/projects/embr/embr_device.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,0..100,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css?v=7">
+</head>
+<body>
+
+<nav class="nav"><div class="wrap">
+  <a class="me" href="/">Birinder Bachhal</a>
+  <ul>
+    <li><a href="/#work">Work</a></li>
+    <li><a href="/#experience">Experience</a></li>
+    <li><a href="/#skills">Skills</a></li>
+    <li><a href="/resume.pdf" target="_blank" rel="noopener">R&eacute;sum&eacute;</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+</div></nav>
+
+<header class="ph2"><div class="wrap">
+  <a class="bk" href="/#work">&larr; Back to work</a>
+  <div style="margin-bottom:20px">
+    <span class="flag win">1st overall &middot; DS+X Hackathon 2026</span>
+    <span class="flag win">Best project, Healthcare Track</span>
+  </div>
+  <h1>EMBR</h1>
+  <p class="dek">A $30 chest strap that estimates your core body temperature from your heart rate,
+  and tells you when it doesn't know.</p>
+  <div class="facts">
+    <div><span>Event</span><b>DS+X Hackathon, Boston University<br>24 to 25 October 2026</b></div>
+    <div><span>My part</span><b>Physical build, enclosure design,<br>hardware bring-up, the pitch</b></div>
+    <div><span>Team</span><b>Five people across hardware,<br>firmware, data and app</b></div>
+    <div><span>Parts cost</span><b>About $30</b></div>
+  </div>
+</div></header>
+
+<div class="wrap"><article class="doc">
+
+<figure><img src="/projects/embr/embr_worn.jpg" alt="Birinder wearing the EMBR chest strap at the hackathon, sprint notes on the whiteboard behind him">
+<figcaption><span class="fignum">FIG. 01</span>EMBR worn on the chest, hour 20 or so. The case has to bridge the breastbone without rocking, which is most of why the back is curved.</figcaption></figure>
+
+<figure><img src="/projects/embr/embr_device.jpg" alt="The EMBR chest strap on a desk, showing the printed case, strap and external sensor leads">
+<figcaption><span class="fignum">FIG. 02</span>EMBR v5 off the body. ESP32-S3 in a printed PETG case, thermistors set into the case floor, power bank in its own pod further along the strap.</figcaption></figure>
+
+<h2>The number that started it</h2>
+
+<p>Exertional heat stroke is close to 100% survivable if core temperature comes down below
+40&nbsp;&deg;C within thirty minutes. The problem is knowing you're getting there. Core temperature
+can only really be measured with a swallowed pill or a rectal probe, so on a job site people go by
+feel, and by the time you feel it you are already in trouble. Roughly 19,000 workers die from heat
+every year.</p>
+
+<p>There is a standard workaround. The US Army published ECTemp, a Kalman filter that estimates
+core temperature from heart rate, and commercial products are built on it. We tested it on 14,041
+minutes of real heat-chamber data with rectal probes as the reference.</p>
+
+<div class="pull"><b>The finding the whole project turned on</b>
+<p>ECTemp's own "90% confident" range contained the true temperature <strong>34% of the
+time</strong>. In 34 of 73 trials where someone's real core temperature crossed 38.5&nbsp;&deg;C,
+its 38.5&nbsp;&deg;C alarm never fired at all.</p></div>
+
+<p>So the project stopped being "build a temperature wearable" and became something more specific:
+build the honest version. A range that is actually right as often as it claims. A device that says
+"I can't tell right now" instead of guessing. And a hard rule that it never hides the reading from
+someone who is already overheating.</p>
+
+<h2>What we shipped</h2>
+
+<div class="tbl">
+  <div><span>Range coverage, claimed 90%</span><b>Kalman 34.3% &rarr; EMBR 89.2%</b></div>
+  <div><span>Error (RMSE)</span><b>0.41 &rarr; 0.32 &deg;C</b></div>
+  <div><span>Average &plusmn; shown on screen</span><b>0.67 &rarr; 0.49 &deg;C</b></div>
+  <div><span>Early warning already on</span><b>47 &rarr; 65 of 73 trials</b></div>
+  <div><span>External test, 65 new people</span><b>26.7% &rarr; 82.0% coverage</b></div>
+  <div><span>People the correction helped</span><b>31 of 37, and 54 of 65 externally</b></div>
+</div>
+
+<p>The early warning number is the one I care about most. By the time a person's true core
+temperature reached 38.5&nbsp;&deg;C, the 38.0&nbsp;&deg;C Watch alert was already on in 65 of 73
+trials, a median of 12 minutes ahead, and it never failed to fire. The original filter missed it
+five times.</p>
+
+<h2>My part</h2>
+
+<p>I owned the physical device. Wiring and soldering, the circuit prototyped in Tinkercad first,
+the enclosure and the power bank pod through several iterations, hardware bring-up, and the pitch
+at the end.</p>
+
+<p>The case is a parametric CadQuery model printed in PETG. A few decisions that mattered:</p>
+
+<ul>
+<li>A 150&nbsp;mm radius curved back so the case bridges the breastbone instead of rocking on it.</li>
+<li>Strap loops at skin level, so the strap can't tip the case off the chest when the wearer moves.</li>
+<li>Two thermistors set into windows in the case <em>floor</em>, touching skin directly, with a third hanging outside the strap to read ambient air.</li>
+<li>Vents, drains, a cable slot for the external leads, and a USB notch reachable with the lid on.</li>
+<li>A fit check written into the script itself, so every revision verified that the parts clear the case and a USB cable can still reach both ports.</li>
+</ul>
+
+<figure><img src="/projects/embr/embr_cad_views.jpg" alt="Six rendered views of the EMBR enclosure: body from above and below, end view, lid underside, exploded view and power bank pod">
+<figcaption><span class="fignum">FIG. 03</span>Enclosure, final revision. 81 &times; 69 &times; 35.5&nbsp;mm, four M3 screws, separate open-top pod for the power bank with 3&nbsp;mm clearance all round.</figcaption></figure>
+
+<p>It took the usual beating from reality. The wire bundle did not fit under the lid, so the case
+was reprinted 12&nbsp;mm taller. The screw holes had to be opened up because PETG prints them
+tight. Halfway through the build we lost the humidity sensor and one of the two pulse sensors, so
+the wiring, the firmware, the Bluetooth frame and the app all had to be reworked together around
+what we actually had.</p>
+
+<figure><img src="/projects/embr/embr_cad_underside.jpg" alt="Underside view of the enclosure showing the concave chest scoop, thermistor windows and strap loops">
+<figcaption><span class="fignum">FIG. 04</span>Underside. The concave scoop is what makes it sit on a chest rather than on a bench.</figcaption></figure>
+
+<figure><img src="/projects/embr/embr_schematic.jpg" alt="Schematic of the EMBR v5 electronics">
+<figcaption><span class="fignum">FIG. 05</span>Schematic, v5. Pulse sensor on GPIO4, two skin thermistors and one air thermistor each with a 10&nbsp;k&Omega; divider, MPU-6050 over I2C.</figcaption></figure>
+
+<div class="pull"><b>The resistor I am oddly proud of</b>
+<p>R4 does nothing except hold GPIO8 low. Without it the pin floats, a leftover battery check in
+the firmware reads a dying battery that does not exist, and the board puts itself to sleep
+mid-test. It is a ten cent part that stops the device from quietly turning itself off, which is
+exactly the kind of failure you only find by building the thing.</p></div>
+
+<h2>How it works</h2>
+
+<p>An ESP32-S3 samples the sensors at 100&nbsp;Hz on a dedicated core. Heart rate comes from
+autocorrelation of the pulse signal, with a cadence check that rejects "pulses" that are really the
+sensor bouncing in step with the wearer's stride. The estimate steps once a minute, which is the
+rate ECTemp was published and calibrated at, and if there is no trustworthy heart rate for a minute
+it predicts without updating so its uncertainty honestly grows.</p>
+
+<p>Three layers sit on top of each other. The published Kalman filter. Then a ridge regression
+correction, capped at &plusmn;1&nbsp;&deg;C, whose largest input after the filter's own estimate is
+<em>heart rate above the wearer's own resting rate</em>. In other words it learned that the thing
+ECTemp gets wrong is assuming one curve fits everyone. Then split conformal prediction, where
+held-out absolute errors are sorted into bins and the range half-width is the quantile in each bin,
+which guarantees the coverage without assuming anything about the shape of the errors.</p>
+
+<figure><img src="/projects/embr/embr_coverage.jpg" alt="Chart comparing Kalman filter coverage against EMBR coverage across temperature bands">
+<figcaption><span class="fignum">FIG. 06</span>Coverage by temperature band. The claimed number is 90%. The bar that matters is whether the real one reaches it.</figcaption></figure>
+
+<figure><img src="/projects/embr/embr_early_warning.jpg" alt="Chart of early warning performance across 73 trials">
+<figcaption><span class="fignum">FIG. 07</span>Early warning. Of 73 trials that reached a true 38.5&nbsp;&deg;C, the 38.0&nbsp;&deg;C Watch alert was already on in 65.</figcaption></figure>
+
+<p>Validation was nested leave-one-subject-out, so every person was scored by a model and a
+calibration fitted on the other 36, then tested externally on a 65-person dataset the model had
+never seen. The same conformal table is generated once by the Python pipeline and compiled into the
+firmware, so the device and the app cannot disagree with each other.</p>
+
+<h2>What it gets wrong</h2>
+
+<p>We put these on the results page rather than burying them, and I think that is a large part of
+why it won.</p>
+
+<ul>
+<li>Coverage drops to <strong>71% above 38.5&nbsp;&deg;C</strong>, because the estimate lags a fast rise. That is precisely the danger zone. It is also why the real early warning sits at 38.0&nbsp;&deg;C instead.</li>
+<li>Catching more true cases cost specificity: sensitivity at 38.0&nbsp;&deg;C went from 0.61 to 0.75, specificity from 0.90 to 0.84.</li>
+<li>On long walks in the external dataset, heart rate drifts up while core temperature levels off, so EMBR over-reads. More false alarms, not more misses, which is the direction you want to fail in.</li>
+<li>Healthy adults aged 19 to 40, in lab protocols. <strong>Not a medical device, and not clinically validated.</strong></li>
+</ul>
+
+<h2>What I took from it</h2>
+
+<p>Calibration matters more than accuracy. A model that is slightly worse on average but honest
+about its uncertainty is more useful than a confident one that is wrong a third of the time, and
+that is a hardware lesson as much as a statistics one.</p>
+
+<p>The other one is that averages hide failures. The overall coverage number looks excellent. Slice
+it by the true outcome and the danger zone is the weakest band, which is the only slice that
+actually matters for a safety device.</p>
+
+<figure><img src="/projects/embr/embr_team.jpg" alt="The EMBR team holding the chest strap at the DS+X Hackathon">
+<figcaption><span class="fignum">FIG. 08</span>Most of the team, with the strap, at the end of the weekend.</figcaption></figure>
+
+<h2>Links</h2>
+
+<ul>
+<li><a href="https://github.com/XBFBolt/ember" target="_blank" rel="noopener">github.com/XBFBolt/ember</a>, the full repo: firmware, analysis pipeline and web app</li>
+<li><a href="https://github.com/XBFBolt/ember/blob/main/analysis/JUDGES_SUMMARY.md" target="_blank" rel="noopener">The full results write-up</a>, every number on this page with its method</li>
+<li><a href="https://devpost.com/software/embr-zfiomr" target="_blank" rel="noopener">Devpost submission</a></li>
+</ul>
+
+<p>Built with Rohan Sarkar, Dillon Smith, Leihui Tong and Lucas Marotta. Dillon owned the repo, the
+analysis pipeline and the web app. The team used Kiro to keep firmware, Python and JavaScript in
+agreement, and I used Claude for design help on the CAD, the wiring diagrams and a repo review.</p>
+
+</article></div>
+
+<footer><div class="wrap">
+  <div class="fg">
+    <div>
+      <h2>Let's build <i>something.</i></h2>
+      <p>I'm looking for a Summer 2027 engineering internship in robotics, manufacturing,
+      aerospace, or medical devices. U.S. citizen, export-control eligible, and I'll go wherever
+      the work is.</p>
+    </div>
+    <ul>
+      <li><span>Email</span><a href="mailto:bachhalbirinder1@gmail.com">bachhalbirinder1@gmail.com</a></li>
+      <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/birinder-bachhal/" target="_blank" rel="noopener">birinder-bachhal</a></li>
+      <li><span>R&eacute;sum&eacute;</span><a href="/resume.pdf" target="_blank" rel="noopener">Download PDF</a></li>
+      <li><span>Index</span><a href="/#work">All projects</a></li>
+    </ul>
+  </div>
+  <div class="sig"><span>Birinder Bachhal &middot; B.S. Mechanical Engineering &middot; Boston University</span><span>Built by hand, Boston</span></div>
+</div></footer>
+
+<script src="/assets/site.js?v=7"></script>
+</body>
+</html>

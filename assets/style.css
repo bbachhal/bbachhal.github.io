@@ -125,6 +125,7 @@ section{padding:78px 0}
 .feat .ph img{width:100%;aspect-ratio:21/9;max-height:540px;object-fit:cover;object-position:50% 94%;
   transition:transform 1.1s var(--ease);filter:saturate(.92)}
 .feat:hover .ph img{transform:scale(1.025)}
+.feat .ph img.team{object-position:50% 56%}
 .feat .cap{display:grid;grid-template-columns:1fr 360px;gap:46px;align-items:start;padding-top:24px}
 .feat h3{font-size:clamp(30px,4.4vw,56px);letter-spacing:-.032em;line-height:1;font-weight:600}
 .feat .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
@@ -145,7 +146,9 @@ section{padding:78px 0}
   color:var(--rust);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 .duo p{font-size:16px;color:var(--ink2);line-height:1.58;margin-top:10px}
 .flag{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--card);background:var(--rust);padding:3px 7px}
+  color:var(--card);background:var(--rust);padding:3px 7px;display:inline-block}
+.flag.win{background:var(--ink);color:var(--paper);margin-right:5px}
+.feat .k .flag{vertical-align:2px}
 
 .rest{margin-top:70px;border-top:1px solid var(--ink)}
 .rest a{display:grid;grid-template-columns:52px 1fr auto;gap:26px;align-items:baseline;
