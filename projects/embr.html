@@ -39,7 +39,7 @@
   and tells you when it doesn't know.</p>
   <div class="facts">
     <div><span>Event</span><b>DS+X Hackathon, Boston University<br>24 to 25 October 2026</b></div>
-    <div><span>My part</span><b>Physical build, enclosure design,<br>hardware bring-up, the pitch</b></div>
+    <div><span>My part</span><b>Wiring diagrams and the<br>enclosure design</b></div>
     <div><span>Team</span><b>Five people across hardware,<br>firmware, data and app</b></div>
     <div><span>Parts cost</span><b>About $30</b></div>
   </div>
@@ -93,18 +93,23 @@ five times.</p>
 
 <h2>My part</h2>
 
-<p>I owned the physical device. Wiring and soldering, the circuit prototyped in Tinkercad first,
-the enclosure and the power bank pod through several iterations, hardware bring-up, and the pitch
-at the end.</p>
+<p>I owned the wiring documentation and the enclosure.</p>
 
-<p>The case is a parametric CadQuery model printed in PETG. A few decisions that mattered:</p>
+<p>I drew the wiring diagrams the rest of the team built from, so whoever was holding the soldering
+iron could replicate the circuit exactly instead of tracing it off somebody else's board. On a
+weekend where the hardware changed under us twice, that is the difference between one correct build
+and four slightly different ones.</p>
+
+<p>The case I designed in Onshape, across two rapid prototyping cycles. The first was a rough PLA
+print, enough to find out whether the thing went together and sat on a chest at all. The second was
+the one that mattered: PETG, and shaped around how a person actually wears it rather than around
+the boards inside it. A few decisions:</p>
 
 <ul>
 <li>A 150&nbsp;mm radius curved back so the case bridges the breastbone instead of rocking on it.</li>
 <li>Strap loops at skin level, so the strap can't tip the case off the chest when the wearer moves.</li>
 <li>Two thermistors set into windows in the case <em>floor</em>, touching skin directly, with a third hanging outside the strap to read ambient air.</li>
 <li>Vents, drains, a cable slot for the external leads, and a USB notch reachable with the lid on.</li>
-<li>A fit check written into the script itself, so every revision verified that the parts clear the case and a USB cable can still reach both ports.</li>
 </ul>
 
 <figure><img src="/projects/embr/embr_cad_views.jpg" alt="Six rendered views of the EMBR enclosure: body from above and below, end view, lid underside, exploded view and power bank pod">
@@ -186,10 +191,6 @@ actually matters for a safety device.</p>
 <li><a href="https://github.com/XBFBolt/ember/blob/main/analysis/JUDGES_SUMMARY.md" target="_blank" rel="noopener">The full results write-up</a>, every number on this page with its method</li>
 <li><a href="https://devpost.com/software/embr-zfiomr" target="_blank" rel="noopener">Devpost submission</a></li>
 </ul>
-
-<p>Built with Rohan Sarkar, Dillon Smith, Leihui Tong and Lucas Marotta. Dillon owned the repo, the
-analysis pipeline and the web app. The team used Kiro to keep firmware, Python and JavaScript in
-agreement, and I used Claude for design help on the CAD, the wiring diagrams and a repo review.</p>
 
 </article></div>
 
